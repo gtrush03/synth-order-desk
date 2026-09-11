@@ -1,0 +1,89 @@
+{
+  "recordedAt": "2026-09-11T19:27:54.722Z",
+  "environment": "https://staging.rocketride.ai",
+  "sdkVersion": "1.3.0",
+  "clientRuntime": "bun 1.3.10",
+  "dnsResultOrder": "ipv4first (client-side only)",
+  "mutations": false,
+  "pipelineRuns": 0,
+  "modelCalls": 0,
+  "authenticated": true,
+  "connectMs": 3287,
+  "organization": {
+    "name": "TRU Synth",
+    "idSha256Prefix": "e260cf73f65f"
+  },
+  "creditLedger": {
+    "unit": "RocketRide credit units (API label: tokens)",
+    "balances": {
+      "tokens": 4841.3
+    },
+    "granted": {
+      "tokens": 5000
+    },
+    "consumed": {
+      "tokens": 158.7
+    },
+    "labels": {
+      "tokens": "tokens"
+    }
+  },
+  "subscriptions": [
+    {
+      "appId": "rocketride.pipeBuilder",
+      "appName": "Pipeline Builder",
+      "status": "active",
+      "planNickname": "Pay-as-you-go",
+      "unitAmount": 0,
+      "billingInterval": "month",
+      "currentPeriodEnd": "2026-10-11T18:08:58",
+      "cancelAtPeriodEnd": false,
+      "credits": null
+    }
+  ],
+  "nodeMetadata": {
+    "tool_python": {
+      "classType": [
+        "tool"
+      ],
+      "configRequired": [
+        "type",
+        "allowedModules"
+      ],
+      "configProperties": [
+        "allowedModules",
+        "timeout",
+        "type"
+      ],
+      "credentialFieldPresent": false,
+      "tile": [
+        "Tool: python.execute"
+      ]
+    },
+    "tools": {
+      "classType": [
+        "source"
+      ],
+      "configRequired": [
+        "hideForm",
+        "type",
+        "mode"
+      ],
+      "configProperties": [
+        "hideForm",
+        "mode",
+        "parameters",
+        "type"
+      ],
+      "invoke": {
+        "tool": {
+          "description": "Tools hosted by this endpoint (via control-plane invoke)",
+          "min": 0
+        }
+      },
+      "credentialFieldPresent": false
+    }
+  },
+  "activeTasksBefore": 0,
+  "totalMs": 6245
+}

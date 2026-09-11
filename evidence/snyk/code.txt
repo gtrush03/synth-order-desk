@@ -1,0 +1,97 @@
+$ snyk code test --json-file-output=evidence/snyk/code.json
+
+
+Testing <export> ...
+
+Open Issues
+
+ ✗ [LOW] Cleartext Transmission - HTTP Instead of HTTPS
+   Path: tests/order-desk.test.ts, line 267
+   Info: node:http.request uses HTTP which is an insecure protocol and should not be used in code due to cleartext transmission of information. Data in cleartext in a communication channel can be sniffed by unauthorized actors. Consider using the https module instead.
+
+ ✗ [LOW] Insufficient postMessage Validation
+   Path: src/gpt-live-browser.ts, line 74
+   Info: The origin of the received message is not checked. This means any site (even malicious) can send message to this window. If you don't expect this, consider checking the origin of sender.
+
+ ✗ [LOW] Insufficient postMessage Validation
+   Path: src/browser-actions.ts, line 78
+   Info: The origin of the received message is not checked. This means any site (even malicious) can send message to this window. If you don't expect this, consider checking the origin of sender.
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 115
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 108
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 195
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 220
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 226
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 315
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 397
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 416
+   Info: Unsanitized input from an exception flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] Cleartext Transmission - HTTP Instead of HTTPS
+   Path: src/server.ts, line 40
+   Info: node:http.createServer uses HTTP which is an insecure protocol and should not be used in code due to cleartext transmission of information. Data in cleartext in a communication channel can be sniffed by unauthorized actors. Consider using the https module instead.
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 114
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 111
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [MEDIUM] DOM-based Cross-site Scripting (XSS)
+   Path: src/talk.ts, line 110
+   Info: Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).
+
+ ✗ [HIGH] Path Traversal
+   Path: src/server.ts, line 80
+   Info: Unsanitized input from the request URL flows into writeFile, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write to arbitrary files.
+
+
+
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Test Summary                                                                                                           │
+│                                                                                                                        │
+│   Organization:      hello-UhCF5tfLsxa99UZVdrvcsT                                                                      │
+│   Test type:         Static code analysis                                                                              │
+│   Project path:      <export>    │
+│                                                                                                                        │
+│   Total issues:   16                                                                                                   │
+│   Ignored issues: 0 [ 0 HIGH  0 MEDIUM  0 LOW ]                                                                        │
+│   Open issues:    16 [ 1 HIGH  12 MEDIUM  3 LOW ]                                                                      │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+    
+💡 Tip
+
+   To view ignored issues, use the --include-ignores option.
+                                                            
+
+
+💡 Tip
+
+   Some capabilities, including the ability to apply ignores, are unavailable. Retest the project with the --remote-repo-url parameter or from within a repository to enable full functionality.
+                                                                                                                                                                                                
+
+[exit 1]

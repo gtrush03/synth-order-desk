@@ -1,0 +1,32 @@
+{
+  "at": "2026-09-11T19:01:47.054100+00:00",
+  "roteVersion": "0.82.0",
+  "result": "pass",
+  "checks": [
+    {
+      "quantity": 100,
+      "totalCents": 115000,
+      "review": "Running DAG play 'order-review' (1 steps)...\n\norder-review\n  run_id: run_20260911_190146.044_2\n\n  [layer 1]\n    bun  ..................................... @3  (25ms)\n\n  Summary: 1/1 completed, 0 failed, 0 blocked\n  Duration: (60ms)\nRendered 1 step(s).\n",
+      "packet": "Running DAG play 'work-packet' (1 steps)...\n\nwork-packet\n  run_id: run_20260911_190146.426_0\n\n  [layer 1]\n    bun  ..................................... @1  (25ms)\n\n  Summary: 1/1 completed, 0 failed, 0 blocked\n  Duration: (57ms)\nRendered 1 step(s).\n",
+      "approvedInput": "Explicit approval test fixture; not a real customer authorization"
+    },
+    {
+      "quantity": 140,
+      "totalCents": 163000,
+      "review": "Running DAG play 'order-review' (1 steps)...\n\norder-review\n  run_id: run_20260911_190146.535_3\n\n  [layer 1]\n    bun  ..................................... @4  (21ms)\n\n  Summary: 1/1 completed, 0 failed, 0 blocked\n  Duration: (53ms)\nRendered 1 step(s).\n",
+      "packet": "Running DAG play 'work-packet' (1 steps)...\n\nwork-packet\n  run_id: run_20260911_190146.641_1\n\n  [layer 1]\n    bun  ..................................... @2  (22ms)\n\n  Summary: 1/1 completed, 0 failed, 0 blocked\n  Duration: (54ms)\nRendered 1 step(s).\n",
+      "approvedInput": "Explicit approval test fixture; not a real customer authorization"
+    },
+    {
+      "quantity": 150,
+      "totalCents": 175000,
+      "review": "Running DAG play 'order-review' (1 steps)...\n\norder-review\n  run_id: run_20260911_190146.746_4\n\n  [layer 1]\n    bun  ..................................... @5  (23ms)\n\n  Summary: 1/1 completed, 0 failed, 0 blocked\n  Duration: (54ms)\nRendered 1 step(s).\n",
+      "packet": "Running DAG play 'work-packet' (1 steps)...\n\nwork-packet\n  run_id: run_20260911_190146.859_2\n\n  [layer 1]\n    bun  ..................................... @3  (23ms)\n\n  Summary: 1/1 completed, 0 failed, 0 blocked\n  Duration: (54ms)\nRendered 1 step(s).\n",
+      "approvedInput": "Explicit approval test fixture; not a real customer authorization"
+    }
+  ],
+  "staleApprovalRejected": true,
+  "cloudModelCalls": 0,
+  "newPaidUsageUsd": 0,
+  "published": false
+}

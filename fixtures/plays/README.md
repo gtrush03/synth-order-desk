@@ -1,0 +1,3 @@
+# Play fixtures
+
+Synthetic inputs for `judge/replay-plays.sh`. `review-input*.json` feed the `order-review` Play (company data plus standing instructions). `approved-140.json` is a conversation state whose 140-shirt split proposal ($1,630) carries an explicit approval, for the `work-packet` Play. `stale-approval.json` carries an approval for 150 shirts against a 140-shirt proposal; the Play must refuse it. Expected totals at an $1,800 budget: 100 shirts $1,150; 140 shirts $1,630; 150 shirts $1,750 (split). With the rule 'Never split shipments.' no option is feasible at $1,800. None of this is a real customer authorization.

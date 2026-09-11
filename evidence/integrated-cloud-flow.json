@@ -1,0 +1,1374 @@
+{
+  "startedAt": "2026-09-11T19:59:56.809Z",
+  "finishedAt": "2026-09-11T20:00:31.087Z",
+  "passed": true,
+  "workflow": "Real served conversation: Hotdata → Hydra constraints → Rote review → RocketRide returned proposal → exact approval → Rote work packet → Cognee save",
+  "stages": [
+    {
+      "label": "review150",
+      "at": "2026-09-11T19:59:56.917Z",
+      "finishedAt": "2026-09-11T20:00:17.894Z",
+      "request": "Please review 150 black T-shirts for September 18, within a budget of $1,800.",
+      "result": {
+        "state": {
+          "id": "edf096ac-9fdf-4370-9a3c-8f302a7a8793",
+          "revision": 1,
+          "quantity": 150,
+          "budgetCents": 180000,
+          "rehearsal": {
+            "proposal": {
+              "quantity": 150,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 165000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 195000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 175000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 175000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "approved": null,
+            "memory": []
+          },
+          "notes": [
+            "Owner approval required.",
+            "never split shipments",
+            "allow split shipments after I approve the exact quote"
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "text": "Please review 150 black T-shirts for September 18, within a budget of $1,800.",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "role": "assistant",
+              "text": "For 150 shirts, split shipment fits the September 18 deadline at $1,750.00, leaving $50.00 in the budget. Standard arrives too late, and express costs $1,950.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+              "at": "2026-09-11T20:00:17.889Z"
+            }
+          ],
+          "events": [
+            {
+              "id": "cognee-recall",
+              "label": "Retrieved company instructions from Cognee",
+              "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; document ad4c9da1-9c47-4acc-baad-aaa9a3df3735; revision 4. The local working cache already has this revision. Raw dataset retrieval; no graph-completion model call.",
+              "at": "2026-09-11T19:59:56.913Z"
+            },
+            {
+              "id": "company-memory",
+              "label": "Opened the company workspace",
+              "detail": "3 saved instructions and 1 previous approved proposals. Company data a49174ced4c2.",
+              "at": "2026-09-11T19:59:56.913Z"
+            },
+            {
+              "id": "company-data",
+              "label": "Read the company data · Hotdata",
+              "detail": "Source a49174ced4c2; 3 Hotdata databases; 531 ms SQL overlap. Receipt 2a7622eb-0159-4d71-9197-a7bb2940295f.",
+              "at": "2026-09-11T20:00:01.492Z"
+            },
+            {
+              "id": "local-options",
+              "label": "Checked the sample order",
+              "detail": "150 shirts; $1,800.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+              "at": "2026-09-11T20:00:01.493Z"
+            },
+            {
+              "id": "hydra-constraints",
+              "label": "Queried the order constraints in HydraDB",
+              "detail": "Order node 567338160840605859; 2 returned constraints, used by the review Play; 23 ms.",
+              "at": "2026-09-11T20:00:02.141Z"
+            },
+            {
+              "id": "rote-review",
+              "label": "Replayed the captured order-review procedure",
+              "detail": "Rote 0.82.0; run_20260911_200001.848_8; 393 ms; no exploratory model wake.",
+              "at": "2026-09-11T20:00:02.141Z"
+            },
+            {
+              "id": "rocketride-review",
+              "label": "Verified the proposal in RocketRide Cloud",
+              "detail": "RocketRide staging tool_python sandbox; task 07b0c8f2; 15743 ms; task terminated true. Credit balance delta 0.5 grant units; no model call. The returned cloud proposal is required for this approval. Receipt e3f80ed9-7f01-466c-8c69-24fc01495dee.",
+              "at": "2026-09-11T20:00:17.888Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “review”; 20970 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:17.889Z"
+            }
+          ],
+          "artifacts": [
+            {
+              "id": "2a7622eb-0159-4d71-9197-a7bb2940295f",
+              "name": "Data-source receipt",
+              "url": "/api/conversation/receipt/2a7622eb-0159-4d71-9197-a7bb2940295f"
+            },
+            {
+              "id": "e3f80ed9-7f01-466c-8c69-24fc01495dee",
+              "name": "RocketRide cloud receipt",
+              "url": "/api/conversation/receipt/e3f80ed9-7f01-466c-8c69-24fc01495dee"
+            }
+          ],
+          "companyName": "TRU Merch Studio",
+          "source": "Hackathon demonstration dataset; replace with your own company price and stock export.",
+          "dataRevision": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331",
+          "cloudReview": {
+            "fingerprint": "a0036ddb9f4e2861d5044c9526c8b1cb2951d656ba91c085e2aeb32776ca1ebb",
+            "receiptId": "e3f80ed9-7f01-466c-8c69-24fc01495dee"
+          },
+          "approvalRevision": null
+        },
+        "reply": "For 150 shirts, split shipment fits the September 18 deadline at $1,750.00, leaving $50.00 in the budget. Standard arrives too late, and express costs $1,950.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+        "engine": "Apple on-device model",
+        "cloudModelCalls": 0,
+        "paidServiceCalls": 0
+      }
+    },
+    {
+      "label": "amend140",
+      "at": "2026-09-11T20:00:17.895Z",
+      "finishedAt": "2026-09-11T20:00:29.631Z",
+      "request": "Actually, make it 140 shirts. Keep the same budget.",
+      "result": {
+        "state": {
+          "id": "edf096ac-9fdf-4370-9a3c-8f302a7a8793",
+          "revision": 2,
+          "quantity": 140,
+          "budgetCents": 180000,
+          "rehearsal": {
+            "proposal": {
+              "quantity": 140,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 155000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 185000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 163000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 163000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "approved": null,
+            "memory": []
+          },
+          "notes": [
+            "Owner approval required.",
+            "never split shipments",
+            "allow split shipments after I approve the exact quote"
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "text": "Please review 150 black T-shirts for September 18, within a budget of $1,800.",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "role": "assistant",
+              "text": "For 150 shirts, split shipment fits the September 18 deadline at $1,750.00, leaving $50.00 in the budget. Standard arrives too late, and express costs $1,950.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "role": "user",
+              "text": "Actually, make it 140 shirts. Keep the same budget.",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "role": "assistant",
+              "text": "For 140 shirts, split shipment fits the September 18 deadline at $1,630.00, leaving $170.00 in the budget. Standard arrives too late, and express costs $1,850.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+              "at": "2026-09-11T20:00:29.628Z"
+            }
+          ],
+          "events": [
+            {
+              "id": "cognee-recall",
+              "label": "Retrieved company instructions from Cognee",
+              "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; document ad4c9da1-9c47-4acc-baad-aaa9a3df3735; revision 4. The local working cache already has this revision. Raw dataset retrieval; no graph-completion model call.",
+              "at": "2026-09-11T19:59:56.913Z"
+            },
+            {
+              "id": "company-memory",
+              "label": "Opened the company workspace",
+              "detail": "3 saved instructions and 1 previous approved proposals. Company data a49174ced4c2.",
+              "at": "2026-09-11T19:59:56.913Z"
+            },
+            {
+              "id": "company-data",
+              "label": "Read the company data · Hotdata",
+              "detail": "Source a49174ced4c2; 3 Hotdata databases; 531 ms SQL overlap. Receipt 2a7622eb-0159-4d71-9197-a7bb2940295f.",
+              "at": "2026-09-11T20:00:01.492Z"
+            },
+            {
+              "id": "local-options",
+              "label": "Checked the sample order",
+              "detail": "150 shirts; $1,800.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+              "at": "2026-09-11T20:00:01.493Z"
+            },
+            {
+              "id": "hydra-constraints",
+              "label": "Queried the order constraints in HydraDB",
+              "detail": "Order node 567338160840605859; 2 returned constraints, used by the review Play; 23 ms.",
+              "at": "2026-09-11T20:00:02.141Z"
+            },
+            {
+              "id": "rote-review",
+              "label": "Replayed the captured order-review procedure",
+              "detail": "Rote 0.82.0; run_20260911_200001.848_8; 393 ms; no exploratory model wake.",
+              "at": "2026-09-11T20:00:02.141Z"
+            },
+            {
+              "id": "rocketride-review",
+              "label": "Verified the proposal in RocketRide Cloud",
+              "detail": "RocketRide staging tool_python sandbox; task 07b0c8f2; 15743 ms; task terminated true. Credit balance delta 0.5 grant units; no model call. The returned cloud proposal is required for this approval. Receipt e3f80ed9-7f01-466c-8c69-24fc01495dee.",
+              "at": "2026-09-11T20:00:17.888Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “review”; 20970 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "id": "company-data",
+              "label": "Read the company data · verified Hotdata snapshot",
+              "detail": "Source a49174ced4c2; 0 Hotdata databases; 0 ms SQL overlap. Reused verified source 2a7622eb-0159-4d71-9197-a7bb2940295f from 2026-09-11T20:00:01.485Z; no fresh Hotdata call. Receipt be5a2f90-3007-4b92-8b56-3a734877d464.",
+              "at": "2026-09-11T20:00:18.883Z"
+            },
+            {
+              "id": "local-options",
+              "label": "Checked the sample order",
+              "detail": "140 shirts; $1,800.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+              "at": "2026-09-11T20:00:18.883Z"
+            },
+            {
+              "id": "hydra-constraints",
+              "label": "Queried the order constraints in HydraDB",
+              "detail": "Order node 848368661196753199; 2 returned constraints, used by the review Play; 21 ms.",
+              "at": "2026-09-11T20:00:19.230Z"
+            },
+            {
+              "id": "rote-review",
+              "label": "Replayed the captured order-review procedure",
+              "detail": "Rote 0.82.0; run_20260911_200019.137_9; 116 ms; no exploratory model wake.",
+              "at": "2026-09-11T20:00:19.230Z"
+            },
+            {
+              "id": "rocketride-review",
+              "label": "Verified the proposal in RocketRide Cloud",
+              "detail": "RocketRide staging tool_python sandbox; task 07b0c8f2; 10395 ms; task terminated true. Credit balance delta 0.3 grant units; no model call. The returned cloud proposal is required for this approval. Receipt 17b30f26-4c3a-4b7a-bd4b-2630377f0b14.",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “review”; 11729 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:29.628Z"
+            }
+          ],
+          "artifacts": [
+            {
+              "id": "2a7622eb-0159-4d71-9197-a7bb2940295f",
+              "name": "Data-source receipt",
+              "url": "/api/conversation/receipt/2a7622eb-0159-4d71-9197-a7bb2940295f"
+            },
+            {
+              "id": "e3f80ed9-7f01-466c-8c69-24fc01495dee",
+              "name": "RocketRide cloud receipt",
+              "url": "/api/conversation/receipt/e3f80ed9-7f01-466c-8c69-24fc01495dee"
+            },
+            {
+              "id": "be5a2f90-3007-4b92-8b56-3a734877d464",
+              "name": "Data-source receipt",
+              "url": "/api/conversation/receipt/be5a2f90-3007-4b92-8b56-3a734877d464"
+            },
+            {
+              "id": "17b30f26-4c3a-4b7a-bd4b-2630377f0b14",
+              "name": "RocketRide cloud receipt",
+              "url": "/api/conversation/receipt/17b30f26-4c3a-4b7a-bd4b-2630377f0b14"
+            }
+          ],
+          "companyName": "TRU Merch Studio",
+          "source": "Hackathon demonstration dataset; replace with your own company price and stock export.",
+          "dataRevision": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331",
+          "cloudReview": {
+            "fingerprint": "16bb1134a3c747237a8c0fe9a8e8f6421825693a74b687be75feae873ed5385e",
+            "receiptId": "17b30f26-4c3a-4b7a-bd4b-2630377f0b14"
+          },
+          "approvalRevision": null
+        },
+        "reply": "For 140 shirts, split shipment fits the September 18 deadline at $1,630.00, leaving $170.00 in the budget. Standard arrives too late, and express costs $1,850.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+        "engine": "Apple on-device model",
+        "cloudModelCalls": 0,
+        "paidServiceCalls": 0
+      }
+    },
+    {
+      "label": "approve140",
+      "at": "2026-09-11T20:00:29.631Z",
+      "finishedAt": "2026-09-11T20:00:30.536Z",
+      "request": "Yes, I approve this exact proposal.",
+      "result": {
+        "state": {
+          "id": "edf096ac-9fdf-4370-9a3c-8f302a7a8793",
+          "revision": 3,
+          "quantity": 140,
+          "budgetCents": 180000,
+          "rehearsal": {
+            "proposal": {
+              "quantity": 140,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 155000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 185000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 163000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 163000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "approved": {
+              "quantity": 140,
+              "totalCents": 163000,
+              "option": "Split shipment"
+            },
+            "memory": [
+              {
+                "quantity": 140,
+                "totalCents": 163000,
+                "option": "Split shipment"
+              }
+            ]
+          },
+          "notes": [
+            "Owner approval required.",
+            "never split shipments",
+            "allow split shipments after I approve the exact quote"
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "text": "Please review 150 black T-shirts for September 18, within a budget of $1,800.",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "role": "assistant",
+              "text": "For 150 shirts, split shipment fits the September 18 deadline at $1,750.00, leaving $50.00 in the budget. Standard arrives too late, and express costs $1,950.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "role": "user",
+              "text": "Actually, make it 140 shirts. Keep the same budget.",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "role": "assistant",
+              "text": "For 140 shirts, split shipment fits the September 18 deadline at $1,630.00, leaving $170.00 in the budget. Standard arrives too late, and express costs $1,850.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "role": "user",
+              "text": "Yes, I approve this exact proposal.",
+              "at": "2026-09-11T20:00:30.380Z"
+            },
+            {
+              "role": "assistant",
+              "text": "I've recorded your approval for 140 shirts at $1,630.00. Shall I write the customer reply?",
+              "at": "2026-09-11T20:00:30.380Z"
+            }
+          ],
+          "events": [
+            {
+              "id": "cognee-recall",
+              "label": "Retrieved company instructions from Cognee",
+              "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; document ad4c9da1-9c47-4acc-baad-aaa9a3df3735; revision 4. The local working cache already has this revision. Raw dataset retrieval; no graph-completion model call.",
+              "at": "2026-09-11T19:59:56.913Z"
+            },
+            {
+              "id": "company-memory",
+              "label": "Opened the company workspace",
+              "detail": "3 saved instructions and 1 previous approved proposals. Company data a49174ced4c2.",
+              "at": "2026-09-11T19:59:56.913Z"
+            },
+            {
+              "id": "company-data",
+              "label": "Read the company data · Hotdata",
+              "detail": "Source a49174ced4c2; 3 Hotdata databases; 531 ms SQL overlap. Receipt 2a7622eb-0159-4d71-9197-a7bb2940295f.",
+              "at": "2026-09-11T20:00:01.492Z"
+            },
+            {
+              "id": "local-options",
+              "label": "Checked the sample order",
+              "detail": "150 shirts; $1,800.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+              "at": "2026-09-11T20:00:01.493Z"
+            },
+            {
+              "id": "hydra-constraints",
+              "label": "Queried the order constraints in HydraDB",
+              "detail": "Order node 567338160840605859; 2 returned constraints, used by the review Play; 23 ms.",
+              "at": "2026-09-11T20:00:02.141Z"
+            },
+            {
+              "id": "rote-review",
+              "label": "Replayed the captured order-review procedure",
+              "detail": "Rote 0.82.0; run_20260911_200001.848_8; 393 ms; no exploratory model wake.",
+              "at": "2026-09-11T20:00:02.141Z"
+            },
+            {
+              "id": "rocketride-review",
+              "label": "Verified the proposal in RocketRide Cloud",
+              "detail": "RocketRide staging tool_python sandbox; task 07b0c8f2; 15743 ms; task terminated true. Credit balance delta 0.5 grant units; no model call. The returned cloud proposal is required for this approval. Receipt e3f80ed9-7f01-466c-8c69-24fc01495dee.",
+              "at": "2026-09-11T20:00:17.888Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “review”; 20970 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "id": "company-data",
+              "label": "Read the company data · verified Hotdata snapshot",
+              "detail": "Source a49174ced4c2; 0 Hotdata databases; 0 ms SQL overlap. Reused verified source 2a7622eb-0159-4d71-9197-a7bb2940295f from 2026-09-11T20:00:01.485Z; no fresh Hotdata call. Receipt be5a2f90-3007-4b92-8b56-3a734877d464.",
+              "at": "2026-09-11T20:00:18.883Z"
+            },
+            {
+              "id": "local-options",
+              "label": "Checked the sample order",
+              "detail": "140 shirts; $1,800.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+              "at": "2026-09-11T20:00:18.883Z"
+            },
+            {
+              "id": "hydra-constraints",
+              "label": "Queried the order constraints in HydraDB",
+              "detail": "Order node 848368661196753199; 2 returned constraints, used by the review Play; 21 ms.",
+              "at": "2026-09-11T20:00:19.230Z"
+            },
+            {
+              "id": "rote-review",
+              "label": "Replayed the captured order-review procedure",
+              "detail": "Rote 0.82.0; run_20260911_200019.137_9; 116 ms; no exploratory model wake.",
+              "at": "2026-09-11T20:00:19.230Z"
+            },
+            {
+              "id": "rocketride-review",
+              "label": "Verified the proposal in RocketRide Cloud",
+              "detail": "RocketRide staging tool_python sandbox; task 07b0c8f2; 10395 ms; task terminated true. Credit balance delta 0.3 grant units; no model call. The returned cloud proposal is required for this approval. Receipt 17b30f26-4c3a-4b7a-bd4b-2630377f0b14.",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “review”; 11729 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "id": "local-approval",
+              "label": "Recorded your proposal approval",
+              "detail": "140 shirts at $1,630.00. Local demo record; no purchase or message.",
+              "at": "2026-09-11T20:00:30.380Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “approve”; 747 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:30.380Z"
+            },
+            {
+              "id": "cognee-save",
+              "label": "Saved the updated company memory in Cognee",
+              "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; revision 5. Raw document stored; no external model call.",
+              "at": "2026-09-11T20:00:30.535Z"
+            }
+          ],
+          "artifacts": [
+            {
+              "id": "2a7622eb-0159-4d71-9197-a7bb2940295f",
+              "name": "Data-source receipt",
+              "url": "/api/conversation/receipt/2a7622eb-0159-4d71-9197-a7bb2940295f"
+            },
+            {
+              "id": "e3f80ed9-7f01-466c-8c69-24fc01495dee",
+              "name": "RocketRide cloud receipt",
+              "url": "/api/conversation/receipt/e3f80ed9-7f01-466c-8c69-24fc01495dee"
+            },
+            {
+              "id": "be5a2f90-3007-4b92-8b56-3a734877d464",
+              "name": "Data-source receipt",
+              "url": "/api/conversation/receipt/be5a2f90-3007-4b92-8b56-3a734877d464"
+            },
+            {
+              "id": "17b30f26-4c3a-4b7a-bd4b-2630377f0b14",
+              "name": "RocketRide cloud receipt",
+              "url": "/api/conversation/receipt/17b30f26-4c3a-4b7a-bd4b-2630377f0b14"
+            }
+          ],
+          "companyName": "TRU Merch Studio",
+          "source": "Hackathon demonstration dataset; replace with your own company price and stock export.",
+          "dataRevision": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331",
+          "cloudReview": {
+            "fingerprint": "16bb1134a3c747237a8c0fe9a8e8f6421825693a74b687be75feae873ed5385e",
+            "receiptId": "17b30f26-4c3a-4b7a-bd4b-2630377f0b14"
+          },
+          "approvalRevision": 3
+        },
+        "reply": "I've recorded your approval for 140 shirts at $1,630.00. Shall I write the customer reply?",
+        "engine": "Apple on-device model",
+        "cloudModelCalls": 0,
+        "paidServiceCalls": 0
+      }
+    },
+    {
+      "label": "packet140",
+      "at": "2026-09-11T20:00:30.536Z",
+      "finishedAt": "2026-09-11T20:00:31.078Z",
+      "request": "Write the approved customer reply and work packet.",
+      "result": {
+        "state": {
+          "id": "edf096ac-9fdf-4370-9a3c-8f302a7a8793",
+          "revision": 4,
+          "quantity": 140,
+          "budgetCents": 180000,
+          "rehearsal": {
+            "proposal": {
+              "quantity": 140,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 155000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 185000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 163000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 163000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "approved": {
+              "quantity": 140,
+              "totalCents": 163000,
+              "option": "Split shipment"
+            },
+            "memory": [
+              {
+                "quantity": 140,
+                "totalCents": 163000,
+                "option": "Split shipment"
+              }
+            ]
+          },
+          "notes": [
+            "Owner approval required.",
+            "never split shipments",
+            "allow split shipments after I approve the exact quote"
+          ],
+          "messages": [
+            {
+              "role": "user",
+              "text": "Please review 150 black T-shirts for September 18, within a budget of $1,800.",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "role": "assistant",
+              "text": "For 150 shirts, split shipment fits the September 18 deadline at $1,750.00, leaving $50.00 in the budget. Standard arrives too late, and express costs $1,950.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "role": "user",
+              "text": "Actually, make it 140 shirts. Keep the same budget.",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "role": "assistant",
+              "text": "For 140 shirts, split shipment fits the September 18 deadline at $1,630.00, leaving $170.00 in the budget. Standard arrives too late, and express costs $1,850.00. Would you like to approve this proposal? Your company instruction is: allow split shipments after I approve the exact quote",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "role": "user",
+              "text": "Yes, I approve this exact proposal.",
+              "at": "2026-09-11T20:00:30.380Z"
+            },
+            {
+              "role": "assistant",
+              "text": "I've recorded your approval for 140 shirts at $1,630.00. Shall I write the customer reply?",
+              "at": "2026-09-11T20:00:30.380Z"
+            },
+            {
+              "role": "user",
+              "text": "Write the approved customer reply and work packet.",
+              "at": "2026-09-11T20:00:31.076Z"
+            },
+            {
+              "role": "assistant",
+              "text": "I've prepared the customer reply for 140 shirts at $1,630.00. It's saved in this demo's workspace, ready for you to read.",
+              "at": "2026-09-11T20:00:31.076Z"
+            }
+          ],
+          "events": [
+            {
+              "id": "cognee-recall",
+              "label": "Retrieved company instructions from Cognee",
+              "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; document ad4c9da1-9c47-4acc-baad-aaa9a3df3735; revision 4. The local working cache already has this revision. Raw dataset retrieval; no graph-completion model call.",
+              "at": "2026-09-11T19:59:56.913Z"
+            },
+            {
+              "id": "company-memory",
+              "label": "Opened the company workspace",
+              "detail": "3 saved instructions and 1 previous approved proposals. Company data a49174ced4c2.",
+              "at": "2026-09-11T19:59:56.913Z"
+            },
+            {
+              "id": "company-data",
+              "label": "Read the company data · Hotdata",
+              "detail": "Source a49174ced4c2; 3 Hotdata databases; 531 ms SQL overlap. Receipt 2a7622eb-0159-4d71-9197-a7bb2940295f.",
+              "at": "2026-09-11T20:00:01.492Z"
+            },
+            {
+              "id": "local-options",
+              "label": "Checked the sample order",
+              "detail": "150 shirts; $1,800.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+              "at": "2026-09-11T20:00:01.493Z"
+            },
+            {
+              "id": "hydra-constraints",
+              "label": "Queried the order constraints in HydraDB",
+              "detail": "Order node 567338160840605859; 2 returned constraints, used by the review Play; 23 ms.",
+              "at": "2026-09-11T20:00:02.141Z"
+            },
+            {
+              "id": "rote-review",
+              "label": "Replayed the captured order-review procedure",
+              "detail": "Rote 0.82.0; run_20260911_200001.848_8; 393 ms; no exploratory model wake.",
+              "at": "2026-09-11T20:00:02.141Z"
+            },
+            {
+              "id": "rocketride-review",
+              "label": "Verified the proposal in RocketRide Cloud",
+              "detail": "RocketRide staging tool_python sandbox; task 07b0c8f2; 15743 ms; task terminated true. Credit balance delta 0.5 grant units; no model call. The returned cloud proposal is required for this approval. Receipt e3f80ed9-7f01-466c-8c69-24fc01495dee.",
+              "at": "2026-09-11T20:00:17.888Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “review”; 20970 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:17.889Z"
+            },
+            {
+              "id": "company-data",
+              "label": "Read the company data · verified Hotdata snapshot",
+              "detail": "Source a49174ced4c2; 0 Hotdata databases; 0 ms SQL overlap. Reused verified source 2a7622eb-0159-4d71-9197-a7bb2940295f from 2026-09-11T20:00:01.485Z; no fresh Hotdata call. Receipt be5a2f90-3007-4b92-8b56-3a734877d464.",
+              "at": "2026-09-11T20:00:18.883Z"
+            },
+            {
+              "id": "local-options",
+              "label": "Checked the sample order",
+              "detail": "140 shirts; $1,800.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+              "at": "2026-09-11T20:00:18.883Z"
+            },
+            {
+              "id": "hydra-constraints",
+              "label": "Queried the order constraints in HydraDB",
+              "detail": "Order node 848368661196753199; 2 returned constraints, used by the review Play; 21 ms.",
+              "at": "2026-09-11T20:00:19.230Z"
+            },
+            {
+              "id": "rote-review",
+              "label": "Replayed the captured order-review procedure",
+              "detail": "Rote 0.82.0; run_20260911_200019.137_9; 116 ms; no exploratory model wake.",
+              "at": "2026-09-11T20:00:19.230Z"
+            },
+            {
+              "id": "rocketride-review",
+              "label": "Verified the proposal in RocketRide Cloud",
+              "detail": "RocketRide staging tool_python sandbox; task 07b0c8f2; 10395 ms; task terminated true. Credit balance delta 0.3 grant units; no model call. The returned cloud proposal is required for this approval. Receipt 17b30f26-4c3a-4b7a-bd4b-2630377f0b14.",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “review”; 11729 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:29.628Z"
+            },
+            {
+              "id": "local-approval",
+              "label": "Recorded your proposal approval",
+              "detail": "140 shirts at $1,630.00. Local demo record; no purchase or message.",
+              "at": "2026-09-11T20:00:30.380Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “approve”; 747 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:30.380Z"
+            },
+            {
+              "id": "cognee-save",
+              "label": "Saved the updated company memory in Cognee",
+              "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; revision 5. Raw document stored; no external model call.",
+              "at": "2026-09-11T20:00:30.535Z"
+            },
+            {
+              "id": "local-draft",
+              "label": "Created a customer-reply draft",
+              "detail": "Local Markdown artifact. Nothing sent.",
+              "at": "2026-09-11T20:00:30.955Z"
+            },
+            {
+              "id": "rote-packet",
+              "label": "Replayed the approved-work-packet Play",
+              "detail": "Rote 0.82.0; run_20260911_200030.980_5; 117 ms. Draft customer reply and next work saved; nothing sent.",
+              "at": "2026-09-11T20:00:31.074Z"
+            },
+            {
+              "id": "local-language-model",
+              "label": "Understood with the on-device model",
+              "detail": "Apple FoundationModels interpreted “draft”; 537 ms for this turn. No cloud model request.",
+              "at": "2026-09-11T20:00:31.076Z"
+            }
+          ],
+          "artifacts": [
+            {
+              "id": "2a7622eb-0159-4d71-9197-a7bb2940295f",
+              "name": "Data-source receipt",
+              "url": "/api/conversation/receipt/2a7622eb-0159-4d71-9197-a7bb2940295f"
+            },
+            {
+              "id": "e3f80ed9-7f01-466c-8c69-24fc01495dee",
+              "name": "RocketRide cloud receipt",
+              "url": "/api/conversation/receipt/e3f80ed9-7f01-466c-8c69-24fc01495dee"
+            },
+            {
+              "id": "be5a2f90-3007-4b92-8b56-3a734877d464",
+              "name": "Data-source receipt",
+              "url": "/api/conversation/receipt/be5a2f90-3007-4b92-8b56-3a734877d464"
+            },
+            {
+              "id": "17b30f26-4c3a-4b7a-bd4b-2630377f0b14",
+              "name": "RocketRide cloud receipt",
+              "url": "/api/conversation/receipt/17b30f26-4c3a-4b7a-bd4b-2630377f0b14"
+            },
+            {
+              "id": "8693408e-0445-48aa-ab27-59c4da04bf62",
+              "name": "Approved work packet · 140 shirts",
+              "url": "/api/conversation/artifact/8693408e-0445-48aa-ab27-59c4da04bf62",
+              "approvalRevision": 3,
+              "approval": {
+                "quantity": 140,
+                "totalCents": 163000,
+                "option": "Split shipment"
+              }
+            }
+          ],
+          "companyName": "TRU Merch Studio",
+          "source": "Hackathon demonstration dataset; replace with your own company price and stock export.",
+          "dataRevision": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331",
+          "cloudReview": {
+            "fingerprint": "16bb1134a3c747237a8c0fe9a8e8f6421825693a74b687be75feae873ed5385e",
+            "receiptId": "17b30f26-4c3a-4b7a-bd4b-2630377f0b14"
+          },
+          "approvalRevision": 3
+        },
+        "reply": "I've prepared the customer reply for 140 shirts at $1,630.00. It's saved in this demo's workspace, ready for you to read.",
+        "engine": "Apple on-device model",
+        "cloudModelCalls": 0,
+        "paidServiceCalls": 0
+      }
+    }
+  ],
+  "packet": {
+    "id": "8693408e-0445-48aa-ab27-59c4da04bf62",
+    "name": "Approved work packet · 140 shirts",
+    "url": "/api/conversation/artifact/8693408e-0445-48aa-ab27-59c4da04bf62",
+    "approvalRevision": 3,
+    "approval": {
+      "quantity": 140,
+      "totalCents": 163000,
+      "option": "Split shipment"
+    },
+    "text": "# Approved order work packet\n\nCompany: TRU Merch Studio\nConversation: edf096ac-9fdf-4370-9a3c-8f302a7a8793\nProposal revision: 3\nSource fingerprint: a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331\n\n## Approved proposal\n\n140 black T-shirts · Split shipment · $1,630.00 · arrival 2026-09-18\n\n## Customer reply — unsent\n\nHello,\n\nWe can provide 140 black T-shirts using split shipment, for a proposed total of $1,630.00, arriving 2026-09-18. Please confirm the sizes, delivery address and artwork before we finalize the order.\n\nThank you,\nTRU Merch Studio\n\n## Work still requiring human input\n\n- Confirm sizes, address and artwork.\n- Confirm supplier availability against the real company system.\n- Send the reviewed reply through the company's authorized channel.\n\nThis packet records proposal approval only. No customer message, payment or supplier order was made. Demonstration prices and stock remain demonstration data.\n"
+  },
+  "receipts": [
+    {
+      "id": "2a7622eb-0159-4d71-9197-a7bb2940295f",
+      "engine": "Hotdata",
+      "sourceSha256": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331",
+      "startedAt": "2026-09-11T19:59:57.883Z",
+      "finishedAt": "2026-09-11T20:00:01.485Z",
+      "workers": [
+        {
+          "role": "policy",
+          "databaseId": "dbidn2ajka6ltyxuztqkh931rq53e2",
+          "catalog": "sd_2a7622eb01594d7191_policy",
+          "tables": [
+            "rules"
+          ],
+          "query": "SELECT * FROM sd_2a7622eb01594d7191_policy.public.rules",
+          "startedAt": "2026-09-11T20:00:00.436Z",
+          "finishedAt": "2026-09-11T20:00:00.967Z",
+          "rows": 1,
+          "destroyed": true,
+          "queryRunId": "qrun42haf61jh0kjwp5ageyq9dkjpu",
+          "resultRows": [
+            {
+              "deadline": "2026-09-18",
+              "notesJson": "[\"Owner approval required.\",\"never split shipments\",\"allow split shipments after I approve the exact quote\"]"
+            }
+          ]
+        },
+        {
+          "role": "inventory",
+          "databaseId": "dbid1xk63ur34szi3euemeisni4gbv",
+          "catalog": "sd_2a7622eb01594d7191_inventory",
+          "tables": [
+            "inventory"
+          ],
+          "query": "SELECT * FROM sd_2a7622eb01594d7191_inventory.public.inventory",
+          "startedAt": "2026-09-11T20:00:00.435Z",
+          "finishedAt": "2026-09-11T20:00:00.968Z",
+          "rows": 1,
+          "destroyed": true,
+          "queryRunId": "qrun7s7xwoimo8wv1td8sj8t1utzfv",
+          "resultRows": [
+            {
+              "available": 100,
+              "unitCents": 900,
+              "rushUnitCents": 1200
+            }
+          ]
+        },
+        {
+          "role": "shipping",
+          "databaseId": "dbidov02uyc832f8bcovwjuleifglg",
+          "catalog": "sd_2a7622eb01594d7191_shipping",
+          "tables": [
+            "rates"
+          ],
+          "query": "SELECT * FROM sd_2a7622eb01594d7191_shipping.public.rates",
+          "startedAt": "2026-09-11T20:00:00.435Z",
+          "finishedAt": "2026-09-11T20:00:00.967Z",
+          "rows": 3,
+          "destroyed": true,
+          "queryRunId": "qrun8g8mqkpinthg7s2qumii7qp2gc",
+          "resultRows": [
+            {
+              "id": "standard",
+              "name": "Standard",
+              "unitCents": 1000,
+              "shippingCents": 15000,
+              "arrival": "2026-09-21"
+            },
+            {
+              "id": "express",
+              "name": "Express",
+              "unitCents": 1000,
+              "shippingCents": 45000,
+              "arrival": "2026-09-18"
+            },
+            {
+              "id": "split",
+              "name": "Split shipment",
+              "unitCents": 0,
+              "shippingCents": 25000,
+              "arrival": "2026-09-18"
+            }
+          ]
+        }
+      ],
+      "queryOverlapMs": 531,
+      "paidCalls": 0,
+      "isolationProbe": {
+        "databaseId": "dbid1xk63ur34szi3euemeisni4gbv",
+        "foreignCatalog": "sd_2a7622eb01594d7191_shipping",
+        "denied": true,
+        "status": 400,
+        "detail": "table 'sd_2a7622eb01594d7191_shipping.public.rates' not found"
+      }
+    },
+    {
+      "id": "e3f80ed9-7f01-466c-8c69-24fc01495dee",
+      "engine": "RocketRide staging tool_python sandbox",
+      "host": "staging.rocketride.ai",
+      "projectId": "trusynth-order-review-cloud",
+      "source": "tools_1",
+      "node": "tool_python_1",
+      "startedAt": "2026-09-11T20:00:02.144Z",
+      "finishedAt": "2026-09-11T20:00:17.887Z",
+      "ms": 15743,
+      "pipelineValidated": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "taskTokenPrefix": "tk_07b",
+      "taskTokenSha256": "43b84fc526f2f2bd004742c6b55630e33b1c0456a0420d52424ae98b82637533",
+      "taskId": "07b0c8f2",
+      "taskName": "synth-order-review-cloud",
+      "terminated": true,
+      "task": {
+        "state": 3,
+        "completed": false,
+        "exitCode": 0,
+        "status": "Tools ready - system is ready to accept tool calls",
+        "startTime": 1789156804.5950744,
+        "endTime": 0,
+        "tokens": {
+          "cpu_utilization": 0.2,
+          "cpu_memory": 0,
+          "gpu_memory": 0,
+          "gpu_inference": 0,
+          "custom": {},
+          "total": 0.2
+        },
+        "metrics": {
+          "cpu_percent": 0.475,
+          "cpu_memory_mb": 191.41796875,
+          "gpu_memory_mb": 0,
+          "peak_cpu_percent": 19.825,
+          "peak_cpu_memory_mb": 201.01953125,
+          "peak_gpu_memory_mb": 0,
+          "avg_cpu_percent": 32.714430008734254,
+          "avg_cpu_memory_mb": 190.8756671293159,
+          "avg_gpu_memory_mb": 0
+        },
+        "errors": 0,
+        "warnings": 0
+      },
+      "credits": {
+        "unit": "RocketRide credit units (API label: tokens)",
+        "floor": 1000,
+        "availableBefore": 4819.9,
+        "availableAfter": 4819.4,
+        "consumedBefore": 180.1,
+        "consumedAfter": 180.6,
+        "unitsUsed": 0.5,
+        "attributedTransactions": 5,
+        "ledgerNote": "live balance verified before the task; 5 ledger row(s) attributed to task 07b0c8f2"
+      },
+      "cases": [
+        {
+          "quantity": 150,
+          "budgetCents": 180000,
+          "notesCount": 3,
+          "inputSha256": "37d57d03eca1e65b18a992136b35b0535f6beb303ce7e3c82cb0122602000971",
+          "ms": 147,
+          "agrees": true,
+          "differences": [],
+          "cloudChosen": "split",
+          "localChosen": "split",
+          "cloudOutput": {
+            "procedure": "order-review",
+            "version": "1.0.0",
+            "engine": "RocketRide tool_python sandbox",
+            "inputSha256": "37d57d03eca1e65b18a992136b35b0535f6beb303ce7e3c82cb0122602000971",
+            "proposal": {
+              "quantity": 150,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 165000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 195000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 175000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 175000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "approved": false,
+            "cloudModelCalls": 0
+          },
+          "localReference": {
+            "quantity": 150,
+            "budgetCents": 180000,
+            "options": [
+              {
+                "id": "standard",
+                "name": "Standard",
+                "totalCents": 165000,
+                "arrival": "2026-09-21",
+                "onTime": false,
+                "explanation": "150 units + shipping; company source demo-company",
+                "withinBudget": true
+              },
+              {
+                "id": "express",
+                "name": "Express",
+                "totalCents": 195000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "150 units + shipping; company source demo-company",
+                "withinBudget": false
+              },
+              {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 175000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            ],
+            "chosen": {
+              "id": "split",
+              "name": "Split shipment",
+              "totalCents": 175000,
+              "arrival": "2026-09-18",
+              "onTime": true,
+              "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+              "withinBudget": true
+            }
+          },
+          "attempts": [
+            {
+              "tool": "execute",
+              "argument": "code",
+              "ok": true,
+              "ms": 147
+            }
+          ]
+        }
+      ],
+      "agrees": true,
+      "cloudModelCalls": 0,
+      "externalModelKeys": 0,
+      "paidCalls": 0
+    },
+    {
+      "id": "be5a2f90-3007-4b92-8b56-3a734877d464",
+      "engine": "verified Hotdata snapshot",
+      "sourceSha256": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331",
+      "startedAt": "2026-09-11T20:00:18.877Z",
+      "finishedAt": "2026-09-11T20:00:18.877Z",
+      "workers": [],
+      "queryOverlapMs": 0,
+      "paidCalls": 0,
+      "reusedFrom": "2a7622eb-0159-4d71-9197-a7bb2940295f",
+      "sourceQueriedAt": "2026-09-11T20:00:01.485Z"
+    },
+    {
+      "id": "17b30f26-4c3a-4b7a-bd4b-2630377f0b14",
+      "engine": "RocketRide staging tool_python sandbox",
+      "host": "staging.rocketride.ai",
+      "projectId": "trusynth-order-review-cloud",
+      "source": "tools_1",
+      "node": "tool_python_1",
+      "startedAt": "2026-09-11T20:00:19.233Z",
+      "finishedAt": "2026-09-11T20:00:29.628Z",
+      "ms": 10395,
+      "pipelineValidated": true,
+      "validationErrors": 0,
+      "validationWarnings": 0,
+      "taskTokenPrefix": "tk_07b",
+      "taskTokenSha256": "43b84fc526f2f2bd004742c6b55630e33b1c0456a0420d52424ae98b82637533",
+      "taskId": "07b0c8f2",
+      "taskName": "synth-order-review-cloud",
+      "terminated": true,
+      "task": {
+        "state": 3,
+        "completed": false,
+        "exitCode": 0,
+        "status": "Tools ready - system is ready to accept tool calls",
+        "startTime": 1789156821.4478524,
+        "endTime": 0,
+        "tokens": {
+          "cpu_utilization": 0.1,
+          "cpu_memory": 0,
+          "gpu_memory": 0,
+          "gpu_inference": 0,
+          "custom": {},
+          "total": 0.1
+        },
+        "metrics": {
+          "cpu_percent": 6.6875,
+          "cpu_memory_mb": 190.67578125,
+          "gpu_memory_mb": 0,
+          "peak_cpu_percent": 29.425,
+          "peak_cpu_memory_mb": 191.33203125,
+          "peak_gpu_memory_mb": 0,
+          "avg_cpu_percent": 53.5,
+          "avg_cpu_memory_mb": 190.67578125,
+          "avg_gpu_memory_mb": 0
+        },
+        "errors": 0,
+        "warnings": 0
+      },
+      "credits": {
+        "unit": "RocketRide credit units (API label: tokens)",
+        "floor": 1000,
+        "availableBefore": 4819.4,
+        "availableAfter": 4819.1,
+        "consumedBefore": 180.6,
+        "consumedAfter": 180.9,
+        "unitsUsed": 0.3,
+        "attributedTransactions": 6,
+        "ledgerNote": "live balance verified before the task; 6 ledger row(s) attributed to task 07b0c8f2"
+      },
+      "cases": [
+        {
+          "quantity": 140,
+          "budgetCents": 180000,
+          "notesCount": 3,
+          "inputSha256": "54b5a32161b78fdc0604dce948e63b7795cc1d119d40a71a0a7431035ba4bac1",
+          "ms": 78,
+          "agrees": true,
+          "differences": [],
+          "cloudChosen": "split",
+          "localChosen": "split",
+          "cloudOutput": {
+            "procedure": "order-review",
+            "version": "1.0.0",
+            "engine": "RocketRide tool_python sandbox",
+            "inputSha256": "54b5a32161b78fdc0604dce948e63b7795cc1d119d40a71a0a7431035ba4bac1",
+            "proposal": {
+              "quantity": 140,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 155000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 185000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 163000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 163000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "approved": false,
+            "cloudModelCalls": 0
+          },
+          "localReference": {
+            "quantity": 140,
+            "budgetCents": 180000,
+            "options": [
+              {
+                "id": "standard",
+                "name": "Standard",
+                "totalCents": 155000,
+                "arrival": "2026-09-21",
+                "onTime": false,
+                "explanation": "140 units + shipping; company source demo-company",
+                "withinBudget": true
+              },
+              {
+                "id": "express",
+                "name": "Express",
+                "totalCents": 185000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "140 units + shipping; company source demo-company",
+                "withinBudget": false
+              },
+              {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 163000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            ],
+            "chosen": {
+              "id": "split",
+              "name": "Split shipment",
+              "totalCents": 163000,
+              "arrival": "2026-09-18",
+              "onTime": true,
+              "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+              "withinBudget": true
+            }
+          },
+          "attempts": [
+            {
+              "tool": "execute",
+              "argument": "code",
+              "ok": true,
+              "ms": 78
+            }
+          ]
+        }
+      ],
+      "agrees": true,
+      "cloudModelCalls": 0,
+      "externalModelKeys": 0,
+      "paidCalls": 0
+    }
+  ],
+  "limits": [
+    "Sample merchant data; no message, payment, order or shipment executed.",
+    "This is API-level full-flow verification. Final polished UI recording is separate."
+  ],
+  "hotdataFreshWaves": 1
+}

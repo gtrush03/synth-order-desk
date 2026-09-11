@@ -1,0 +1,96 @@
+{
+  "id": "c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f",
+  "engine": "Hotdata",
+  "sourceSha256": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331",
+  "startedAt": "2026-09-11T19:21:40.294Z",
+  "finishedAt": "2026-09-11T19:21:48.300Z",
+  "workers": [
+    {
+      "role": "inventory",
+      "databaseId": "dbid8hdbhlhyl6xfdzovn6rnydp8ne",
+      "catalog": "sd_c6cfcb5ef4f84cc6a8_inventory",
+      "tables": [
+        "inventory"
+      ],
+      "query": "SELECT * FROM sd_c6cfcb5ef4f84cc6a8_inventory.public.inventory",
+      "startedAt": "2026-09-11T19:21:44.647Z",
+      "finishedAt": "2026-09-11T19:21:46.268Z",
+      "rows": 1,
+      "destroyed": true,
+      "queryRunId": "qrun8mm4pxtrqungdy238qba6tm7qu",
+      "resultRows": [
+        {
+          "available": 100,
+          "unitCents": 900,
+          "rushUnitCents": 1200
+        }
+      ]
+    },
+    {
+      "role": "policy",
+      "databaseId": "dbid2d0alvf4tt16qfhi7a5pa9dm0z",
+      "catalog": "sd_c6cfcb5ef4f84cc6a8_policy",
+      "tables": [
+        "rules"
+      ],
+      "query": "SELECT * FROM sd_c6cfcb5ef4f84cc6a8_policy.public.rules",
+      "startedAt": "2026-09-11T19:21:44.648Z",
+      "finishedAt": "2026-09-11T19:21:46.268Z",
+      "rows": 1,
+      "destroyed": true,
+      "queryRunId": "qrunif6y3xf0hpx0bt1saw51czuwyh",
+      "resultRows": [
+        {
+          "deadline": "2026-09-18",
+          "notesJson": "[\"Owner approval required.\",\"never split shipments\"]"
+        }
+      ]
+    },
+    {
+      "role": "shipping",
+      "databaseId": "dbidh9u2townhf4pcz06fhl5k1wedq",
+      "catalog": "sd_c6cfcb5ef4f84cc6a8_shipping",
+      "tables": [
+        "rates"
+      ],
+      "query": "SELECT * FROM sd_c6cfcb5ef4f84cc6a8_shipping.public.rates",
+      "startedAt": "2026-09-11T19:21:44.648Z",
+      "finishedAt": "2026-09-11T19:21:46.267Z",
+      "rows": 3,
+      "destroyed": true,
+      "queryRunId": "qrunf196hiyqpo97jb00b6x8856q1e",
+      "resultRows": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "unitCents": 1000,
+          "shippingCents": 15000,
+          "arrival": "2026-09-21"
+        },
+        {
+          "id": "express",
+          "name": "Express",
+          "unitCents": 1000,
+          "shippingCents": 45000,
+          "arrival": "2026-09-18"
+        },
+        {
+          "id": "split",
+          "name": "Split shipment",
+          "unitCents": 0,
+          "shippingCents": 25000,
+          "arrival": "2026-09-18"
+        }
+      ]
+    }
+  ],
+  "queryOverlapMs": 1619,
+  "paidCalls": 0,
+  "isolationProbe": {
+    "databaseId": "dbid8hdbhlhyl6xfdzovn6rnydp8ne",
+    "foreignCatalog": "sd_c6cfcb5ef4f84cc6a8_shipping",
+    "denied": true,
+    "status": 400,
+    "detail": "table 'sd_c6cfcb5ef4f84cc6a8_shipping.public.rates' not found"
+  }
+}

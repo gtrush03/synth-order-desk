@@ -1,0 +1,24 @@
+$ snyk test --file=requirements.txt --command=.venv/bin/python --json-file-output=evidence/snyk/python-deps.json
+
+
+Testing <export>...
+
+Organization:      hello-UhCF5tfLsxa99UZVdrvcsT
+Package manager:   pip
+Target file:       requirements.txt
+Project name:      synth-order-desk
+Open source:       no
+Project path:      <export>
+Licenses:          enabled
+
+✔ Tested 15 dependencies for known issues, no vulnerable paths found.
+
+Tip: Detected multiple supported manifests (2), use --all-projects to scan all of them at once.
+
+Next steps:
+- Run `snyk monitor` to be notified about new related vulnerabilities.
+- Run `snyk test` as part of your CI/test.
+
+
+
+[exit 0]

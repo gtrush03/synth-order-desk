@@ -1,0 +1,13 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { validateCompany } from '../src/company-workspace.ts';
+import { sampleProposal } from '../src/rehearsal-model.ts';
+import { splitForbidden } from '../src/conversation-model.ts';
+const args=Object.fromEntries(process.argv.slice(2).map(x=>{const i=x.indexOf('=');return [x.slice(0,i),x.slice(i+1)];}));
+const input=JSON.parse(await readFile(args.input,'utf8'));
+const company=validateCompany(input.company);
+const proposal=sampleProposal(Number(args.quantity),Number(args.budgetCents),company);
+if(splitForbidden(input.notes??[]))proposal.chosen=proposal.options.filter(o=>o.id!=='split'&&o.onTime&&o.withinBudget).sort((a,b)=>a.totalCents-b.totalCents)[0]??null;
+const output={procedure:'order-review',version:'1.0.0',sourceSha256:createHash('sha256').update(JSON.stringify(input)).digest('hex'),proposal,approved:false,cloudModelCalls:0};
+await writeFile(args.output,JSON.stringify(output,null,2)+'\n',{mode:0o600});
+console.log(JSON.stringify({procedure:output.procedure,quantity:proposal.quantity,chosen:proposal.chosen,approved:false,cloudModelCalls:0}));

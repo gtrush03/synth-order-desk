@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080808"><meta name="color-scheme" content="dark"><title>Talk to your Synth · TRU</title><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/talk.css"></head>
+<body><a class="skip" href="#message">Skip to the message box</a>
+<div class="app">
+<header><a href="/today" class="brand"><img src="/wordmark.png" width="98" height="39" alt="TRU Synth"></a><div class="identity"><strong>Synth Order Desk</strong><span>Voice requests. Real work. Clear approval.</span></div><div class="header-actions"><span class="local"><i aria-hidden="true"></i><span class="local-long">Voice + connected tools</span><span class="local-short">Voice + tools</span></span><button id="new-chat" class="quiet" type="button">New conversation</button></div></header>
+<div class="stage">
+<div class="column">
+<main id="main">
+<div class="brief-line"><span class="brief-tag">Order DEMO-001</span><p id="brief-company">Company workspace</p></div>
+<section id="welcome" class="welcome"><h1>Tell Synth.<br>Get the work moving.</h1><p id="workspace-description">Plan the merch. Change your mind. Approve the handoff.</p><div class="outcome-flow" aria-label="How Synth works"><span>Tell it what you need</span><b aria-hidden="true">→</b><span>Review the plan</span><b aria-hidden="true">→</b><span>Put it to work</span></div><div id="workspace-starters" class="starters" aria-label="Starter requests"></div></section>
+<details id="workspace" class="workspace"><summary><span><strong id="workspace-title">Explore company data</strong><span id="workspace-product"></span></span><span id="workspace-kind">Data workspace</span></summary><p id="workspace-loading" role="status">Reading inventory, delivery rates and saved instructions…</p><button id="workspace-retry" class="quiet" type="button" hidden>Retry workspace data</button><div id="workspace-content" hidden><div class="workspace-grid"><section id="workspace-stock" aria-label="Inventory"></section><section id="workspace-delivery" aria-label="Delivery timeline"></section></div><section id="workspace-rules" class="workspace-rules" aria-label="Company constraints"></section><details class="source-details"><summary>Source and planning context</summary><dl id="workspace-context"></dl><p id="workspace-source"></p></details></div></details>
+<p id="opened" class="opened" hidden></p>
+<section id="thread" class="thread" aria-label="Conversation" role="log" aria-live="polite" aria-relevant="additions"></section>
+<section id="live" class="live" aria-label="Live sponsor activity" hidden><div class="live-head"><span class="live-dot" aria-hidden="true"></span><p id="live-status" role="status" aria-live="polite">Connecting…</p><button id="live-toggle" class="quiet" type="button" aria-expanded="false" aria-controls="live-steps">Steps</button></div><ol id="live-tiles" class="tiles" aria-label="Sponsors on this task"></ol><ol id="live-steps" class="live-steps" hidden></ol></section>
+<div id="working" class="working" role="status" hidden><span aria-hidden="true"></span><p id="working-label">Thinking through your request…</p></div>
+<div id="error" class="error" role="alert" tabindex="-1" hidden><p id="error-text"></p><button id="error-reload" class="quiet" type="button" hidden>Reload the conversation</button></div>
+<section id="artifacts" class="artifacts" aria-label="Saved work" hidden></section>
+</main>
+<section class="composer-area" aria-label="Talk or type"><div class="voice-line" data-voice="off"><button id="talk" class="talk-button" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0014 0v-2M12 19v3M8 22h8"/></svg><span id="talk-label">Start talking</span></button><select id="voice-mode" aria-label="Voice engine" hidden><option value="gpt">GPT Live · Willow</option><option value="local">On-device voice</option></select><audio id="live-audio" autoplay controls hidden></audio><canvas id="wave" width="160" height="32" aria-hidden="true"></canvas><span id="voice-status" role="status">Your microphone stays off until you start.</span><button id="mute" class="quiet" type="button" aria-pressed="false" aria-label="Turn spoken replies off">Voice on</button></div>
+<form id="chat-form"><label for="message" class="sr-only">Message your Synth</label><textarea id="message" rows="1" maxlength="2000" placeholder="Or tell me here…" required></textarea><button id="attach" class="attach" type="button" aria-label="Attach a voice note up to 30 seconds">＋</button><input id="voice-file" type="file" accept="audio/*" hidden><button id="send" type="submit" aria-label="Send message">↑</button></form>
+<div class="composer-footer"><span id="order-line" role="status">Start a conversation to see the order.</span><button id="show-work" class="quiet" type="button">Proof &amp; details <span aria-hidden="true">↗</span></button></div>
+</section>
+</div>
+<aside class="rail" aria-label="Order status and what ran">
+<section id="order" class="order" aria-label="Order status" data-kind="none"></section>
+<details class="activity" aria-labelledby="activity-title"><summary id="activity-title">Tools &amp; receipts</summary><ol id="activity-list" class="activity-list"></ol></details>
+</aside>
+</div>
+<footer><span>Connected tools · open any for proof</span><div id="sponsor-links"></div><button id="all-proof" class="quiet" type="button">Evidence <span aria-hidden="true">↗</span></button></footer>
+</div>
+<dialog id="proof" aria-labelledby="proof-title"><div class="dialog-inner"><div class="dialog-head"><h2 id="proof-title">What happened</h2><button id="close-proof" class="quiet" type="button" aria-label="Close evidence">Close ×</button></div><div id="proof-body"></div></div></dialog>
+<dialog id="packet" aria-labelledby="packet-title"><div class="dialog-inner"><div class="dialog-head"><div><h2 id="packet-title">Saved file</h2><p id="packet-status" class="packet-status"></p></div><button id="close-packet" class="quiet" type="button" aria-label="Close the saved file">Close ×</button></div><pre id="packet-text" class="packet-text" tabindex="0"></pre><p id="packet-error" class="error" role="alert" hidden></p><div class="packet-actions"><button id="packet-copy" type="button" class="action">Copy</button><button id="packet-download" type="button" class="action">Download</button><a id="packet-raw" href="#" target="_blank" rel="noreferrer" class="quiet">Raw file <span aria-hidden="true">↗</span></a></div></div></dialog>
+<script type="module" src="/talk.js"></script></body></html>

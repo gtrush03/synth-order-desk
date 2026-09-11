@@ -1,0 +1,646 @@
+$ bash judge/self-check.sh
+
+
+### bun install (pinned TypeScript, RocketRide, Tenki SDK and guest Playwright)
+bun install v1.3.10 (30e609e0)
+
++ @types/node@26.1.2
++ typescript@5.9.3
++ @tenkicloud/sandbox@1.0.6
++ playwright@1.56.0
++ rocketride@1.3.0
+
+48 packages installed [49.00ms]
+
+### event dependencies (pinned, isolated)
+bun install v1.3.10 (30e609e0)
+Resolving dependencies
+Resolved, downloaded and extracted [0]
+Saved lockfile
+
++ typescript@5.9.3
++ wrangler@4.96.0
+
+37 packages installed [3.58s]
+
+### python venv + neo4j driver (requirements.lock)
+Using CPython 3.13.12
+warning: The requested interpreter resolved to Python 3.13.12, which is incompatible with the project's Python requirement: `==3.12.*` (from `project.requires-python`)
+Creating virtual environment at: .venv
+Activate with: source .venv/bin/activate
+Resolved 16 packages in 30ms
+Installed 16 packages in 26ms
+ + aiohappyeyeballs==2.7.1
+ + aiohttp==3.14.3
+ + aiosignal==1.4.0
+ + attrs==26.1.0
+ + certifi==2026.7.22
+ + edge-tts==7.2.8
+ + frozenlist==1.8.0
+ + idna==3.19
+ + multidict==6.8.0
+ + neo4j==6.3.0
+ + pip==26.2.1
+ + propcache==0.5.2
+ + pytz==2026.3.post1
+ + tabulate==0.10.0
+ + typing-extensions==4.16.0
+ + yarl==1.24.5
+neo4j driver 6.3.0
+edge-tts import available; no speech request made
+
+### typescript check
+$ tsc --noEmit
+
+### build (Swift helper + bundles)
+$ bun run scripts/build.ts
+Bundled 5 modules in 3ms
+
+  talk.js  64.39 KB  (entry point)
+
+Bundled 27 modules in 3ms
+
+  server.js  134.29 KB  (entry point)
+
+Built: <export>/run
+
+### tests
+$ bun run scripts/test.ts
+Bundled 27 modules in 4ms
+
+  order-desk.test.js  210.98 KB  (entry point)
+
+Bundled 2 modules in 2ms
+
+  browser-actions.test.js  36.1 KB  (entry point)
+
+Bundled 4 modules in 1ms
+
+  work-ticket.test.js  22.27 KB  (entry point)
+
+Bundled 8 modules in 1ms
+
+  workspace-map.test.js  13.83 KB  (entry point)
+
+Bundled 2 modules in 1ms
+
+  gmail-draft.test.js  6.20 KB  (entry point)
+
+Bundled 7 modules in 2ms
+
+  tenki-browser.test.js  38.73 KB  (entry point)
+
+Bundled 3 modules in 2ms
+
+  gpt-live.test.js  43.85 KB  (entry point)
+
+Bundled 2 modules in 1ms
+
+  project-email.test.js  7.32 KB  (entry point)
+
+Bundled 2 modules in 1ms
+
+  printful-draft.test.js  12.39 KB  (entry point)
+
+TAP version 13
+# Subtest: the allowlist, loopback bridge and page-script guards cannot be widened by options
+ok 1 - the allowlist, loopback bridge and page-script guards cannot be widened by options
+  ---
+  duration_ms: 1.370084
+  type: 'test'
+  ...
+# Subtest: bridge address must be the local loopback DevTools endpoint and an unknown target is refused before any request
+ok 2 - bridge address must be the local loopback DevTools endpoint and an unknown target is refused before any request
+  ---
+  duration_ms: 1.011
+  type: 'test'
+  ...
+# Subtest: a read opens exactly one own tab, navigates only to the allowlisted URL, reads with the fixed script, screenshots, closes that tab and writes a token-free receipt
+ok 3 - a read opens exactly one own tab, navigates only to the allowlisted URL, reads with the fixed script, screenshots, closes that tab and writes a token-free receipt
+  ---
+  duration_ms: 23.587583
+  type: 'test'
+  ...
+# Subtest: a page that leaves the allowed site is blocked before any title, heading or text is read
+ok 4 - a page that leaves the allowed site is blocked before any title, heading or text is read
+  ---
+  duration_ms: 2.17825
+  type: 'test'
+  ...
+# Subtest: one total deadline bounds the bridge handshake, the session open and the tab cleanup, without unhandled rejections
+ok 5 - one total deadline bounds the bridge handshake, the session open and the tab cleanup, without unhandled rejections
+  ---
+  duration_ms: 153.297917
+  type: 'test'
+  ...
+# Subtest: navigation errors, unreadable pages, load timeouts and a failed tab close are honest error receipts that still release the tab
+ok 6 - navigation errors, unreadable pages, load timeouts and a failed tab close are honest error receipts that still release the tab
+  ---
+  duration_ms: 62.101417
+  type: 'test'
+  ...
+# Subtest: visible text is bounded and sanitized before it reaches a receipt
+ok 7 - visible text is bounded and sanitized before it reaches a receipt
+  ---
+  duration_ms: 0.324166
+  type: 'test'
+  ...
+# Subtest: the WebSocket session correlates replies by id, surfaces DevTools errors, dispatches events, times out and cleans up
+ok 8 - the WebSocket session correlates replies by id, surfaces DevTools errors, dispatches events, times out and cleans up
+  ---
+  duration_ms: 52.43675
+  type: 'test'
+  ...
+# Subtest: the inquiry draft is unsent, bounded, and built only from company facts and the read supplier page
+ok 9 - the inquiry draft is unsent, bounded, and built only from company facts and the read supplier page
+  ---
+  duration_ms: 13.780625
+  type: 'test'
+  ...
+# Subtest: Gmail creates an unsent recipient-free draft once and reuses its receipt
+ok 10 - Gmail creates an unsent recipient-free draft once and reuses its receipt
+  ---
+  duration_ms: 20.458291
+  type: 'test'
+  ...
+# Subtest: wrong sender and uncertain creation stop before another draft can be made
+ok 11 - wrong sender and uncertain creation stop before another draft can be made
+  ---
+  duration_ms: 14.568
+  type: 'test'
+  ...
+# Subtest: disabled, malformed allowance, expired credits, foreign gateway and invalid optional limit make zero requests
+ok 12 - disabled, malformed allowance, expired credits, foreign gateway and invalid optional limit make zero requests
+  ---
+  duration_ms: 33.647792
+  type: 'test'
+  ...
+# Subtest: reserves before create, fixes voice/model/client mode, exposes no token and arms 180 second server hangup
+ok 13 - reserves before create, fixes voice/model/client mode, exposes no token and arms 180 second server hangup
+  ---
+  duration_ms: 17.853541
+  type: 'test'
+  ...
+# Subtest: ambiguous creation remains reserved and never retries or leaks provider diagnostic
+ok 14 - ambiguous creation remains reserved and never retries or leaks provider diagnostic
+  ---
+  duration_ms: 3.077583
+  type: 'test'
+  ...
+# Subtest: budget refusal and simultaneous attempts cannot exceed reservation
+ok 15 - budget refusal and simultaneous attempts cannot exceed reservation
+  ---
+  duration_ms: 4.877333
+  type: 'test'
+  ...
+# Subtest: delegation calls only supplied conversation callback, reuses duplicate, rejects stale/prototype and no transcript
+ok 16 - delegation calls only supplied conversation callback, reuses duplicate, rejects stale/prototype and no transcript
+  ---
+  duration_ms: 11.849667
+  type: 'test'
+  ...
+# Subtest: closure requires matching final session event; usage snapshots are cumulative and provenance explicit
+ok 17 - closure requires matching final session event; usage snapshots are cumulative and provenance explicit
+  ---
+  duration_ms: 5.247791
+  type: 'test'
+  ...
+# Subtest: restart recovery hangs up known session, does not create a replacement
+ok 18 - restart recovery hangs up known session, does not create a replacement
+  ---
+  duration_ms: 4.06075
+  type: 'test'
+  ...
+# Subtest: speech append uses a conservative UTF8 bound including non-English output
+ok 19 - speech append uses a conservative UTF8 bound including non-English output
+  ---
+  duration_ms: 0.1805
+  type: 'test'
+  ...
+# Subtest: event bridge collects exact fragments, never treats transcript as a turn, suppresses duplicate and corrected late result
+ok 20 - event bridge collects exact fragments, never treats transcript as a turn, suppresses duplicate and corrected late result
+  ---
+  duration_ms: 0.415417
+  type: 'test'
+  ...
+# Subtest: bridge returns commentary using original delegation id, handles session.closed only after stopping
+ok 21 - bridge returns commentary using original delegation id, handles session.closed only after stopping
+  ---
+  duration_ms: 0.387375
+  type: 'test'
+  ...
+# Subtest: overlapping approval fragment is consumed only after its complete interval, never repeated
+ok 22 - overlapping approval fragment is consumed only after its complete interval, never repeated
+  ---
+  duration_ms: 3.890375
+  type: 'test'
+  ...
+# Subtest: deadline hangup proceeds while ledger lock is held; recovery retries a requested known hangup
+ok 23 - deadline hangup proceeds while ledger lock is held; recovery retries a requested known hangup
+  ---
+  duration_ms: 56.135334
+  type: 'test'
+  ...
+# Subtest: microphone refusal makes no session request and releases the peer
+ok 24 - microphone refusal makes no session request and releases the peer
+  ---
+  duration_ms: 0.305292
+  type: 'test'
+  ...
+# Subtest: funded-balance-only default removes180seconds/45c/3session limits and retains30second close reserve
+ok 25 - funded-balance-only default removes180seconds/45c/3session limits and retains30second close reserve
+  ---
+  duration_ms: 1.559041
+  type: 'test'
+  ...
+# Subtest: refill enabled or unverified excess funds refuse creation
+ok 26 - refill enabled or unverified excess funds refuse creation
+  ---
+  duration_ms: 1.278917
+  type: 'test'
+  ...
+# Subtest: ICE gathers before provider creation and sends final localDescription; pagehide closes and missing finalevent stays unconfirmed
+ok 27 - ICE gathers before provider creation and sends final localDescription; pagehide closes and missing finalevent stays unconfirmed
+  ---
+  duration_ms: 17.471042
+  type: 'test'
+  ...
+# Subtest: ICE timeout and abort reject before any billable request
+ok 28 - ICE timeout and abort reject before any billable request
+  ---
+  duration_ms: 2.605667
+  type: 'test'
+  ...
+# Subtest: delegation/commentary waits for matching session.started and deduplicates transcript events
+ok 29 - delegation/commentary waits for matching session.started and deduplicates transcript events
+  ---
+  duration_ms: 0.203292
+  type: 'test'
+  ...
+# Subtest: sample decision respects budget and deadline and refuses an unfulfillable approval
+ok 30 - sample decision respects budget and deadline and refuses an unfulfillable approval
+  ---
+  duration_ms: 1.666583
+  type: 'test'
+  ...
+# Subtest: changing a sample preserves prior context but cannot reuse its approval for a new quantity
+ok 31 - changing a sample preserves prior context but cannot reuse its approval for a new quantity
+  ---
+  duration_ms: 0.433458
+  type: 'test'
+  ...
+# Subtest: a cloud-verified proposal cannot approve a changed order, policy, price or result
+ok 32 - a cloud-verified proposal cannot approve a changed order, policy, price or result
+  ---
+  duration_ms: 19.459875
+  type: 'test'
+  ...
+# Subtest: conversation approval is explicit and amendments cannot inherit it
+ok 33 - conversation approval is explicit and amendments cannot inherit it
+  ---
+  duration_ms: 1.206625
+  type: 'test'
+  ...
+# Subtest: preparing or publishing a changed order cannot silently use the old approval
+ok 34 - preparing or publishing a changed order cannot silently use the old approval
+  ---
+  duration_ms: 0.663292
+  type: 'test'
+  ...
+# Subtest: a saved packet belongs to its exact approval, even when a later order has the same quantity
+ok 35 - a saved packet belongs to its exact approval, even when a later order has the same quantity
+  ---
+  duration_ms: 0.732
+  type: 'test'
+  ...
+# Subtest: company instruction survives a fresh session and changes the next decision
+ok 36 - company instruction survives a fresh session and changes the next decision
+  ---
+  duration_ms: 4.734833
+  type: 'test'
+  ...
+# Subtest: company data drives rates and strict Hotdata results reject partial facts
+ok 37 - company data drives rates and strict Hotdata results reject partial facts
+  ---
+  duration_ms: 0.379833
+  type: 'test'
+  ...
+# Subtest: another conversation changing policy or source invalidates both approval and draft eligibility
+ok 38 - another conversation changing policy or source invalidates both approval and draft eligibility
+  ---
+  duration_ms: 0.608
+  type: 'test'
+  ...
+# Subtest: the spoken explanation uses the actual company deadline
+ok 39 - the spoken explanation uses the actual company deadline
+  ---
+  duration_ms: 0.767666
+  type: 'test'
+  ...
+# Subtest: a failed Hotdata create is reconciled and only this run databases are deleted
+ok 40 - a failed Hotdata create is reconciled and only this run databases are deleted
+  ---
+  duration_ms: 3.809875
+  type: 'test'
+  ...
+# Subtest: repeating a prior instruction makes it current again after a contrary instruction
+ok 41 - repeating a prior instruction makes it current again after a contrary instruction
+  ---
+  duration_ms: 6.15
+  type: 'test'
+  ...
+# Subtest: newer retrieved Cognee memory restores an empty cache and cannot replace a later local revision
+ok 42 - newer retrieved Cognee memory restores an empty cache and cannot replace a later local revision
+  ---
+  duration_ms: 4.237459
+  type: 'test'
+  ...
+# Subtest: only a contradictory recognized shipment rule can make an instruction historical
+ok 43 - only a contradictory recognized shipment rule can make an instruction historical
+  ---
+  duration_ms: 0.212125
+  type: 'test'
+  ...
+# Subtest: live progress reflects actual pending work and an older run cannot overwrite a newer one
+ok 44 - live progress reflects actual pending work and an older run cannot overwrite a newer one
+  ---
+  duration_ms: 0.392125
+  type: 'test'
+  ...
+# Subtest: live progress failure never turns unfinished work into success or exposes provider errors
+ok 45 - live progress failure never turns unfinished work into success or exposes provider errors
+  ---
+  duration_ms: 0.106875
+  type: 'test'
+  ...
+# Subtest: external actions preserve every potential quantity and budget amendment for exact approval checks
+ok 46 - external actions preserve every potential quantity and budget amendment for exact approval checks
+  ---
+  duration_ms: 0.06825
+  type: 'test'
+  ...
+# Subtest: exported local server keeps its localhost, origin, CSP and static-file boundaries
+ok 47 - exported local server keeps its localhost, origin, CSP and static-file boundaries
+  ---
+  duration_ms: 28.161042
+  type: 'test'
+  ...
+# Subtest: Printful creates only one unsubmitted configured sample draft and returns no private data
+ok 48 - Printful creates only one unsubmitted configured sample draft and returns no private data
+  ---
+  duration_ms: 35.170792
+  type: 'test'
+  ...
+# Subtest: Ambiguous creation survives restart and cannot POST again or leak provider errors
+ok 49 - Ambiguous creation survives restart and cannot POST again or leak provider errors
+  ---
+  duration_ms: 3.398917
+  type: 'test'
+  ...
+# Subtest: Known creation resumes GET after failed readback and rejects non-draft status
+ok 50 - Known creation resumes GET after failed readback and rejects non-draft status
+  ---
+  duration_ms: 5.447209
+  type: 'test'
+  ...
+# Subtest: Concurrent calls cannot duplicate creation
+ok 51 - Concurrent calls cannot duplicate creation
+  ---
+  duration_ms: 19.052416
+  type: 'test'
+  ...
+# Subtest: Wrong provider item cannot produce a successful configured-draft receipt
+ok 52 - Wrong provider item cannot produce a successful configured-draft receipt
+  ---
+  duration_ms: 5.494125
+  type: 'test'
+  ...
+# Subtest: Email sends only to owner, verifies SENT, and reuses exact handoff
+ok 53 - Email sends only to owner, verifies SENT, and reuses exact handoff
+  ---
+  duration_ms: 18.567042
+  type: 'test'
+  ...
+# Subtest: An ambiguous send cannot be retried and a wrong account cannot send
+ok 54 - An ambiguous send cannot be retried and a wrong account cannot send
+  ---
+  duration_ms: 14.532041
+  type: 'test'
+  ...
+# Subtest: Known sent message retries readback without a duplicate email
+ok 55 - Known sent message retries readback without a duplicate email
+  ---
+  duration_ms: 9.058375
+  type: 'test'
+  ...
+# Subtest: Tenki absent/disabled makes no provider call; invalid enabled config fails closed
+ok 56 - Tenki absent/disabled makes no provider call; invalid enabled config fails closed
+  ---
+  duration_ms: 15.721959
+  type: 'test'
+  ...
+# Subtest: Tenki exact session, workspace, run, resources and expiry checked before execution
+ok 57 - Tenki exact session, workspace, run, resources and expiry checked before execution
+  ---
+  duration_ms: 27.766958
+  type: 'test'
+  ...
+# Subtest: Tenki read maps actual result and PNG; fourth additional read never executes
+ok 58 - Tenki read maps actual result and PNG; fourth additional read never executes
+  ---
+  duration_ms: 8.448667
+  type: 'test'
+  ...
+# Subtest: Tenki unsafe result or changed guest script never claims success; attempt remains spent
+ok 59 - Tenki unsafe result or changed guest script never claims success; attempt remains spent
+  ---
+  duration_ms: 5.962
+  type: 'test'
+  ...
+# Subtest: Tenki exact approved kit uploads to fixed files and preserves capture time; repeat reuses receipt
+ok 60 - Tenki exact approved kit uploads to fixed files and preserves capture time; repeat reuses receipt
+  ---
+  duration_ms: 15.622
+  type: 'test'
+  ...
+# Subtest: Tenki upload rejects changed quantity, budget, revision, content or stale cloud fingerprint without writes
+ok 61 - Tenki upload rejects changed quantity, budget, revision, content or stale cloud fingerprint without writes
+  ---
+  duration_ms: 7.033041
+  type: 'test'
+  ...
+# Subtest: Tenki uncertain upload is counted and blocked from duplicate, concurrent call cannot reserve
+ok 62 - Tenki uncertain upload is counted and blocked from duplicate, concurrent call cannot reserve
+  ---
+  duration_ms: 4.93275
+  type: 'test'
+  ...
+# Subtest: Tenki total timeout spends one attempt, closes host client, makes no later writes
+ok 63 - Tenki total timeout spends one attempt, closes host client, makes no later writes
+  ---
+  duration_ms: 18.323417
+  type: 'test'
+  ...
+# Subtest: handoff needs the current approved packet and accepts no private company data
+ok 64 - handoff needs the current approved packet and accepts no private company data
+  ---
+  duration_ms: 20.5925
+  type: 'test'
+  ...
+# Subtest: published ticket is constrained to the owned project and retries reuse its receipt
+ok 65 - published ticket is constrained to the owned project and retries reuse its receipt
+  ---
+  duration_ms: 11.803
+  type: 'test'
+  ...
+# Subtest: uncertain publication stops before a duplicate and remote identity mismatch cannot post
+ok 66 - uncertain publication stops before a duplicate and remote identity mismatch cannot post
+  ---
+  duration_ms: 7.730625
+  type: 'test'
+  ...
+# Subtest: inventory reservations, holds and deadline eligibility must match the declared stock
+ok 67 - inventory reservations, holds and deadline eligibility must match the declared stock
+  ---
+  duration_ms: 3.132375
+  type: 'test'
+  ...
+# Subtest: all three public experiments use the actual quote calculation and policy gate
+ok 68 - all three public experiments use the actual quote calculation and policy gate
+  ---
+  duration_ms: 7.851459
+  type: 'test'
+  ...
+1..68
+# tests 68
+# suites 0
+# pass 68
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 371.127042
+
+### rocketride adapter tests (fake clients, no network)
+bun test v1.3.10 (30e609e0)
+
+scripts/rocketride-cloud.test.ts:
+(pass) the exported pipe is exactly the adapter definition: one tools source, one credential-free python sandbox, nothing else [3.47ms]
+(pass) the sandbox program reproduces the local quote for a grid of quantities, budgets and shipment policies [122.18ms]
+(pass) hostile company text is embedded verbatim and cannot smuggle substitution placeholders or break the program [19.30ms]
+(pass) cloud output extraction accepts the sandbox return shapes and rejects everything else [0.23ms]
+(pass) proposal comparison ignores key order but reports every money, date or choice difference [0.91ms]
+(pass) credential loading accepts only the existing staging pair and redaction hides keys, JWTs and bearer tokens [3.58ms]
+(pass) the bounded allowance refuses disabled, foreign-host, unverified, expired or exhausted runs and counts failed runs [0.93ms]
+(pass) a bounded run validates, starts one task, calls the sandbox once per case, compares, terminates and writes a token-free receipt [37.76ms]
+(pass) the adapter learns the sandbox argument name and tool name from the error text within the attempt limit [19.52ms]
+(pass) a cloud quote that disagrees with the local quote is rejected with the receipt kept, and other failure paths stay clean [54.01ms]
+(pass) the live balance floor fails closed before validation or any task: zero, below floor, non-finite, unavailable or missing billing [20.41ms]
+(pass) oversized company input is rejected before a run slot is claimed or a connection opens [0.50ms]
+(pass) the coordinator hook skips silently without an allowance and cross-checks the expected proposal with one [36.86ms]
+
+ 13 pass
+ 0 fail
+Ran 13 tests across 1 file. [338.00ms]
+
+### event SQLite and boundary tests (fake senders)
+bun test v1.3.10 (30e609e0)
+
+event-workspace/tests/event.test.ts:
+(pass) invalid input, unchecked/string consent, stale terms and injected header are rejected [1.31ms]
+(pass) body cap checks real streamed bytes, including absent or dishonest content length [2.85ms]
+(pass) real SQLite insert persists consent and public projection never exposes private fields [5.01ms]
+(pass) five per IP/hour succeeds; sixth refuses; later hour resets; duplicate cannot overwrite consent [0.83ms]
+(pass) global 200 signups/day boundary and 500 total storage boundary are atomic SQL conditions [18.38ms]
+(pass) removal requires private token, redacts PII, disables directory and follow-up, cleanup purges [0.71ms]
+(pass) expired visitors cannot appear, send, or survive daily retention cleanup [0.43ms]
+(pass) sender held, no consent, mismatched review and no ROOT approval never invoke sender [0.36ms]
+(pass) ten reviewed sends/day cap persists; idempotency prevents repeat; accepted is never delivered [2.33ms]
+(pass) ambiguous provider failure retains reservation and blocks retries [0.73ms]
+(pass) Worker boundary: held signup, cross-origin rejection, actual local persistence, no public send endpoint [0.93ms]
+(pass) IP rate limit remains effective across midnight [0.37ms]
+(pass) scheduled Worker invokes actual expired-record purge [0.22ms]
+(pass) automatic followup requires operator enable, exact content hash and binding; never accepts request control [0.80ms]
+(pass) signup route triggers only explicitly requested fixed content; client cannot override sender or text [0.55ms]
+(pass) actual selftest acceptance migration consumes one Sep11 slot and remains idempotent [1.59ms]
+
+event-workspace/tests/runtime.test.ts:
+(pass) Tenki adapter limits static files, rejects cross origin, holds mail and purges on expiry [7.94ms]
+(pass) Tenki ignores spoofed CF IPs, enforces five shared signups and purges real data at expiry [1.22ms]
+
+ 18 pass
+ 0 fail
+ 103 expect() calls
+Ran 18 tests across 2 files. [60.00ms]
+
+### event worker TypeScript
+$ tsc --noEmit
+
+### event Bun runtime bundle
+Bundled 5 modules in 3ms
+
+  event-server.js  18.35 KB  (entry point)
+
+
+### rote play replays
+== order-review Play: 100 / 140 / 150 shirts at $1,800 ==
+    run_id: run_20260911_222600.332_0
+  PASS total for 100 = 115000
+    run_id: run_20260911_222600.715_1
+  PASS total for 140 = 163000
+    run_id: run_20260911_222600.855_2
+  PASS total for 150 = 175000
+== order-review Play with the company rule 'never split shipments' ==
+  PASS no feasible option when split is forbidden at $1,800 = None
+== work-packet Play: approved 140-shirt proposal ==
+  PASS packet written: <export>/run/replays/packet-140.md
+    run_id: run_20260911_222601.160_0
+== work-packet Play must refuse a stale approval (approved 150, proposal now 140) ==
+  PASS stale approval refused
+All Play replays passed.
+
+### voice fixture transcription
+Transcript: Our customer now needs 150 black t-shirts by September 18. Keep it within $1,800.
+
+### on-device model helper
+{"action":"review","memoryNote":"Remember to ask before splitting shipments","quantity":140}
+
+### server smoke (read-only)
+{
+  "port": 38857,
+  "results": {
+    "/": 200,
+    "/talk": 200,
+    "/talk.js": 200,
+    "/talk.css": 200,
+    "/api/company": 200,
+    "/evidence/build-plan": 200,
+    "/evidence/full-flow-verification": 200,
+    "/evidence/unknown": 404,
+    "/.env": 404,
+    "/api/snapshot": 200,
+    "POST /api/conversation/new (foreign origin)": 403,
+    "/api/conversation/progress?id=not-a-uuid": 400,
+    "company.sampleData": "true",
+    "/evidence/hotdata-order-proof (sponsor link)": 200,
+    "/evidence/full-flow (sponsor link)": 200,
+    "/evidence/rote-plays-proof (sponsor link)": 200,
+    "/evidence/integrated-cloud-flow (sponsor link)": 200,
+    "/evidence/judges-repo (sponsor link)": 200,
+    "/evidence/integrated-review (sponsor link)": 200,
+    "/evidence/hotdata-cleanup (sponsor link)": 200,
+    "/evidence/hotdata-credits (sponsor link)": 200,
+    "/evidence/full-walkthrough (sponsor link)": 200,
+    "/evidence/cognee-cache-recovery (sponsor link)": 200,
+    "/evidence/rocketride-cloud-proof (sponsor link)": 200,
+    "/evidence/rocketride-cloud-ledger (sponsor link)": 200,
+    "/evidence/rocketride-staging-credits (sponsor link)": 200
+  },
+  "cloudCalls": 0,
+  "conversationTurns": 0
+}
+Smoke check passed.
+
+SELF-CHECK PASSED
+
+[exit 0]

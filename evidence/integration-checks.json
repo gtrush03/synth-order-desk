@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-09-11T21:16:41Z",
+  "source": "ROOT tool execution; stdout summarized from actual returned result, not a fabricated raw transcript",
+  "typeCheck": {
+    "command": "bun run check",
+    "exit": 0
+  },
+  "tests": {
+    "command": "python3 ../fleet/build.py root -- bun run test",
+    "passed": 48,
+    "failed": 0,
+    "skipped": 0,
+    "exit": 0,
+    "durationMs": 344.297417,
+    "providerCalls": "Injected tests only",
+    "receipt": "private build-receipts/20260911T211641-root-a7a2e67f.json"
+  },
+  "build": {
+    "command": "python3 ../fleet/build.py root -- bun run build",
+    "exit": 0,
+    "nativeCompiled": true,
+    "bundles": [
+      "app",
+      "briefing",
+      "stage",
+      "talk",
+      "today",
+      "server"
+    ],
+    "afterFullBuild": {
+      "at": "2026-09-11T21:16:41Z",
+      "serverRebundleExit": 0,
+      "reason": "Quoted mixed-case SQL identifiers for Hotdata DataFusion; other bundles unchanged",
+      "receipt": "private build-receipts/20260911T211641-root-72d54a44.json"
+    }
+  },
+  "sourceSha256": {
+    "src/state.ts": "37afc8a045c93d69f3e0b1606f8333766d19992a688f5b46200d4b53dc0ec468",
+    "src/local-procedures.ts": "f33e94f04def0ab5c587e22468c9043f7c2913b06d41b49a5d1eeb8a1254d469",
+    "src/data-workers.ts": "7e42782df4a2d709b18679c8d5e04e0a914a39ad2f2cd43c1435905e946646dd",
+    "src/talk.ts": "b2ab0b433a77b80ea72532b63554d47931407d0855eb08198258cb0b4760f0e3",
+    "src/rehearsal-model.ts": "8b7a449f0ae0f1a1da5af1c8ff55419f2acc9d8a7adb152aba182ef0ffd19d16",
+    "src/main.ts": "9a70dd704f077b1104dd47e0b22f5d49200f5f685e039bdde0942e2708147b82",
+    "src/work-ticket.ts": "baef0a6be75d38a3a9327c77066b629e8211c2c53392519cb9abfff17975b5e8",
+    "src/demo-content.ts": "78d2ca6ca304b2f3ca558ac994bcf1f0770f9aa9e4f300f1841593f788406157",
+    "src/briefing.ts": "bf2c9d956b682b6059c5c7726f7137e18d5964ec6ae87e309e66fb2ed3a49d2b",
+    "src/workers.ts": "8b16313e71a8cf63d953d069f6da88e442d1ba628f941c18939a5fe5cad1ff4a",
+    "src/stage.ts": "da0fa050452d63b83c814a090b6bae4b0361c11ee64e583f6d930fada4d6fa7d",
+    "src/briefing-content.ts": "e2a574b01f8479307f77b7fccac356f6f9d2493afa343e0eab9193e1c1ed41b4",
+    "src/workspace-map.ts": "595676d5ed7ad69f988ec7d395031886a0c910262e9caca6d1adfdec3ac8c052",
+    "src/app.ts": "ba542fce6ca03ae0d58275a3de428c1dcc1bfad984f143fbf629d0684d23e415",
+    "src/today.ts": "a5287767002ea117809d32e8234f51eec23e750aba95f6da4e4befb6cbb47140",
+    "src/sources.ts": "2ab217f835c16385f9a17f5667d127c7eb28194d0df534fab2880e48a79a6457",
+    "src/prize-content.ts": "ff24f6fc71adce685e010b7d16dac8595f9cffb062e2ac9627819afd151b806e",
+    "src/hotdata-http.ts": "2c80a18d117fee13d4aff2570711cd3a93ff6cb9dfefdf97a42d44633d2299b0",
+    "src/cognee-memory.ts": "fb7a4d1acdd12b282fa2c66a855ebde0bbdc218add8017ed152a8a8ac836f6a7",
+    "src/model.ts": "e18c15cae764e5c7d3c2dac6e1b960f060f796f070874681816afe85f86ea4c2",
+    "src/sponsor-evidence.ts": "a651909f0c2e802eb836e46f3b22e5e91b342b3a05dfb29a72d5859c3252e3cd",
+    "src/local-conversation.ts": "d509e9bb383b50d80e6dbd1a6f0b8378c36fdaa39f52c41158cf98c58f5ab703",
+    "src/conversation-model.ts": "0a9b75eec2f9bfd2dca5accbe9a594be7acfef78cdaba9dd38cd31d98c69a273",
+    "src/browser-actions.ts": "71b77651d555794939fa74c61d30fc018bdc6f7eb93f23df67ccbe365deac14a",
+    "src/live-progress.ts": "f0aaf51f33db2f9e9b8436655e5e72c98252167563c01deab74afce26feffcbf",
+    "src/rocketride-cloud.ts": "d08d7c13b8e44a61c2f5f6c0d8bda397df9d19f05c25381b2563f168690f1034",
+    "src/tenki-browser.ts": "9a07d49a813e13c83367eda3b2c315ed7cf9f4bdb0abc47ade33c0d78b32335d",
+    "src/goals.ts": "4cc6b1a800dd5d7e39d730f67545356cc342bd9761dcc80d2a2b7589f50f3c29",
+    "src/gmail-draft.ts": "28ac53c30187715ac5acd2e5844d908c969a0b93269587f5cb4abf7fa4a6bf77",
+    "src/approval-proof.ts": "370b41e80881e3b0474315a53a6ac7e6bd75bdda314492ea2c54d3b8be21d083",
+    "src/fleet-monitor.ts": "cbf8a30f2ff5d1951fd2b241abda6a803a799942c8d31cb8c0649d441e8a89dc",
+    "src/company-workspace.ts": "647086af7758174eab982ed5f499141e333ac44d880b41c2788fb6e9107646da",
+    "src/server.ts": "8dad6c7b5da012b84efa643503b144915926a3614f87b2517a3bf2f85118bd31",
+    "src/public-preview.ts": "1dce160ca5eb3fcb45d62f5fcce170177af8ef8d79c8061776968c89aed20b68",
+    "tests/control-room.test.ts": "4a8c719548d15716e733bd3c0c32b687e5fe197ffaf1a4ec2f44f3fe0e961f67",
+    "tests/workspace-map.test.ts": "6ca0b62bfc70300f3effc3ebd823364d44125f4b786d915af4df9de554c74f3f",
+    "tests/gmail-draft.test.ts": "855febae8ff9f96cd2f9b7004c7dc19672e55a5480ff6b3e5759b7d4159f7bf7",
+    "tests/browser-actions.test.ts": "9f7223493a2986298193ff74f9bfcf8e807e167154f62decd364578883d9d92a",
+    "tests/tenki-browser.test.ts": "6b91201950781ca7071492ec94954b247ad657d33508acedda8fd16cab431444",
+    "tests/work-ticket.test.ts": "753866aa8c81f839692a939bc91dd049136ed8f0576f2a0907e9b6d46a1dedcd",
+    "scripts/test.ts": "7e71e3869ae2ad27cbe7ea8660fd5143c6b20d87261910371dc033dfb419a8cf",
+    "scripts/build.ts": "c474d79786405afbf103168f632a1af23163772f79649c718d8bc7ccf981f4f5",
+    "scripts/tenki-browser-read.mjs": "ecc472292f692e231e83c44d5c1ab8161dc5eb1bd3709b96f1e73f6762d5e4ca",
+    "native/LocalSynth.swift": "483d58c81f238498d85a5c7a6aabaa23b1c6b5de712cab8a028ea63e8c6379a8"
+  },
+  "actualRecording": {
+    "passed": true,
+    "recordedAt": "2026-09-11T21:17:24.230Z",
+    "finishedAt": "2026-09-11T21:21:44.924Z",
+    "freshHotdataWaves": 2,
+    "workTicket": "https://github.com/gtrush03/synth-order-desk/issues/1"
+  }
+}

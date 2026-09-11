@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "workspaceId": "workREPLACEWITHYOURS",
+  "freeCreditConfirmed": false,
+  "confirmedAvailableUsd": 0,
+  "maxInputBytes": 25000,
+  "validUntil": "2026-09-11T22:00:00Z",
+  "maxRuns": 12,
+  "proof": "Describe where you verified your own free credit before enabling. This file is a local consumption cap, not a provider billing setting."
+}

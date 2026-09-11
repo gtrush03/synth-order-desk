@@ -1,0 +1,138 @@
+{
+  "recordedAt": "2026-09-11T20:16:43.924Z",
+  "purpose": "Owner-facing triage of the Snyk Code scan of the sanitized judge candidate scope. Verdicts come from reading the exported source at each location; no fixes were applied in this lane.",
+  "account": {
+    "org": "hello-UhCF5tfLsxa99UZVdrvcsT",
+    "plan": "Free (v1 entitlements licenses/reports/fullVulnDB all false)",
+    "role": "Org Admin",
+    "snykCode": "was disabled (sast_enabled=false → HTTP 403 SNYK-CODE-0005); enabled 2026-09-11T20:10Z by REST PATCH sast_settings with data.id (201), read-back true; free and reversible (same PATCH with false). Receipt: security-code-enable.json"
+  },
+  "scope": {
+    "candidate": "JudgesReview-2026-09-11/synth-order-desk-candidate",
+    "manifestSha256": "64dbceb9d295bb747de15e01ccc42f0c08708f02af974202f313ca09841a3bae",
+    "manifestCreatedAt": "2026-09-11T20:10:50.358869+00:00",
+    "codeFingerprint": "b353198b2c8131bd28bb0d75e930df44b632c7b5246b89a6f7e74212c3168dc2",
+    "fileCount": 107,
+    "guard": "clean",
+    "receipt": "security-code-scope.json"
+  },
+  "scan": {
+    "command": "snyk code test --org=hello-UhCF5tfLsxa99UZVdrvcsT (inside the verified scope copy)",
+    "exit": 1,
+    "status": "completed with open issues; NOT a clean result",
+    "open": {
+      "high": 1,
+      "medium": 6,
+      "low": 1
+    },
+    "receipt": "security-code-findings.json"
+  },
+  "findings": [
+    {
+      "ruleId": "javascript/PT",
+      "severity": "high",
+      "location": "src/server.ts:65",
+      "cwe": "CWE-23",
+      "verdict": "false positive by review",
+      "rationale": "The URL segment is limited by the route regex to [a-z0-9-]+ and reaches StateStore.update only as a JSON key inside the checklist document; the file path is the fixed storePath (src/state.ts writes to this.path plus a random temporary suffix and renames). No path component is derived from the request.",
+      "recommendation": "Owner ROOT, optional: the planning checklist is excluded from the judge export (model.ts stub), so the PATCH /api/tasks/:id and GET /api/export routes in src/server.ts (about lines 62–73) can be removed from the exported server, which also removes this finding. Otherwise leave as is and record the rationale in docs/SECURITY.md.",
+      "owner": "ROOT (src/server.ts) / JUDGES (docs/SECURITY.md)"
+    },
+    {
+      "ruleId": "javascript/DOMXSS",
+      "severity": "medium",
+      "location": "src/talk.ts:95, :107, :150, :240",
+      "cwe": "CWE-79",
+      "verdict": "mitigated by a custom escaper; hardening recommended",
+      "rationale": "Each flagged innerHTML assignment interpolates server-provided text only through esc() at the point of insertion (message text, artifact names, activity text via esc(text) at line 156, proposal head/main/note via esc() at line 144, sponsor and event fields in the proof dialog). Values inserted without esc() are numbers from money()/counts, fixed enum class names, or nested fragments whose own text is escaped. Snyk cannot recognise a project-local sanitizer, so the alert is expected.",
+      "recommendation": "Owner ROOT/DEMO, optional hardening before freeze: add a unit test that renders a message, artifact name, note and event detail containing <img src=x onerror=1> and asserts the DOM contains no element from it; or build these regions with document.createElement/textContent instead of template strings. Do not add a Snyk ignore without that test.",
+      "owner": "ROOT/DEMO (src/talk.ts, tests)"
+    },
+    {
+      "ruleId": "javascript/HttpToHttps",
+      "severity": "medium",
+      "location": "src/server.ts:34",
+      "cwe": "CWE-319",
+      "verdict": "accepted by design",
+      "rationale": "The server is loopback-only: main.ts listens on 127.0.0.1 and every request is rejected unless the Host header is localhost or 127.0.0.1; no network transmission leaves the machine. TLS on loopback would add no protection for the judge run.",
+      "recommendation": "Owner JUDGES: state this explicitly in docs/SECURITY.md (already implied by the threat model). No code change.",
+      "owner": "JUDGES (docs/SECURITY.md)"
+    },
+    {
+      "ruleId": "javascript/ServerLeak",
+      "severity": "medium",
+      "location": "src/server.ts:35",
+      "cwe": "CWE-200, CWE-209",
+      "verdict": "accepted by design, minor tightening possible",
+      "rationale": "The catch handler returns error.message only for StateError instances, whose messages are the deliberate user-facing texts; every other error is replaced by a fixed sentence. The proposed RocketRide hook and some 503 paths embed a truncated provider/error message inside a StateError, which is the only channel where third-party text could reach the client.",
+      "recommendation": "Owner ROOT, optional: for StateError with status >= 500 return a fixed sentence and keep the detailed text in the conversation event/receipt only.",
+      "owner": "ROOT (src/server.ts, src/local-conversation.ts)"
+    },
+    {
+      "ruleId": "javascript/HttpToHttps/test",
+      "severity": "low",
+      "location": "tests/order-desk.test.ts:209",
+      "cwe": "CWE-319",
+      "verdict": "accepted",
+      "rationale": "A test issuing a plain HTTP request to the loopback test server to assert the Host-header rejection.",
+      "recommendation": "None.",
+      "owner": "ROOT (tests)"
+    }
+  ],
+  "inheritedRuntimeGaps": {
+    "scopeNote": "Separate from the application scope above. The app dependency scans (38 npm, 2 Python, no findings) and this Code scan do not certify the local Cognee and HydraDB services the app talks to.",
+    "cognee": {
+      "installed": "cognee 1.5.4, diskcache 5.6.3, litellm 1.96.2 in the local sponsor-lab Python environment (still present 2026-09-11 13:14 PT)",
+      "advisories": [
+        {
+          "package": "cognee@1.5.4",
+          "severity": "critical",
+          "title": "Arbitrary Code Injection",
+          "cvss": 9.2,
+          "fixedIn": "none listed"
+        },
+        {
+          "package": "diskcache@5.6.3",
+          "severity": "high",
+          "title": "Deserialization of Untrusted Data",
+          "cvss": 7,
+          "fixedIn": "none listed"
+        },
+        {
+          "package": "litellm@1.96.2",
+          "severity": "high",
+          "title": "Insufficient Session Expiration",
+          "cvss": 7.1,
+          "fixedIn": "none listed"
+        },
+        {
+          "package": "litellm@1.96.2",
+          "severity": "medium",
+          "title": "Missing Authentication for Critical Function",
+          "cvss": 6.9,
+          "fixedIn": "none listed"
+        },
+        {
+          "package": "litellm@1.96.2",
+          "severity": "medium",
+          "title": "Insufficient Session Expiration",
+          "cvss": 5.3,
+          "fixedIn": "none listed"
+        }
+      ],
+      "source": "sponsor-lab Snyk dependency scan of 2026-09-10 23:55 PT (private lab receipt, not exported)",
+      "exposure": "Cognee API process binds 127.0.0.1:8765 only (verified from the process list and listener table); the app sends only validated raw documents it produced.",
+      "recommendation": "Keep disclosed; no fixed versions exist; do not describe as mitigated."
+    },
+    "hydradb": {
+      "installed": "container ghcr.io/hydra-db/hydradb:latest created 2026-09-11T08:58Z",
+      "exposure": "Docker publishes 7687/tcp (Bolt), 8443/tcp and 9090/tcp with an empty HostIp, i.e. on ALL interfaces of this Mac, not loopback only (docker inspect PortBindings; listener table shows *:7687).",
+      "recommendation": "Owner ROOT/lab (not this lane): recreate the container with loopback bindings, e.g. -p 127.0.0.1:7687:7687 -p 127.0.0.1:8443:8443 -p 127.0.0.1:9090:9090, and confirm authentication is enabled; update docs/SECURITY.md wording from operator responsibility to this explicit instruction."
+    }
+  },
+  "remainingBlockers": [
+    "None for Snyk Code enablement or scanning. The final frozen export must be re-scanned with its own exact scope (manifest SHA will change); this receipt covers candidate manifest 64dbceb9d295… only.",
+    "Snyk ignores/.snyk policies were not applied; the 8 findings stay open in Snyk unless owners fix or justify them.",
+    "No paid Snyk feature was used or needed; no billing, login or account change was made."
+  ]
+}

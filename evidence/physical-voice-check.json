@@ -1,0 +1,14 @@
+{
+  "verifiedAt": "2026-09-11T19:52:27.747980+00:00",
+  "method": "User-confirmed physical acceptance",
+  "app": "http://localhost:7790/talk",
+  "prompt": "What can you help me with?",
+  "input": "EarPods microphone",
+  "output": "EarPods",
+  "userResponse": "Yes, both work",
+  "hearsSpeech": true,
+  "speaksReplyClearly": true,
+  "limits": [
+    "This verifies George's physical microphone and spoken-reply test. It does not by itself verify a complete recorded sponsor workflow."
+  ]
+}

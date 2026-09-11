@@ -1,0 +1,176 @@
+{
+  "company": {
+    "schema": 1,
+    "id": "demo-company",
+    "name": "TRU Merch Studio",
+    "sampleData": true,
+    "source": "Curated hackathon sample: two locations, six sizes, reservations, quality holds, delivery rates and shipment policy. No live supplier inventory.",
+    "product": "black T-shirts",
+    "deadline": "2026-09-18",
+    "stock": {
+      "available": 100,
+      "unitCents": 900,
+      "rushUnitCents": 1200
+    },
+    "shipping": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "unitCents": 1000,
+        "shippingCents": 15000,
+        "arrival": "2026-09-21"
+      },
+      {
+        "id": "express",
+        "name": "Express",
+        "unitCents": 1000,
+        "shippingCents": 45000,
+        "arrival": "2026-09-18"
+      },
+      {
+        "id": "split",
+        "name": "Split shipment",
+        "unitCents": 0,
+        "shippingCents": 25000,
+        "arrival": "2026-09-18"
+      }
+    ],
+    "stockLots": [
+      {
+        "id": "SF-01",
+        "location": "San Francisco",
+        "variant": "XS",
+        "available": 16,
+        "reserved": 2,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-15",
+        "status": "ready"
+      },
+      {
+        "id": "SF-02",
+        "location": "San Francisco",
+        "variant": "S",
+        "available": 24,
+        "reserved": 4,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-15",
+        "status": "ready"
+      },
+      {
+        "id": "SF-03",
+        "location": "San Francisco",
+        "variant": "M",
+        "available": 30,
+        "reserved": 5,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-15",
+        "status": "ready"
+      },
+      {
+        "id": "SF-04",
+        "location": "San Francisco",
+        "variant": "L",
+        "available": 28,
+        "reserved": 5,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-15",
+        "status": "ready"
+      },
+      {
+        "id": "SF-05",
+        "location": "San Francisco",
+        "variant": "XL",
+        "available": 20,
+        "reserved": 8,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-15",
+        "status": "ready"
+      },
+      {
+        "id": "SF-06",
+        "location": "San Francisco",
+        "variant": "XXL",
+        "available": 12,
+        "reserved": 6,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-15",
+        "status": "ready"
+      },
+      {
+        "id": "OAK-01",
+        "location": "Oakland",
+        "variant": "XS",
+        "available": 10,
+        "reserved": 0,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-16",
+        "status": "quality-hold"
+      },
+      {
+        "id": "OAK-02",
+        "location": "Oakland",
+        "variant": "S",
+        "available": 12,
+        "reserved": 0,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-16",
+        "status": "quality-hold"
+      },
+      {
+        "id": "OAK-03",
+        "location": "Oakland",
+        "variant": "M",
+        "available": 16,
+        "reserved": 0,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-16",
+        "status": "quality-hold"
+      },
+      {
+        "id": "OAK-04",
+        "location": "Oakland",
+        "variant": "L",
+        "available": 12,
+        "reserved": 0,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-16",
+        "status": "quality-hold"
+      },
+      {
+        "id": "OAK-05",
+        "location": "Oakland",
+        "variant": "XL",
+        "available": 10,
+        "reserved": 0,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-16",
+        "status": "quality-hold"
+      },
+      {
+        "id": "OAK-06",
+        "location": "Oakland",
+        "variant": "XXL",
+        "available": 8,
+        "reserved": 0,
+        "unitCents": 900,
+        "rushUnitCents": 1200,
+        "readyBy": "2026-09-16",
+        "status": "quality-hold"
+      }
+    ]
+  },
+  "notes": [
+    "Never split shipments."
+  ]
+}

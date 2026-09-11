@@ -1,0 +1,68 @@
+{
+  "at": "2026-09-11T20:47:06.120809+00:00",
+  "binarySha256": "69c7fb1040a09cd7d9faa74cbe6544b7d1760fe024a592ca86d857bea0dbf622",
+  "sourceSha256": "483d58c81f238498d85a5c7a6aabaa23b1c6b5de712cab8a028ea63e8c6379a8",
+  "providerCalls": 0,
+  "results": [
+    {
+      "message": "Review 150 shirts within $1800.",
+      "current": 100,
+      "result": {
+        "action": "review",
+        "budgetDollars": 1800,
+        "quantity": 150
+      },
+      "passed": true
+    },
+    {
+      "message": "Actually, make it 140 shirts.",
+      "current": 150,
+      "result": {
+        "action": "review",
+        "quantity": 140,
+        "memoryNote": "Remember to ask before splitting shipments"
+      },
+      "passed": true
+    },
+    {
+      "message": "Add 40 more.",
+      "current": 100,
+      "result": {
+        "quantity": 140,
+        "action": "review",
+        "memoryNote": "Add 40 more."
+      },
+      "passed": true
+    },
+    {
+      "message": "Prepare the supplier email and social post.",
+      "current": 140,
+      "result": {
+        "quantity": 140,
+        "budgetDollars": 1800,
+        "action": "launch"
+      },
+      "passed": false
+    },
+    {
+      "message": "Publish the work ticket to GitHub.",
+      "current": 140,
+      "result": {
+        "budgetDollars": 1800,
+        "action": "publish",
+        "quantity": 140
+      },
+      "passed": false
+    },
+    {
+      "message": "Check the supplier website.",
+      "current": 140,
+      "result": {
+        "memoryNote": "Check the supplier website",
+        "action": "browse"
+      },
+      "passed": true
+    }
+  ],
+  "passed": false
+}

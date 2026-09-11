@@ -1,0 +1,64 @@
+{
+  "id": "fixture-conversation-0001",
+  "revision": 3,
+  "companyName": "TRU Merch Studio",
+  "source": "Curated hackathon sample: two locations, six sizes, reservations, quality holds, delivery rates and shipment policy. No live supplier inventory.",
+  "dataRevision": "fixture-company-json",
+  "notes": [],
+  "messages": [],
+  "events": [],
+  "artifacts": [],
+  "quantity": 140,
+  "budgetCents": 180000,
+  "rehearsal": {
+    "proposal": {
+      "quantity": 140,
+      "budgetCents": 180000,
+      "options": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "totalCents": 155000,
+          "arrival": "2026-09-21",
+          "onTime": false,
+          "withinBudget": true,
+          "explanation": "140 units + shipping; company source demo-company"
+        },
+        {
+          "id": "express",
+          "name": "Express",
+          "totalCents": 185000,
+          "arrival": "2026-09-18",
+          "onTime": true,
+          "withinBudget": false,
+          "explanation": "140 units + shipping; company source demo-company"
+        },
+        {
+          "id": "split",
+          "name": "Split shipment",
+          "totalCents": 163000,
+          "arrival": "2026-09-18",
+          "onTime": true,
+          "withinBudget": true,
+          "explanation": "100 from stock + 40 rush units + shipping; company source demo-company"
+        }
+      ],
+      "chosen": {
+        "id": "split",
+        "name": "Split shipment",
+        "totalCents": 163000,
+        "arrival": "2026-09-18",
+        "onTime": true,
+        "withinBudget": true,
+        "explanation": "100 from stock + 40 rush units + shipping; company source demo-company"
+      }
+    },
+    "approved": {
+      "quantity": 150,
+      "totalCents": 175000,
+      "option": "Split shipment"
+    },
+    "memory": []
+  },
+  "_fixture": "Stale approval: the owner approved 150 shirts but the proposal is now 140. The work-packet Play must refuse it."
+}

@@ -1,0 +1,7 @@
+import {execFile} from 'node:child_process';import {promisify} from 'node:util';import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';import {createHash,randomUUID} from 'node:crypto';
+const run=promisify(execFile);
+const PYTHON=process.env.TRU_NATURAL_VOICE_PYTHON??`${process.cwd()}/.venv/bin/python`;
+const PROGRAM="import asyncio,edge_tts,sys\nasyncio.run(edge_tts.Communicate(sys.argv[1], 'en-US-AvaMultilingualNeural', rate='-3%', pitch='-2Hz').save(sys.argv[2]))";
+let active=false;
+/** Natural neural speech for already-confirmed replies; no model/tool authority. */
+export async function naturalVoice(root:string,text:unknown){if(typeof text!=='string'||!text.trim()||text.length>1600)throw Error('Choose a short reply to speak.');const dir=`${root}/natural-voice`;await mkdir(dir,{recursive:true});const key=createHash('sha256').update(text).digest('hex'),file=`${dir}/${key}.mp3`;try{return await readFile(file);}catch{}if(active)throw Error('A spoken reply is already preparing.');active=true;const temp=`${dir}/${randomUUID()}.mp3`;try{await run(PYTHON,['-c',PROGRAM,text,temp],{timeout:20000,maxBuffer:2000});const audio=await readFile(temp);if(audio.length<100||audio.length>2_000_000)throw Error('Voice output unavailable.');await rename(temp,file);await writeFile(`${dir}/${key}.json`,JSON.stringify({voice:'Microsoft AvaMultilingualNeural',engine:'edge-tts7.2.8',createdAt:new Date().toISOString(),textSha256:key,bytes:audio.length}),{mode:0o600});return audio;}finally{active=false;}}

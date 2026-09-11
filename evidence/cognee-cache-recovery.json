@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-11T19:35:17.055Z",
+  "result": "pass",
+  "source": "Actual local Cognee API raw-document retrieval",
+  "datasetId": "8b9cda4d-fc22-5788-bc55-3771f1235de0",
+  "dataId": "ad4c9da1-9c47-4acc-baad-aaa9a3df3735",
+  "beforeRevision": 0,
+  "restoredRevision": 4,
+  "restoredNotes": [
+    "Owner approval required.",
+    "never split shipments",
+    "allow split shipments after I approve the exact quote"
+  ],
+  "restoredApprovals": 1,
+  "isolatedCache": true,
+  "sharedMemoryChanged": false,
+  "cloudModelCalls": 0
+}

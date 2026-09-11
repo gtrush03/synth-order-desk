@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-09-11T18:59:12.326787+00:00",
+  "checks": {
+    "typescript": "pass",
+    "automatedTests": {
+      "pass": 12,
+      "fail": 0
+    },
+    "voiceNote": {
+      "input": "Local Samantha voice recording, 5.8 seconds",
+      "transcript": "Our customer now needs 150 black t-shirts. Keep the budget at $1,800.",
+      "resultCents": 175000,
+      "error": null
+    },
+    "typedFlow": [
+      "review 150/$1800",
+      "remember company instruction",
+      "change to 140",
+      "explicit approval",
+      "create local reply artifact"
+    ],
+    "moneySpentOnTheseChecksUsd": 0,
+    "physicalMicrophoneAtVenue": "not tested",
+    "speechVoice": "local English system voice available; physical audio quality not independently heard"
+  },
+  "latestTests": {
+    "at": "2026-09-11T19:22:29.664513+00:00",
+    "passed": 14,
+    "failed": 0,
+    "check": "TypeScript check passed",
+    "regressions": [
+      "cross-conversation policy/source invalidates approval and packet eligibility",
+      "actual company deadline used in reply"
+    ]
+  },
+  "fullFlowProof": "/evidence/full-flow"
+}

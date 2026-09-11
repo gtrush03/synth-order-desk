@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "host": "staging.rocketride.ai",
+  "freeCreditConfirmed": false,
+  "minAvailableCredits": 4000,
+  "maxRuns": 6,
+  "validUntil": "2026-09-11T22:00:00Z",
+  "proof": "Describe where you verified your own staging grant before enabling. Local cap only; units are not dollars."
+}

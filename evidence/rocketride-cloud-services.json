@@ -1,0 +1,216 @@
+{
+  "recordedAt": "2026-09-11T19:27:54.722Z",
+  "environment": "https://staging.rocketride.ai",
+  "services": {
+    "tools": {
+      "actions": 0,
+      "capabilities": 3584,
+      "classType": [
+        "source"
+      ],
+      "description": "A source component that transfers no data: it exists to host tool nodes. \nConnect tools to it via the tool invoke channel and call them directly from \na client with client.tool() - no agent, no LLM, no data lanes. Ideal for \npipelines whose whole purpose is exposing capabilities (file storage, vector \nstore management, integrations) to an application.",
+      "documentation": "https://docs.rocketride.org",
+      "invoke": {
+        "tool": {
+          "description": "Tools hosted by this endpoint (via control-plane invoke)",
+          "min": 0
+        }
+      },
+      "lanes": {
+        "_source": []
+      },
+      "Pipe": {
+        "schema": {
+          "properties": {
+            "hideForm": {
+              "default": true,
+              "type": "boolean"
+            },
+            "mode": {
+              "default": "Source",
+              "type": "string"
+            },
+            "parameters": {
+              "object": "parameters",
+              "type": "object"
+            },
+            "type": {
+              "default": "tools",
+              "type": "string"
+            }
+          },
+          "required": [
+            "hideForm",
+            "type",
+            "mode"
+          ],
+          "title": "Tools",
+          "type": "object"
+        },
+        "ui": {
+          "hideForm": {
+            "ui:options": {
+              "label": false
+            },
+            "ui:widget": "hidden"
+          },
+          "mode": {
+            "ui:options": {
+              "label": false
+            },
+            "ui:widget": "hidden"
+          },
+          "parameters": {
+            "ui:options": {
+              "label": false,
+              "nonNestedDisplay": true
+            }
+          },
+          "type": {
+            "ui:options": {
+              "label": false
+            },
+            "ui:widget": "hidden"
+          },
+          "ui:order": [
+            "hideForm",
+            "type",
+            "mode",
+            "parameters"
+          ]
+        }
+      },
+      "plans": null,
+      "prefix": "Tools",
+      "protocol": "tools://",
+      "tile": [],
+      "title": "Tools"
+    },
+    "tool_python": {
+      "actions": 0,
+      "capabilities": 3072,
+      "classType": [
+        "tool"
+      ],
+      "description": "Executes Python code in a restricted in-process sandbox via exec().\nOnly whitelisted modules can be imported. Dangerous builtins are removed.",
+      "documentation": "https://docs.rocketride.org",
+      "lanes": {},
+      "Pipe": {
+        "schema": {
+          "properties": {
+            "allowedModules": {
+              "description": "Modules the agent is allowed to import, in addition to the built-in defaults (math, json, re, collections, datetime, etc.).",
+              "items": {
+                "properties": {
+                  "moduleName": {
+                    "default": "",
+                    "title": "Module name",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "moduleName"
+                ],
+                "type": "object"
+              },
+              "minItems": 0,
+              "title": "Additional Allowed Modules",
+              "type": "array"
+            },
+            "timeout": {
+              "default": 20,
+              "description": "Maximum seconds a script may run before it is killed. Useful for long-running operations like network scans. Default is 20s, max is 1200s.",
+              "maximum": 1200,
+              "minimum": 1,
+              "title": "Execution timeout (seconds)",
+              "type": "integer"
+            },
+            "type": {
+              "default": "tool_python",
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "allowedModules"
+          ],
+          "title": "Python",
+          "type": "object"
+        },
+        "ui": {
+          "allowedModules": {
+            "items": {
+              "moduleName": {},
+              "ui:order": [
+                "moduleName"
+              ]
+            },
+            "ui:order": [
+              "items"
+            ]
+          },
+          "timeout": {},
+          "type": {
+            "ui:options": {
+              "label": false
+            },
+            "ui:widget": "hidden"
+          },
+          "ui:order": [
+            "type",
+            "timeout",
+            "allowedModules"
+          ]
+        }
+      },
+      "plans": null,
+      "prefix": "python",
+      "protocol": "tool_python://",
+      "tile": [
+        "Tool: python.execute"
+      ],
+      "title": "Python"
+    },
+    "response_json": {
+      "actions": 0,
+      "capabilities": 2048,
+      "classType": [
+        "infrastructure"
+      ],
+      "description": "A component that returns structured JSON data back to the requesting client. It handles \nthe response phase of the HTTP request-response cycle by returning the results as a JSON \nobject. This component ensures that data is transmitted efficiently and clearly to \nthe client, providing a standardized format for the response.",
+      "documentation": "https://docs.rocketride.org",
+      "lanes": {
+        "json": []
+      },
+      "Pipe": {
+        "schema": {
+          "properties": {
+            "laneName": {
+              "default": "json",
+              "maxLength": 32,
+              "minLength": 1,
+              "title": "Identifier key within result",
+              "type": "string"
+            }
+          },
+          "required": [
+            "laneName"
+          ],
+          "title": "Return JSON",
+          "type": "object"
+        },
+        "ui": {
+          "laneName": {},
+          "ui:order": [
+            "laneName"
+          ]
+        }
+      },
+      "plans": null,
+      "prefix": "response",
+      "protocol": "response_json://",
+      "tile": [],
+      "title": "Return JSON"
+    }
+  }
+}

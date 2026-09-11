@@ -1,0 +1,8 @@
+schema_version = 1
+[[tools]]
+id = "bun"
+command = "bun"
+required = true
+[[tools.install]]
+manager = "system"
+notes = "Bun 1.3.10; install this pinned version before running."

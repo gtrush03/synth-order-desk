@@ -1,0 +1,8 @@
+# Provenance
+
+- **Pre-existing TRU Synth platform** (not included): the company's Mac app, website, runtime, accounts and billing. This package does not contain, depend on or modify them. The wordmark image is the company's own brand asset.
+- **Event-day implementation (September 11, 2026)**: the talking order desk in `src/`, `native/`, `procedures/`, `plays/`, `public/talk.*`, `fixtures/company.json` and the tests. Written by George with AI assistance (OpenAI Codex/GPT and Anthropic Claude sessions on the owner's own subscriptions). Evidence receipts were produced by running the app, not written by hand.
+- **Overnight and morning preparation**: a planning dashboard and a browser-only rehearsal were built before the talking product. They are excluded from this package because they are not the submission and the dashboard carries private roadmap content.
+- **Export**: produced by the private `scripts/export-judges.py` at 2026-09-11T22:37:05.638065+00:00. `EXPORT-MANIFEST.json` lists every file with its role: `verbatim` (byte-identical to the source), `rewritten` (source with the listed exact substitutions of machine paths for environment variables, both hashes recorded), `stub` (export-specific replacement that removes private content while keeping the module interface), `generated` (scripts, docs, fixtures), `evidence` (sanitized receipt), `fixture`, `brand`.
+- **Third-party components** and their licences: `docs/LICENSES.md`.
+- **What a clean export must not pretend**: the platform was not invented during the event; the sponsor integrations were built during the event on top of local services already installed on the Mac.

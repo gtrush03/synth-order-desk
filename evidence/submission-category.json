@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2026-09-11T19:51:32.295167+00:00",
+  "method": "Live HTTPS export from the two organizer-supplied Google Docs; local downloaded guides also read in full.",
+  "title": "Synth Order Desk",
+  "tagline": "Turn order changes into approved work.",
+  "taglineCharacters": 38,
+  "track": "Main Track \u2014 Compound Agents",
+  "officialSuggestedIdea": "Compounding Support Desk",
+  "adaptation": "Merchandise-order support: quantity changes, company shipment policies, stock and deadline checks, exact approval, saved work packet, remembered instructions.",
+  "source": {
+    "url": "https://docs.google.com/document/d/14FdPbLDZUuUei7JtLK-oQJeivwzej8ik-_PgCrs1EmY/edit",
+    "title": "Data and AI Hackathon: From Memory to Muscle Memory",
+    "section": "4. Suggested Project Ideas",
+    "sha256": "33c8f0f360952371d04fc1bbf0c6e2226b003a798a018a8cf4834242a84235d4",
+    "bytes": 13081
+  },
+  "parallelGuide": {
+    "url": "https://docs.google.com/document/d/1UMDAo-Bm_4kKZZC1JHpHZW71heGVWfbrGe5lftQzEP8/edit",
+    "sha256": "197ae9b09ef3d15ca857fa75b47457043608baac82521bf254195ac1b39b0d43"
+  },
+  "limits": [
+    "This is a remix of a suggested project idea, not an independently named official commerce category.",
+    "Main Track eligibility is subject to judges assessment of meaningful use of all five mandated layers.",
+    "No Parallel Agents or Best Agent Telemetry eligibility claim.",
+    "Best Use of Hotdata primary; RocketRide secondary; prize scoring and exact overall prizes remain organizer-controlled."
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "verifiedAt": "2026-09-11T20:22:14.949106+00:00",
+  "scope": "Six official sponsor logos bundled locally for identification of actual task work. Rote uses the official Modiqo wordmark.",
+  "assetCount": 6,
+  "totalBytes": 47401,
+  "visualInspection": "Rendered all SVG assets with librsvg and inspected against black and light backgrounds; PNG alpha/dimensions checked. Final contact sheet retained in coordinator/logo-research/final-contact.png.",
+  "assets": [
+    {
+      "sponsor": "hotdata",
+      "path": "public/sponsors/hotdata.svg",
+      "urlPath": "/sponsors/hotdata.svg",
+      "officialWebsite": "https://www.hotdata.dev/",
+      "assetSourceUrl": "https://www.hotdata.dev/hotdata-wordmark.svg",
+      "retrievedAt": "2026-09-11T20:22:14.941016+00:00",
+      "sourcePageSha256": "747957ed694ed8aa66f17f25700e4de662d79c9048c9e75f7d01433b58a79e55",
+      "downloadedSha256": "456b46124ed5039fe7828dfcbe8644966fa81321ac97b2826374848e3c35c513",
+      "sha256": "456b46124ed5039fe7828dfcbe8644966fa81321ac97b2826374848e3c35c513",
+      "bytes": 7938,
+      "dimensions": {
+        "width": "533",
+        "height": "88",
+        "viewBox": "0 0 533 88"
+      },
+      "transformation": "None; official downloaded asset unchanged.",
+      "safety": {
+        "validFormat": true,
+        "scriptOrEventHandlers": false,
+        "foreignObject": false,
+        "externalResourceReferences": false,
+        "hazards": []
+      },
+      "display": "Official wordmark for dark backgrounds; preserve aspect ratio.",
+      "identityEvidence": "Official site header; first-party asset or official branding repository."
+    },
+    {
+      "sponsor": "hydradb",
+      "path": "public/sponsors/hydradb.png",
+      "urlPath": "/sponsors/hydradb.png",
+      "officialWebsite": "https://hydradb.com/",
+      "assetSourceUrl": "https://framerusercontent.com/images/yQ3d6DpgSTbs8IxbkxaQ0CcHmK0.png?width=1180&height=215",
+      "retrievedAt": "2026-09-11T20:22:14.944916+00:00",
+      "sourcePageSha256": "cbbef3fc8befd7dea10a600ac45cbc3b5efc10fa5639d8c28dee2e6b551373c7",
+      "downloadedSha256": "f0c40597d0603a22684b56a03bcaca7a9b24711d7931fc5dff9a0541a3336040",
+      "sha256": "f0c40597d0603a22684b56a03bcaca7a9b24711d7931fc5dff9a0541a3336040",
+      "bytes": 5869,
+      "dimensions": {
+        "width": 1180,
+        "height": 215
+      },
+      "transformation": "None; official downloaded asset unchanged.",
+      "safety": {
+        "validFormat": true,
+        "scriptOrEventHandlers": false,
+        "foreignObject": false,
+        "externalResourceReferences": false,
+        "hazards": []
+      },
+      "display": "Official wordmark for dark backgrounds; preserve aspect ratio.",
+      "identityEvidence": "Official site header; first-party asset or official branding repository."
+    },
+    {
+      "sponsor": "Rote / Modiqo",
+      "path": "public/sponsors/rote.png",
+      "urlPath": "/sponsors/rote.png",
+      "officialWebsite": "https://www.modiqo.ai/",
+      "assetSourceUrl": "https://www.modiqo.ai/assets/brand/modiqo_logo_dark_optionA_256.png?v=20260817-docs-play-usecases",
+      "retrievedAt": "2026-09-11T20:22:14.946735+00:00",
+      "sourcePageSha256": "668dc29aa2c2a65ec01aea25411900374e587e484254d0dc0bb88eff6de13a00",
+      "downloadedSha256": "f1f7e151a447ddc84278f4dadea7da7fa6b5923cb102a757e2894c0c450457c8",
+      "sha256": "348fe3d5e0d29ae1c92ca364fd0b4b6bb946d810d7abb0ee952bd978ed4cf836",
+      "bytes": 7530,
+      "dimensions": {
+        "width": 219,
+        "height": 60
+      },
+      "transformation": "Remove transparent margins only; crop alpha bounds (19,98,238,158). Exact official white Modiqo wordmark pixels, no recoloring or redrawing.",
+      "safety": {
+        "validFormat": true,
+        "scriptOrEventHandlers": false,
+        "foreignObject": false,
+        "externalResourceReferences": false,
+        "hazards": []
+      },
+      "display": "Official wordmark for dark backgrounds; preserve aspect ratio.",
+      "identityEvidence": "Official site header; Rote is made by Modiqo in official page footer."
+    },
+    {
+      "sponsor": "cognee",
+      "path": "public/sponsors/cognee.svg",
+      "urlPath": "/sponsors/cognee.svg",
+      "officialWebsite": "https://www.cognee.ai/",
+      "assetSourceUrl": "https://www.cognee.ai/",
+      "retrievedAt": "2026-09-11T20:22:14.947000+00:00",
+      "sourcePageSha256": "6121f7072c4d54c741c17b617f16c05c960ca8dcb7f54bb31d3482c8c83145a2",
+      "downloadedSha256": "d3873244ca99f3d9f9bf2c92b0a06c087ccf7cf66115ed11ead0d1d2414478b8",
+      "sha256": "cee17a6aedfcafcf214f080a9d49202cf8bbc2db9a020dcac61d0049369f9da4",
+      "bytes": 6989,
+      "dimensions": {
+        "width": "176",
+        "height": "45",
+        "viewBox": "0 0 176 45"
+      },
+      "transformation": "first header SVG; remove CSS utility class, retain exact geometry and set currentColor to original #EDECEA",
+      "safety": {
+        "validFormat": true,
+        "scriptOrEventHandlers": false,
+        "foreignObject": false,
+        "externalResourceReferences": false,
+        "hazards": []
+      },
+      "display": "Official wordmark for dark backgrounds; preserve aspect ratio.",
+      "identityEvidence": "Official site header; first-party asset or official branding repository."
+    },
+    {
+      "sponsor": "snyk",
+      "path": "public/sponsors/snyk.svg",
+      "urlPath": "/sponsors/snyk.svg",
+      "officialWebsite": "https://snyk.io/",
+      "assetSourceUrl": "https://res.cloudinary.com/snyk/image/upload/snyk-mktg-brandui/brand-logos/default-dark.svg",
+      "retrievedAt": "2026-09-11T20:22:14.948374+00:00",
+      "sourcePageSha256": "c76d790970c3c38d799d93b7d7a0fa6136238a22ed96561b9d1d7955d5b44fa4",
+      "downloadedSha256": "1e4f39f185092ee3f5ff36d4bf635cf14ff753af88ff3f43e26ea4f775c8b631",
+      "sha256": "7e522b15ce8f0531a7796d6b72ae13d75e312add30911776d79b7ebd73e41869",
+      "bytes": 10480,
+      "dimensions": {
+        "width": "100.414",
+        "height": "52",
+        "viewBox": "0 0 100.414 52"
+      },
+      "transformation": "Add intrinsic width/height/viewBox from the original clip rectangle (100.414 \u00d7 52), preserving all geometry and colors.",
+      "safety": {
+        "validFormat": true,
+        "scriptOrEventHandlers": false,
+        "foreignObject": false,
+        "externalResourceReferences": false,
+        "hazards": []
+      },
+      "display": "Official wordmark for dark backgrounds; preserve aspect ratio.",
+      "identityEvidence": "Official site header; first-party asset or official branding repository.",
+      "assetDiscovery": "Official homepage stylesheet /_next/static/immutable/chunks/23or_hvsvwizy.css .snyk-logo.logo-default:before"
+    },
+    {
+      "sponsor": "rocketride",
+      "path": "public/sponsors/rocketride.svg",
+      "urlPath": "/sponsors/rocketride.svg",
+      "officialWebsite": "https://rocketride.org/",
+      "assetSourceUrl": "https://raw.githubusercontent.com/rocketride-org/branding/09f23af6a7fee7f08478dd55b87abe6a78d9d27d/logos/rocketride-logo-white.svg",
+      "retrievedAt": "2026-09-11T20:22:14.949005+00:00",
+      "sourcePageSha256": "279e062b7f994292c793acc9cd06250fa6ac05b38aacf0add89543500dc2a9c9",
+      "downloadedSha256": "88dc0b5bdc4167098557b390508ccae51fe33543c6fbde7a52af289a08a919f0",
+      "sha256": "88dc0b5bdc4167098557b390508ccae51fe33543c6fbde7a52af289a08a919f0",
+      "bytes": 8595,
+      "dimensions": {
+        "viewBox": "0 0 1363.3 192.5"
+      },
+      "transformation": "None; official downloaded asset unchanged.",
+      "safety": {
+        "validFormat": true,
+        "scriptOrEventHandlers": false,
+        "foreignObject": false,
+        "externalResourceReferences": false,
+        "hazards": []
+      },
+      "display": "Official wordmark for dark backgrounds; preserve aspect ratio.",
+      "identityEvidence": "Official site header; first-party asset or official branding repository.",
+      "repositoryCommit": "09f23af6a7fee7f08478dd55b87abe6a78d9d27d"
+    }
+  ]
+}

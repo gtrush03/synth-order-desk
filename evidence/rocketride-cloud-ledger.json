@@ -1,0 +1,155 @@
+{
+  "recordedAt": "2026-09-11T19:45:46.951Z",
+  "environment": "https://staging.rocketride.ai",
+  "mutations": false,
+  "laneTasksKnown": [
+    {
+      "taskId": "07b0c8f2",
+      "prefix": "tk_07b",
+      "sha256Prefix": "43b84fc526f2"
+    },
+    {
+      "taskId": "07b0c8f2",
+      "prefix": "tk_07b",
+      "sha256Prefix": "43b84fc526f2"
+    }
+  ],
+  "creditLedger": {
+    "unit": "RocketRide credit units (API label: tokens)",
+    "available": 4819.9,
+    "granted": 5000,
+    "consumed": 180.1
+  },
+  "transactions": {
+    "total": 13,
+    "shown": 13,
+    "rows": [
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -0.5,
+        "createdAt": "2026-09-11T19:40:35.468432",
+        "idempotencyKey": "task:[masked]:cpu_utilization",
+        "laneTask": true,
+        "context": "{\"task_id\":\"07b0c8f2.tools_1\",\"pipeline\":\"synth-order-review-cloud\",\"source\":\"synth-order-review-cloud.Synth calls the sandbox directly (no agent, no LLM)\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"duration_sec"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -0.3,
+        "createdAt": "2026-09-11T19:38:49.811876",
+        "idempotencyKey": "task:[masked]:cpu_utilization",
+        "laneTask": true,
+        "context": "{\"task_id\":\"07b0c8f2.tools_1\",\"pipeline\":\"synth-order-review-cloud\",\"source\":\"synth-order-review-cloud.Synth calls the sandbox directly (no agent, no LLM)\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"duration_sec"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -0.9,
+        "createdAt": "2026-09-11T19:36:55.597219",
+        "idempotencyKey": "task:[masked]:cpu_memory",
+        "laneTask": true,
+        "context": "{\"task_id\":\"07b0c8f2.tools_1\",\"pipeline\":\"synth-order-review-cloud\",\"source\":\"synth-order-review-cloud.Synth calls the sandbox directly (no agent, no LLM)\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"duration_sec"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -19.7,
+        "createdAt": "2026-09-11T19:36:55.588580",
+        "idempotencyKey": "task:[masked]:cpu_utilization",
+        "laneTask": true,
+        "context": "{\"task_id\":\"07b0c8f2.tools_1\",\"pipeline\":\"synth-order-review-cloud\",\"source\":\"synth-order-review-cloud.Synth calls the sandbox directly (no agent, no LLM)\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"duration_sec"
+      },
+      {
+        "type": "credit",
+        "resource": "tokens",
+        "amount": 5000,
+        "createdAt": "2026-09-11T18:08:58.903587",
+        "idempotencyKey": "promo:DATAAIHACK:8a1377e3-1e1e-43e6-bdc6-9e125e8e05cb:tokens",
+        "laneTask": false,
+        "context": "{\"promo_code\":\"DATAAIHACK\",\"coupon_id\":\"A2naKIjB\",\"source\":\"promo_redeem\"}"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -3.8,
+        "createdAt": "2026-09-11T08:19:26.740570",
+        "idempotencyKey": "task:[masked]:cpu_memory",
+        "laneTask": false,
+        "context": "{\"task_id\":\"AnifY6yt.chat_1\",\"pipeline\":\"trusynth-order-rr-proof-613a5d14c2c1\",\"source\":\"trusynth-order-rr-proof-613a5d14c2c1.An order arrives (phone, email or chat)\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"d"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -18.7,
+        "createdAt": "2026-09-11T08:19:26.734643",
+        "idempotencyKey": "task:[masked]:cpu_utilization",
+        "laneTask": false,
+        "context": "{\"task_id\":\"AnifY6yt.chat_1\",\"pipeline\":\"trusynth-order-rr-proof-613a5d14c2c1\",\"source\":\"trusynth-order-rr-proof-613a5d14c2c1.An order arrives (phone, email or chat)\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"d"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -0.9,
+        "createdAt": "2026-09-11T08:16:27.386582",
+        "idempotencyKey": "task:[masked]:cpu_memory",
+        "laneTask": false,
+        "context": "{\"task_id\":\"XoRbiNfX.chat_1\",\"pipeline\":\"trusynth-order-rr-proof-b194c1763b43\",\"source\":\"trusynth-order-rr-proof-b194c1763b43.An order arrives (phone, email or chat)\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"d"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -3.8,
+        "createdAt": "2026-09-11T08:16:27.380553",
+        "idempotencyKey": "task:[masked]:cpu_utilization",
+        "laneTask": false,
+        "context": "{\"task_id\":\"XoRbiNfX.chat_1\",\"pipeline\":\"trusynth-order-rr-proof-b194c1763b43\",\"source\":\"trusynth-order-rr-proof-b194c1763b43.An order arrives (phone, email or chat)\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"d"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -4.5,
+        "createdAt": "2026-09-11T07:11:29.794229",
+        "idempotencyKey": "task:[masked]:cpu_memory",
+        "laneTask": false,
+        "context": "{\"task_id\":\"e0af4058.chat_1\",\"pipeline\":\"trusynth-project-wave\",\"source\":\"trusynth-project-wave.Owner asks the Synth\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"duration_seconds\":126.6,\"tokens_total\":31.6}"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -27.1,
+        "createdAt": "2026-09-11T07:11:29.788602",
+        "idempotencyKey": "task:[masked]:cpu_utilization",
+        "laneTask": false,
+        "context": "{\"task_id\":\"e0af4058.chat_1\",\"pipeline\":\"trusynth-project-wave\",\"source\":\"trusynth-project-wave.Owner asks the Synth\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"duration_seconds\":126.6,\"tokens_total\":31.6}"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -14,
+        "createdAt": "2026-09-11T07:03:17.556090",
+        "idempotencyKey": "task:[masked]:cpu_memory",
+        "laneTask": false,
+        "context": "{\"task_id\":\"e0af4058.chat_1\",\"pipeline\":\"trusynth-project-wave\",\"source\":\"trusynth-project-wave.Owner asks the Synth\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"duration_seconds\":390.7,\"tokens_total\":99.9}"
+      },
+      {
+        "type": "usage",
+        "resource": "tokens",
+        "amount": -85.9,
+        "createdAt": "2026-09-11T07:03:02.306645",
+        "idempotencyKey": "task:[masked]:cpu_utilization",
+        "laneTask": false,
+        "context": "{\"task_id\":\"e0af4058.chat_1\",\"pipeline\":\"trusynth-project-wave\",\"source\":\"trusynth-project-wave.Owner asks the Synth\",\"client_id\":\"4420d98d-c1b8-4501-8f26-15195fa8dcf1\",\"duration_seconds\":390.7,\"tokens_total\":99.9}"
+      }
+    ]
+  },
+  "laneAttributedRows": 4,
+  "laneAttributedUnits": -21.4,
+  "activeTasks": 0,
+  "incidents": [
+    {
+      "at": "2026-09-11T19:36Z–19:38Z",
+      "what": "A hook test without an injected client built a real staging client after the 5 s bun test timeout and started one idle task (source tools_1). It was found with getTasks and terminated at 19:38:10Z; status was \"Tools ready\". Between the 19:27Z profile read (4841.3 available) and the 19:38Z proof start (4820.7) the ledger shows 20.6 units consumed, which includes that idle task; no cash charge, no model call. Tests now inject fake clients and the adapter refuses to build a real client under NODE_ENV=test."
+    }
+  ]
+}

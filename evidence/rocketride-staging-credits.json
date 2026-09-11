@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-09-11T18:08:02.602Z",
+  "environment": "https://staging.rocketride.ai",
+  "organization": "TRUSynth",
+  "sdkVersion": "1.3.0",
+  "existingApiKeyAuthenticated": true,
+  "credentialVariable": "ROCKETRIDE_APIKEY",
+  "credentialIncluded": false,
+  "promoCode": "DATAAIHACK",
+  "redemption": {
+    "redeemed": true,
+    "mode": "subscribed",
+    "appId": "rocketride.pipeBuilder",
+    "status": "active",
+    "credits": {
+      "tokens": 5000
+    }
+  },
+  "creditLedger": {
+    "unit": "RocketRide credit units (API label: tokens)",
+    "granted": 5000,
+    "previouslyConsumed": 158.7,
+    "available": 4841.3
+  },
+  "subscription": {
+    "appId": "rocketride.pipeBuilder",
+    "appName": "Pipeline Builder",
+    "status": "active",
+    "planNickname": "Pay-as-you-go",
+    "unitAmount": 0,
+    "billingInterval": "month"
+  },
+  "paidCheckoutCreated": false,
+  "modelRunsStarted": 0,
+  "cashChargeInitiated": false,
+  "paidOverageProtectionVerified": false,
+  "downstreamModelBillingVerified": false,
+  "prizeUsageAttributionVerified": false,
+  "scope": "Authentication and free-grant redemption only. No inference, pipeline execution, purchase, payment, customer message or supplier order.",
+  "limits": [
+    "The zero subscription base price does not establish protection from paid usage.",
+    "Credit units are not a dollar amount or a verified count of model tokens.",
+    "The earlier 158.7-unit ledger consumption does not establish a cash charge."
+  ]
+}

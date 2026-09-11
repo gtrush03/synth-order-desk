@@ -1,0 +1,114 @@
+{
+  "at": "2026-09-11T22:34:23.856537+00:00",
+  "outcome": "verified",
+  "durationSeconds": 98.033333,
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 2941
+  },
+  "remotion": {
+    "version": "4.0.523",
+    "render": "actual local React compositions",
+    "receipt": "qa/render-receipt.json",
+    "chapterReceipt": "qa/rail-render-receipt.json",
+    "concurrency": 2,
+    "closedOwnBrowsers": true
+  },
+  "edit": {
+    "introSeconds": 2.4,
+    "originalSeconds": 91.63333333333334,
+    "outroSeconds": 4,
+    "sourceVideoSha256": "011d0d2aa7088605393acc7326c829755988e6066214251233c708479d54e56e",
+    "sourceUntouched": true,
+    "recordedFootage": "All2749frames in sameorder/time; uniform90%scale insideblackframe; chapterrail belowactualpicture; no simulated results",
+    "chapters": [
+      {
+        "title": "Ask",
+        "start": 0.0,
+        "end": 14.266667
+      },
+      {
+        "title": "Check",
+        "start": 14.266667,
+        "end": 28.4
+      },
+      {
+        "title": "Approve",
+        "start": 28.4,
+        "end": 33.4
+      },
+      {
+        "title": "Act",
+        "start": 33.4,
+        "end": 63.033333
+      },
+      {
+        "title": "Remember",
+        "start": 63.033333,
+        "end": 94.033333
+      }
+    ]
+  },
+  "audio": {
+    "voice": "Fresh Microsoft Ava narration, edge-tts7.2.8; normal -3% rate; no audio speedup",
+    "sourceOffsetSeconds": 2.4,
+    "waveformCorrelation": 0.9999779660133445,
+    "signalToErrorDb": 43.51435437599639,
+    "comparedSamples": 2199200,
+    "peakDbFS": -2.3282915893797056,
+    "clippedSamples": 0,
+    "effects": "Original synthesized softchime/whoosh confined to intro/outro; silenceoverAva",
+    "music": false
+  },
+  "captions": {
+    "cues": 26,
+    "everyCueShiftMs": 2400,
+    "textExact": true,
+    "embeddedTrack": false,
+    "doubleCaptionAvoidance": "Source burned captions retained; selectable captions supplied as correctly shifted sidecars only",
+    "burnedSourceCaptionsPreserved": true
+  },
+  "decode": {
+    "exitCode": 0,
+    "errorBytes": 0
+  },
+  "files": {
+    "submission/synth-order-desk-demo.mp4": {
+      "bytes": 19516597,
+      "sha256": "d9c069244982c9c617796caaa2e3a57e6e941971051503d445cff9302069af1f"
+    },
+    "submission/poster.jpg": {
+      "bytes": 134391,
+      "sha256": "d4f73d0cc3881cabaea86c217c857f049d55eb4cb25092cb711cfe4f9a9c2d7a"
+    },
+    "submission/captions.srt": {
+      "bytes": 2052,
+      "sha256": "ef4050fd6df3a79c11488c55ab9be1550a66c58dd7dd6d80ed57e1697d1368b2"
+    },
+    "submission/captions.vtt": {
+      "bytes": 2060,
+      "sha256": "c01b83a540409d7ad6bddba43d2f6a5b983b048f8d9ef0fdafb21668ec392560"
+    },
+    "submission/TRANSCRIPT.md": {
+      "bytes": 3156,
+      "sha256": "b3104956a6ca6b2e6def19c32cc794f20dbbfce087c32732fed46dea58523131"
+    }
+  },
+  "frameInspection": [
+    "qa/final-intro.jpg",
+    "qa/final-ask.jpg",
+    "qa/final-check.jpg",
+    "qa/final-approve.jpg",
+    "qa/final-act.jpg",
+    "qa/final-remember.jpg",
+    "qa/final-outro.jpg"
+  ],
+  "actualCapturePassed": true,
+  "freshConversation": true,
+  "oneCompleteTake": true,
+  "rawCaptureSha256": "c063236dc2df98a01ae3d01bd2d27adb10e6f434705c712d91b2791a745db815",
+  "recordedAt": "2026-09-11T22-29-20-832Z",
+  "disclosure": "Prerecorded voice note transcribed by local Whisper. Actual application and provider responses, edited for length from one successful fresh capture. Microsoft Ava narration added separately. Printful draft read back, not paid or submitted. Higgsfield closing concept imagery is editorial."
+}

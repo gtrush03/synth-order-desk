@@ -1,0 +1,10 @@
+{
+  "name": "trusynth-event-2026-09-11",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-09-11",
+  "assets": {"directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"]},
+  "d1_databases": [{"binding": "EVENT_DB", "database_name": "trusynth-event-2026-09-11", "database_id": "00000000-0000-0000-0000-000000000000", "migrations_dir": "./migrations"}],
+  "vars": {"SIGNUPS_ENABLED": "false", "RESOURCE_MAIL_ENABLED": "false", "RESOURCE_APPROVED_HASH": "fc9352fa0e74a95267cacb971a396300ea2f86b7b190ae71f23bf28fa343e7ee", "DEPLOYMENT_LABEL": "Preview · signup connection pending"},
+  "triggers": {"crons": ["0 8 * * *"]},
+  "observability": {"enabled": false}
+}

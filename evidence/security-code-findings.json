@@ -1,0 +1,134 @@
+{
+  "recordedAt": "2026-09-11T20:13:54.976Z",
+  "tool": "snyk code test (Snyk CLI 1.1307.1, free plan Snyk Code, org hello-UhCF5tfLsxa99UZVdrvcsT)",
+  "command": "snyk code test --org=hello-UhCF5tfLsxa99UZVdrvcsT --json-file-output=… --sarif-file-output=… (run inside the verified sanitized scope copy)",
+  "exit": 1,
+  "exitMeaning": "1 = analysis completed with open issues (0 = no issues, 2 = error, 3 = no supported files)",
+  "status": "COMPLETED — static application-code analysis performed; not a clean result",
+  "uploaded": "yes: only the verified sanitized scope (manifest-listed distribution files + manifest); no runtime state, environments, credentials or private source",
+  "scope": {
+    "candidate": "JudgesReview-2026-09-11/synth-order-desk-candidate",
+    "manifestSha256": "64dbceb9d295bb747de15e01ccc42f0c08708f02af974202f313ca09841a3bae",
+    "manifestCreatedAt": "2026-09-11T20:10:50.358869+00:00",
+    "codeFingerprint": "b353198b2c8131bd28bb0d75e930df44b632c7b5246b89a6f7e74212c3168dc2",
+    "fileCount": 107,
+    "guardResult": "clean"
+  },
+  "snykCodeEnabled": "enabled 2026-09-11T20:10Z via REST sast_settings PATCH (free, reversible); see security-code-enable.json",
+  "totals": {
+    "open": 8,
+    "byLevel": {
+      "warning": 6,
+      "note": 1,
+      "error": 1
+    },
+    "ignored": 0
+  },
+  "findings": [
+    {
+      "ruleId": "javascript/DOMXSS",
+      "level": "warning",
+      "severity": "warning",
+      "title": "DOM-based Cross-site Scripting (XSS)",
+      "cwe": "CWE-79",
+      "file": "src/talk.ts",
+      "line": 95,
+      "endLine": 101,
+      "priorityScore": 400,
+      "message": "Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).",
+      "isAutofixable": true
+    },
+    {
+      "ruleId": "javascript/DOMXSS",
+      "level": "warning",
+      "severity": "warning",
+      "title": "DOM-based Cross-site Scripting (XSS)",
+      "cwe": "CWE-79",
+      "file": "src/talk.ts",
+      "line": 107,
+      "endLine": 121,
+      "priorityScore": 400,
+      "message": "Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).",
+      "isAutofixable": true
+    },
+    {
+      "ruleId": "javascript/DOMXSS",
+      "level": "warning",
+      "severity": "warning",
+      "title": "DOM-based Cross-site Scripting (XSS)",
+      "cwe": "CWE-79",
+      "file": "src/talk.ts",
+      "line": 150,
+      "endLine": 158,
+      "priorityScore": 400,
+      "message": "Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).",
+      "isAutofixable": true
+    },
+    {
+      "ruleId": "javascript/DOMXSS",
+      "level": "warning",
+      "severity": "warning",
+      "title": "DOM-based Cross-site Scripting (XSS)",
+      "cwe": "CWE-79",
+      "file": "src/talk.ts",
+      "line": 240,
+      "endLine": 240,
+      "priorityScore": 400,
+      "message": "Unsanitized input from data from a remote resource flows into innerHTML, where it is used to dynamically construct the HTML page on client side. This may result in a DOM Based Cross-Site Scripting attack (DOMXSS).",
+      "isAutofixable": true
+    },
+    {
+      "ruleId": "javascript/HttpToHttps",
+      "level": "warning",
+      "severity": "warning",
+      "title": "Cleartext Transmission - HTTP Instead of HTTPS",
+      "cwe": "CWE-319",
+      "file": "src/server.ts",
+      "line": 34,
+      "endLine": 34,
+      "priorityScore": 363,
+      "message": "node:http.createServer uses HTTP which is an insecure protocol and should not be used in code due to cleartext transmission of information. Data in cleartext in a communication channel can be sniffed by unauthorized actors. Consider using the https module instead.",
+      "isAutofixable": true
+    },
+    {
+      "ruleId": "javascript/HttpToHttps/test",
+      "level": "note",
+      "severity": "note",
+      "title": "Cleartext Transmission - HTTP Instead of HTTPS",
+      "cwe": "CWE-319",
+      "file": "tests/order-desk.test.ts",
+      "line": 209,
+      "endLine": 209,
+      "priorityScore": 163,
+      "message": "node:http.request uses HTTP which is an insecure protocol and should not be used in code due to cleartext transmission of information. Data in cleartext in a communication channel can be sniffed by unauthorized actors. Consider using the https module instead.",
+      "isAutofixable": true
+    },
+    {
+      "ruleId": "javascript/PT",
+      "level": "error",
+      "severity": "error",
+      "title": "Path Traversal",
+      "cwe": "CWE-23",
+      "file": "src/server.ts",
+      "line": 65,
+      "endLine": 65,
+      "priorityScore": 613,
+      "message": "Unsanitized input from the request URL flows into writeFile, where it is used as a path. This may result in a Path Traversal vulnerability and allow an attacker to write to arbitrary files.",
+      "isAutofixable": false
+    },
+    {
+      "ruleId": "javascript/ServerLeak",
+      "level": "warning",
+      "severity": "warning",
+      "title": "Information Exposure - Server Error Message",
+      "cwe": "CWE-200,CWE-209",
+      "file": "src/server.ts",
+      "line": 35,
+      "endLine": 35,
+      "priorityScore": 363,
+      "message": "An error object flows to end and is leaked to the attacker. This may disclose important information about the application to an attacker.",
+      "isAutofixable": false
+    }
+  ],
+  "triage": "see security-code-triage in the RocketRide lane HANDOFF; owners decide fixes"
+}

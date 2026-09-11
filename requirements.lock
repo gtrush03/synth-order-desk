@@ -1,0 +1,16 @@
+# Exact neo4j pins plus versions read from ROOT’s working edge-tts7.2.8 environment on 2026-09-11; final self-check installs and scans this scope.
+neo4j==6.3.0
+pytz==2026.3.post1
+edge-tts==7.2.8
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.3
+aiosignal==1.4.0
+attrs==26.1.0
+certifi==2026.7.22
+frozenlist==1.8.0
+idna==3.19
+multidict==6.8.0
+propcache==0.5.2
+tabulate==0.10.0
+typing_extensions==4.16.0
+yarl==1.24.5

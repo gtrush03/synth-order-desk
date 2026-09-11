@@ -1,0 +1,11 @@
+node_modules/
+.venv/
+run/
+models/*.bin
+judge.env
+*.log
+__pycache__/
+.DS_Store
+plays/*/deno.json
+plays/*/.rote-hardcode-audit.json
+plays/*/.rote-release.lock

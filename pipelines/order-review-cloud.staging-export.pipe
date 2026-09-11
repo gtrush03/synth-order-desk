@@ -1,0 +1,58 @@
+{
+  "name": "Synth order review · RocketRide cloud sandbox",
+  "description": "The talking Synth calls a RocketRide tool_python sandbox directly through the tools source. The deterministic order-review procedure runs in the cloud with no agent, no LLM and no external credential; its quote is compared with the local one before approval.",
+  "version": 1,
+  "project_id": "trusynth-order-review-cloud",
+  "source": "tools_1",
+  "isLocked": false,
+  "viewport": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  },
+  "components": [
+    {
+      "id": "tools_1",
+      "provider": "tools",
+      "name": "Synth calls the sandbox directly (no agent, no LLM)",
+      "config": {
+        "hideForm": true,
+        "mode": "Source",
+        "parameters": {},
+        "type": "tools"
+      },
+      "ui": {
+        "position": {
+          "x": 40,
+          "y": 200
+        },
+        "nodeType": "default",
+        "formDataValid": true
+      }
+    },
+    {
+      "id": "tool_python_1",
+      "provider": "tool_python",
+      "name": "Order review procedure · pure Python, deterministic",
+      "config": {
+        "type": "tool_python",
+        "timeout": 20,
+        "allowedModules": []
+      },
+      "control": [
+        {
+          "classType": "tool",
+          "from": "tools_1"
+        }
+      ],
+      "ui": {
+        "position": {
+          "x": 360,
+          "y": 200
+        },
+        "nodeType": "default",
+        "formDataValid": true
+      }
+    }
+  ]
+}

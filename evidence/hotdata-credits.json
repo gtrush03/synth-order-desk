@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-11T18:49:56.502883+00:00",
+  "source": "Existing signed-in TRU Synth account, https://app.hotdata.dev/billing/pricing/",
+  "workspace": "Synth Compound",
+  "workspaceId": "work8zo0a7qv698i27om1ppjnqwvw3",
+  "promoAttempt": "9R8FUMD",
+  "promoResult": "That promo code isn't valid or is no longer active.",
+  "existingCreditUsd": 100,
+  "monthlyWorkspaceEstimateUsd": 5,
+  "remainingBalanceUsd": 95,
+  "storageRateUsdPerGBMonth": 0.02,
+  "readRateUsdPerGB": 0.01,
+  "newPurchases": 0,
+  "billingSettingsChanged": false
+}

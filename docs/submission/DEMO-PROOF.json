@@ -1,0 +1,277 @@
+{
+  "recordedAt": "2026-09-11T22:29:20.839Z",
+  "finishedAt": "2026-09-11T22:31:49.286Z",
+  "allActualUiActionsPassed": true,
+  "oneCompleteFreshTake": true,
+  "rawWallClockSeconds": 147.33041501045227,
+  "recordedFrames": 5887,
+  "chapters": [
+    "01-introduction",
+    "02-recorded-voice-request",
+    "03-options-and-evidence",
+    "04-amend140",
+    "05-explicit-approval",
+    "06-create-packet",
+    "07-read-approved-work",
+    "07a-cloud-browser",
+    "07b-launch-kit",
+    "07c-publish-work",
+    "07d-printful-draft",
+    "07e-send-demo-email",
+    "08-save-company-instruction",
+    "09-fresh-conversation",
+    "10-memory-changes-decision",
+    "11-adjust-budget",
+    "12-security-proof",
+    "13-close"
+  ],
+  "freshHotdataWaves": 2,
+  "providerProof": {
+    "checkedAt": "2026-09-11T22:32:06.541212+00:00",
+    "run": "2026-09-11T22-29-20-832Z",
+    "checks": [
+      {
+        "name": "oneRawPassed",
+        "passed": true
+      },
+      {
+        "name": "emptyInitialChatAndArtifacts",
+        "passed": true
+      },
+      {
+        "name": "firstProposal150at1750",
+        "passed": true
+      },
+      {
+        "name": "amended140at1630ClearsApproval",
+        "passed": true
+      },
+      {
+        "name": "explicitCurrentApproval",
+        "passed": true
+      },
+      {
+        "name": "approvedPacketCreated",
+        "passed": true
+      },
+      {
+        "name": "realBrowserReadAndOwnedTabClosed",
+        "passed": true
+      },
+      {
+        "name": "cloudUploadMatchesApprovedKit",
+        "passed": true
+      },
+      {
+        "name": "actualOneItemUnsubmittedDraft",
+        "passed": true
+      },
+      {
+        "name": "recordedFixedOwnerSendReceipt",
+        "passed": true
+      },
+      {
+        "name": "savedNeverSplitInstruction",
+        "passed": true
+      },
+      {
+        "name": "differentChatRecallsAndRejects1800",
+        "passed": true
+      },
+      {
+        "name": "sameNewChat2000Allows1950Express",
+        "passed": true
+      },
+      {
+        "name": "captureClosesAfterSecurity",
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "fileSha256": {
+      "provenance.json": "c18633fa229ace6fb80c85d4b02027599d29cc3bb1d3f7c9248b70ed653f8fc1",
+      "initial-fresh-session.json": "b61dc23a161832af2f3901a40bf02961942dbc91f3174a388b8e4e5df14b0f72",
+      "review150.json": "f17e35302c4ed727e2d8cb668c846e5030e368c387b7abb6f180c04b2d92a391",
+      "04-amend140.json": "de8846f8f4304a6488f7c5666320a96a4a7df58e8305540c828a1f49c83ff396",
+      "05-explicit-approval.json": "2b2041d2b515cec86f65d7ec47b03c925110a3bcb8a7076633c18a27a539abb1",
+      "06-create-packet.json": "a864abebe57a21a3703fe66aa46584c291fd8c51bdfd3013cabda2ec9c71afcd",
+      "tenki-browser-receipt.json": "bfda88701dbcffac401db3aa5d50fea1c389be7d4ed15cc446bd7c57d0a5dc93",
+      "tenki-handoff-proof.json": "fcc75611cfb50b45034cc7e439f23773e0ae4d0df5cf81a9bcd8fc244be95337",
+      "printful-draft.json": "61d085897a2966e02beed8e2b0320de9366e214464da9ff380812f0b97241eef",
+      "sent-email.json": "1904391eef0ac8e7bdd1b840b6f5b01b70f13697c67c00171382581963f0f33a",
+      "08-save-company-instruction.json": "81cc7dcf35e67d961f15a49a8d31025d5f72c6a2917c0425549cfcfa687c97f1",
+      "10-memory-changes-decision.json": "58f2721dbed7d91cc7523d7991f7aebeed00fbfd959950e57abeee5e5ea77819",
+      "11-adjust-budget.json": "b027d1dad5978c3b77314b99d6e2bd731af82ee375e4cccb2426badedcf90365"
+    },
+    "rawFrames": 5887,
+    "rawDuration": 147.33041501045227,
+    "emailMessageId": "1a09298801c6dbe3",
+    "scope": "Fresh one-take recorded flow and existing sanitized receipts. Film visual/audio QA and final export/publication require their separate receipts."
+  },
+  "workTicket": "https://github.com/gtrush03/synth-order-desk/issues/6",
+  "printful": {
+    "id": 176055721,
+    "status": "draft",
+    "itemCount": 1,
+    "externalId": "synth-9bf6d13ece594dff9dd86629",
+    "requestSha256": "59d4da2348ba8d244f0d60bda08f97007b26f505ee83fcb57e5494db722cfea1",
+    "createdAt": "2026-09-11T22:06:31.490Z",
+    "reused": true,
+    "submitted": false,
+    "printReady": false,
+    "artworkPending": true,
+    "catalogVariantId": 4017,
+    "quantity": 1,
+    "artworkSha256": "cc163dd95ac1cca42edb957b89d0acca39c03c54caf99115aa514487b744d183",
+    "artworkReadbackConfirmed": false,
+    "description": "Saved one Black / M sample tee draft with TRU Synth front artwork requested. Printful artwork processing is not yet verified. No purchase or shipment.",
+    "verifiedAt": "2026-09-11T22:30:58.264Z"
+  },
+  "ownerEmail": {
+    "sent": true,
+    "recipient": "hello@trusynth.com",
+    "messageId": "1a09298801c6dbe3",
+    "fingerprint": "1c9f16c11dfe02573ce94a237b33e3ae8c049a23004b2d5dad0179aeb8424a97",
+    "createdAt": "2026-09-11T22:31:04.142Z",
+    "reused": false,
+    "deliveryConfirmed": false
+  },
+  "dataset": "Explicit sample company data, not live supplier prices or stock",
+  "voiceInput": "Prerecorded voice note, actual local Whisper transcription",
+  "narration": "Microsoft Ava neural voice; not GPT Live",
+  "recordingEngine": "Actual Chrome DevTools screencast, timing edited",
+  "messageActions": "Recipient-free supplier Gmail draft, saved social copy, approved public work ticket, owner-only email sent.",
+  "liveProviderProof": {
+    "checkedAt": "2026-09-11T22:34:12.064981+00:00",
+    "runId": "2026-09-11T22-29-20-832Z",
+    "singleCompleteFreshTake": true,
+    "chapters": 18,
+    "flowChecksPassed": 14,
+    "initialChatMessages": 0,
+    "initialArtifacts": 0,
+    "raw": {
+      "file": "live-screen-raw.mp4",
+      "sha256": "c063236dc2df98a01ae3d01bd2d27adb10e6f434705c712d91b2791a745db815",
+      "bytes": 8278286,
+      "durationSeconds": 149.166667,
+      "frames": 4226,
+      "width": 1920,
+      "height": 1080,
+      "provenanceSha256": "c18633fa229ace6fb80c85d4b02027599d29cc3bb1d3f7c9248b70ed653f8fc1",
+      "capturedScreencastFrames": 5887,
+      "captureWallClockSeconds": 147.33041501045227,
+      "frameCountNote": "Encoded MP4 frames and duration are from ffprobe; capture counters describe original screencast input and differ."
+    },
+    "quote": {
+      "initialQuantity": 150,
+      "initialTotalCents": 175000,
+      "revisedQuantity": 140,
+      "revisedTotalCents": 163000,
+      "revisionClearsApproval": true,
+      "explicitApproval": true
+    },
+    "hotdata": {
+      "freshWaves": 2,
+      "createdDatabases": 6,
+      "deletionConfirmed": 6,
+      "queryOverlapMs": [
+        318,
+        399
+      ],
+      "crossCatalogDenialStatuses": [
+        400,
+        400
+      ],
+      "snapshotReuses": 2,
+      "receipts": [
+        {
+          "id": "ec900136-7236-4bbb-9eb5-535992924a57",
+          "sha256": "02089f05d9e9b61486d53d5e55b2381fa1f2dbc24dd84fe858bcc0008312daf1"
+        },
+        {
+          "id": "38dfd544-b107-48ed-83bf-99c860258aae",
+          "sha256": "bd6f2ac1b7a90de590e23aa3434da8fcf781f9de7e8f7797ce30a1a21124dc06"
+        },
+        {
+          "id": "ad455204-c64e-4e5c-975d-c1a976c861d5",
+          "sha256": "f30f2926a738cc190f839c5394021338c7ac55d78326ea9bc8319d1def6bb660"
+        },
+        {
+          "id": "1e98a290-3bac-4bf8-8c3f-303e4f109d2b",
+          "sha256": "dcab3358fa9fe944a4a54f21c56b202d2e9ab6d5780a5fff3e022fbaf430df26"
+        }
+      ]
+    },
+    "rocketRide": {
+      "realPythonCrossChecks": 4,
+      "allAgree": true,
+      "allTerminated": true,
+      "creditUnitsDelta": 1.6,
+      "distinctTaskIdentities": 1,
+      "cloudModelCalls": 0,
+      "receipts": [
+        {
+          "id": "d1b10531-83cd-4106-868a-37113362514f",
+          "sha256": "0406775527e8d87e38d74c4132489e40e9d074df15498b0da9af377ab97ee92b"
+        },
+        {
+          "id": "d1c85206-0eca-4db1-9e8c-03fc7353a66d",
+          "sha256": "dc750f681af374d4651e89af4f46a917957ae9aed3b13670f2dbf40b62c99498"
+        },
+        {
+          "id": "46cd3ae9-1cbd-430e-8106-3da0eee7bfed",
+          "sha256": "7667e11f71d9dd386377b6dc28ca0deb0c5806d2671ca6867495c5192e9c8414"
+        },
+        {
+          "id": "0d236608-ae59-4d0d-94a6-17f09af767fe",
+          "sha256": "f331e687c09c4d05d22a6aedecac378b30d363fc8ff1299a3ba0d12e17dce0e0"
+        }
+      ]
+    },
+    "tenki": {
+      "actualBrowserRead": true,
+      "ownedBrowserClosed": true,
+      "sharedBrowserClosed": false,
+      "approvedUploadMatched": true,
+      "browserReceiptSha256": "bfda88701dbcffac401db3aa5d50fea1c389be7d4ed15cc446bd7c57d0a5dc93"
+    },
+    "github": {
+      "recordedPublicTicket": "https://github.com/gtrush03/synth-order-desk/issues/6",
+      "recordedResponseSha256": "543f50478178492a9564111f67775d3954db6a5f6670bca6cb7c6e80a0099835"
+    },
+    "printful": {
+      "draftId": 176055721,
+      "status": "draft",
+      "quantity": 1,
+      "catalogVariantId": 4017,
+      "reused": true,
+      "providerRecheckedAt": "2026-09-11T22:30:58.264Z",
+      "submitted": false,
+      "printReady": false,
+      "readbackSha256": "ab0d37942f4726b15a6b7401585018575bb1462b9bd82f9224e69410830520b4",
+      "recordedReceiptSha256": "61d085897a2966e02beed8e2b0320de9366e214464da9ff380812f0b97241eef"
+    },
+    "ownerEmail": {
+      "messageId": "1a09298801c6dbe3",
+      "sentAndInboxLabelsVerified": true,
+      "fixedOwnerSenderAndRecipient": true,
+      "externalDeliveryClaimed": false,
+      "readbackSha256": "2c81f1bc229f7b554115ccd0edd1e14abdb3b4226de0cfb9b098ce11277d0829",
+      "recordedReceiptSha256": "1904391eef0ac8e7bdd1b840b6f5b01b70f13697c67c00171382581963f0f33a"
+    },
+    "memory": {
+      "neverSplitSaved": true,
+      "differentConversationRecalls": true,
+      "budget180000Rejects": true,
+      "budget200000AllowsExpress195000": true
+    },
+    "limitations": [
+      "Prices and stock are sample data.",
+      "Printful draft remains unsubmitted and unpaid; artwork readiness is not verified.",
+      "Email is owner-only; no external recipient delivery claim.",
+      "Four RocketRide calls share one task identity; they are deterministic Python, not cloud model agents.",
+      "GPT Live unavailable; local Whisper/Apple and Ava are labeled.",
+      "This is raw-flow proof. Edited-film QA and final publication need separate receipts."
+    ]
+  }
+}

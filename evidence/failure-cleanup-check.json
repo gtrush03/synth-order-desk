@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-09-11T20:15:15.133848+00:00",
+  "kind": "Isolated regression with injected provider I/O; actual conversation failure and persistence path",
+  "result": {
+    "passed": true,
+    "checks": 11,
+    "error": "RocketRide could not verify this proposal; approval is paused. Check the service and free-run allowance, then review again. The previous proposal and approval were cleared. Reload this conversation, then try the review again.",
+    "initialRevision": 4,
+    "clearedRevision": 5,
+    "nextReply": "I need to check a feasible proposal first. What quantity and budget should I use?",
+    "providerCalls": 0
+  },
+  "source": {
+    "sourceSha256": "4191f417407132710119c843ba6b9754c82632d5897f5795b36398a50699bd3b",
+    "transforms": [
+      "ROOT redirected to isolated fixture directory",
+      "localModel seam injected with deterministic review/approve intents",
+      "Hotdata, Cognee, Hydra/Rote and RocketRide I/O injected; RocketRide throws"
+    ],
+    "networkCalls": 0
+  },
+  "bundleSha256": "a548abe43333e3c56b2308f87b22de0bf1b7ffa8818cdfe36a6e9bd05ba5ae97",
+  "limits": [
+    "No actual RocketRide outage was caused.",
+    "No provider network calls were made.",
+    "A separate temporary company and session store was used; the live conversation was not changed."
+  ],
+  "assertions": [
+    "Replacement review failure persists cleared approval, proposal and cloud proof",
+    "Old artifact remains historical",
+    "Re-approval without a new review is refused",
+    "Injected private provider error detail is absent from the user response"
+  ]
+}

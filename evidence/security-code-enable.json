@@ -1,0 +1,39 @@
+{
+  "recordedAt": "2026-09-11T20:10:17.283Z",
+  "account": {
+    "org": "hello-UhCF5tfLsxa99UZVdrvcsT",
+    "role": "Org Admin (REST membership read)",
+    "loginMethod": "google-oauth2 via Snyk CLI OAuth token; no credential created or changed"
+  },
+  "entitlementsV1": {
+    "licenses": false,
+    "reports": false,
+    "fullVulnDB": false
+  },
+  "before": {
+    "status": 200,
+    "sast_enabled": false,
+    "raw": "{\"jsonapi\":{\"version\":\"1.0\"},\"data\":{\"type\":\"sast_settings\",\"id\":\"[org-id]\",\"attributes\":{\"sast_enabled\":false}},\"links\":{\"self\":\"/orgs/[org-id]/settings/sast&version=2024-10-15\"}}"
+  },
+  "authorization": "ROOT authorized a clearly free, reversible Code-enable setting in the existing account; Snyk Code is included in the Free plan",
+  "method": "PATCH /rest/orgs/{org}/settings/sast?version=2024-10-15 {data:{type:sast_settings,attributes:{sast_enabled:true}}}",
+  "revert": "same PATCH with sast_enabled:false",
+  "attempts": [
+    {
+      "status": 400,
+      "withId": false,
+      "response": "{\"jsonapi\":{\"version\":\"1.0\"},\"errors\":[{\"id\":\"79a8b55b-c9de-425c-afab-3dc1b399235a\",\"links\":{\"about\":\"https://docs.snyk.io/scan-with-snyk/error-catalog#snyk-openapi-0001\"},\"status\":\"400\",\"code\":\"SNYK-OPENAPI-0001\",\"title\":\"Bad request\",\"detail\":\"must have required property 'id'\",\"meta\":{\"links\":[\"https://docs.snyk.io/snyk-api-info/getting-started-using-snyk-rest-api \"],\"isErrorCatalogError\":true,\""
+    },
+    {
+      "status": 201,
+      "withId": true,
+      "response": "{\"jsonapi\":{\"version\":\"1.0\"},\"data\":{\"type\":\"sast_settings\",\"id\":\"[org-id]\",\"attributes\":{\"sast_enabled\":true}},\"links\":{\"self\":\"/orgs/[org-id]/settings/sast&version=2024-10-15\"}}"
+    }
+  ],
+  "after": {
+    "status": 200,
+    "sast_enabled": true,
+    "raw": "{\"jsonapi\":{\"version\":\"1.0\"},\"data\":{\"type\":\"sast_settings\",\"id\":\"[org-id]\",\"attributes\":{\"sast_enabled\":true}},\"links\":{\"self\":\"/orgs/[org-id]/settings/sast&version=2024-10-15\"}}"
+  },
+  "result": "ENABLED (free, reversible)"
+}

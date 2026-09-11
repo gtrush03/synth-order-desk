@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-11T19:19:44.028Z",
+  "results": [
+    {
+      "id": "dbids7xvmh9ghxwusyq19pq27ddso7",
+      "name": "Synth Order Desk inventory 2d09d2d1",
+      "removed": true
+    },
+    {
+      "id": "dbidefjom6080y33woc6tfe81aykaf",
+      "name": "Synth Order Desk shipping 2d09d2d1",
+      "removed": true
+    }
+  ],
+  "remaining": [],
+  "hasMore": false
+}

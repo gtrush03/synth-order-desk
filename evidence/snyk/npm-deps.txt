@@ -1,0 +1,24 @@
+$ snyk test --file=package.json --dev --json-file-output=evidence/snyk/npm-deps.json
+
+
+Testing <export>...
+
+Organization:      hello-UhCF5tfLsxa99UZVdrvcsT
+Package manager:   npm
+Target file:       package.json
+Project name:      tru-synth-order-desk
+Open source:       no
+Project path:      <export>
+Licenses:          enabled
+
+✔ Tested 45 dependencies for known issues, no vulnerable paths found.
+
+Tip: Detected multiple supported manifests (2), use --all-projects to scan all of them at once.
+
+Next steps:
+- Run `snyk monitor` to be notified about new related vulnerabilities.
+- Run `snyk test` as part of your CI/test.
+
+
+
+[exit 0]

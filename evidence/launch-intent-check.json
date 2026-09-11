@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-09-11T20:31:44.968808+00:00",
+  "passed": true,
+  "runtime": "Apple FoundationModels on this Mac",
+  "sourceSha256": "40be84563f95ccc7bcd63cd4a96097bcd53ef2631cd8af91b85a7edd9f289fb0",
+  "binarySha256": "63e87aa593c59f039537d8b3d237be19ddd98c2cb642ed3722e6e9fe116d8a65",
+  "cases": [
+    {
+      "message": "Please review 150 black T-shirts within a budget of 1800 dollars.",
+      "expected": "review",
+      "result": {
+        "quantity": 150,
+        "action": "review",
+        "budgetDollars": 1800
+      },
+      "passed": true
+    },
+    {
+      "message": "Actually, make it 140 shirts.",
+      "expected": "review",
+      "result": {
+        "action": "review",
+        "budgetDollars": 0,
+        "quantity": 140
+      },
+      "passed": true
+    },
+    {
+      "message": "Prepare the supplier email and social post.",
+      "expected": "launch",
+      "result": {
+        "action": "launch",
+        "memoryNote": "Prepare the supplier email and social post."
+      },
+      "passed": true
+    },
+    {
+      "message": "Publish the approved work ticket to GitHub.",
+      "expected": "publish",
+      "result": {
+        "action": "publish",
+        "memoryNote": "Publish the approved work ticket to GitHub."
+      },
+      "passed": true
+    },
+    {
+      "message": "Check the supplier website.",
+      "expected": "browse",
+      "result": {
+        "memoryNote": "Check the supplier website.",
+        "action": "browse"
+      },
+      "passed": true
+    }
+  ],
+  "providerCalls": 0,
+  "limits": "Intent classification only; no browser action or publication was performed."
+}

@@ -1,0 +1,21 @@
+{
+  "repoUrl": "https://github.com/gtrush03/synth-order-desk",
+  "commitSha": "",
+  "demoVideoUrl": "./submission/synth-order-desk-demo.mp4",
+  "demoVideoKind": "edited-video",
+  "demoVideoRecordedAt": "",
+  "posterUrl": "./submission/poster.jpg",
+  "workTicketUrl": "https://github.com/gtrush03/synth-order-desk/issues/1",
+  "workTicketLabel": "Approved production handoff",
+  "tenkiPreviewUrl": "https://synth-order-work--23h39h.us.sb.tenki.sh",
+  "tenkiPreviewEmbed": false,
+  "eventWorkspaceUrl": "https://synth-event-2026--23h39h.us.sb.tenki.sh",
+  "contactUrl": "https://trusynth.com",
+  "tenkiPreviewExpiresAt": "2026-09-11T23:51:25.313Z",
+  "tenkiDesktopUrl": "https://synth-live-desktop--23h39h.us.sb.tenki.sh/synth.html",
+  "tenkiDesktopExpiresAt": "2026-09-11T23:51:25.313Z",
+  "captionUrl": "./submission/captions.vtt",
+  "transcriptUrl": "./submission/TRANSCRIPT.md",
+  "eventWorkspaceExpiresAt": "2026-09-11T22:15:00Z",
+  "presentationUrl": "./submission/Synth-Order-Desk.pdf"
+}

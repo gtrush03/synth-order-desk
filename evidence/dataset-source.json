@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-11T20:39:24.407523+00:00",
+  "kind": "curated-sample",
+  "sourceSha256": "0a28b1178774abb168911ea5fbafa0a5ffc5020d8860984211a7bafda4c0ca4c",
+  "inventoryRows": 12,
+  "shippingRows": 3,
+  "policyRows": 1,
+  "availableBeforeReservations": 130,
+  "reserved": 30,
+  "held": 68,
+  "usableStock": 100,
+  "externalSupplierData": false,
+  "previousSourceSha256": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331"
+}

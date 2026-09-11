@@ -1,0 +1,129 @@
+{
+  "updatedAt": "2026-09-11T22:34:58.143380+00:00",
+  "summary": "19 of 20 demo acceptance checks complete: verified fresh 18-step flow, narrated film, seven-page PDF and isolated tested source. Final public-link review and George clicking Submit remain. This is a hackathon prototype, not production readiness.",
+  "method": "20 explicit acceptance checks for the revised talking-Synth entry; this replaces the earlier dashboard checklist. Equal-weight check completion is not effort, quality or winning probability.",
+  "tagline": "Turn order changes into approved work.",
+  "taglineCharacters": 38,
+  "gates": [
+    {
+      "title": "A real local conversation",
+      "status": "done",
+      "detail": "Apple FoundationModels interprets free text; tool results ground the order response.",
+      "link": "/evidence/talk-verification"
+    },
+    {
+      "title": "Voice note to useful answer",
+      "status": "done",
+      "detail": "Local voice-file transcription returned the $1,750 proposal. George also confirmed the physical EarPods microphone and spoken reply both work.",
+      "link": "/evidence/physical-voice-check"
+    },
+    {
+      "title": "Company data drives the quote",
+      "status": "done",
+      "detail": "Versioned, validated company stock and rates are read from a replaceable file; source SHA accompanies the result.",
+      "link": "/api/company"
+    },
+    {
+      "title": "Useful Hotdata scopes",
+      "status": "done",
+      "detail": "Three role-specific databases returned inventory, shipping rates and policy. The inventory database rejected a query against the shipping catalog.",
+      "link": "/evidence/hotdata-order-proof"
+    },
+    {
+      "title": "Actual concurrent SQL",
+      "status": "done",
+      "detail": "The newest live wave had 1,619 ms of overlapping SQL requests and returned the rows used for the quote. This measures overlap, not speedup.",
+      "link": "/evidence/hotdata-order-proof"
+    },
+    {
+      "title": "Cleanup and failure handling",
+      "status": "done",
+      "detail": "Newest run removed all three databases; earlier network-failure leftovers reconciled with a scoped API list returning none. Expiry is only best effort.",
+      "link": "/evidence/hotdata-cleanup"
+    },
+    {
+      "title": "Exact proposal approval",
+      "status": "done",
+      "detail": "19 core tests pass. Exact approval binds quantity, price and option; saved packets identify their approval revision. Changed policy, source or failed replacement review clears old approval.",
+      "link": "/evidence/integration-checks"
+    },
+    {
+      "title": "A real saved deliverable",
+      "status": "done",
+      "detail": "The actual conversation created an approved work packet through the captured Rote Play, including an unsent customer reply.",
+      "link": "/evidence/full-flow"
+    },
+    {
+      "title": "Memory affects the next request",
+      "status": "done",
+      "detail": "Persistence test: \u201cNever split shipments\u201d survives a fresh session and changes the feasible choice; raising budget then selects express.",
+      "link": "/evidence/talk-verification"
+    },
+    {
+      "title": "Cognee in the conversation",
+      "status": "done",
+      "detail": "Actual Cognee raw-document retrieval restored an empty working cache to revision4 with three instructions and a prior approval. Fresh sessions use this memory. No semantic graph or embedding claim.",
+      "link": "/evidence/cognee-cache-recovery"
+    },
+    {
+      "title": "HydraDB changes the working context",
+      "status": "done",
+      "detail": "Actual conversation queried the deadline and shipment policy from HydraDB and supplied those returned constraints to the Rote review Play.",
+      "link": "/evidence/integrated-review"
+    },
+    {
+      "title": "Two captured Rote Plays",
+      "status": "done",
+      "detail": "Both captured Plays ran with 100, 140 and 150 shirts. The packet Play refused a stale approval. Lint passed with optional presentation-fixture advice.",
+      "link": "/evidence/rote-plays-proof"
+    },
+    {
+      "title": "RocketRide cloud execution",
+      "status": "done",
+      "detail": "Actual served conversation used two cloud-returned proposals, then enforced the current approval fingerprint and saved the exact140/$1630packet. Both tasks terminated. No external model call.",
+      "link": "/evidence/integrated-cloud-flow"
+    },
+    {
+      "title": "Within approved funding",
+      "status": "done",
+      "detail": "Existing sponsor credits plus one expressly approved $10.50 Cloudflare purchase ($10 AI credit and $0.50 fee); automatic top-ups off. No Printful purchase. GPT Live route remains unavailable; Ava narration works.",
+      "link": "/evidence/hotdata-credits"
+    },
+    {
+      "title": "Honest sponsor evidence in the UI",
+      "status": "done",
+      "detail": "Six sponsor roles and actual receipts are visible. Snyk is build-time; Cognee uses raw-document memory; RocketRide executes the deterministic cloud pipeline.",
+      "link": "/talk"
+    },
+    {
+      "title": "All three talks transcribed",
+      "status": "done",
+      "detail": "Full local ASR completed for 27, 28 and 29; quality review marks unrecoverable audio.",
+      "link": "/evidence/event-notes"
+    },
+    {
+      "title": "Isolated runnable judge export",
+      "status": "done",
+      "detail": "213-file code candidate passed all 99 tests with credentials and private history excluded. Final media included in the exact-hash export.",
+      "link": "/evidence/judges-repo"
+    },
+    {
+      "title": "Security check of the submitted code",
+      "status": "done",
+      "detail": "All four Snyk scans executed: main npm and Python clean; 16 Code findings and 29 Event development-dependency advisories remain disclosed.",
+      "link": "/evidence/morning-sponsor-audit"
+    },
+    {
+      "title": "Room rehearsal and backup",
+      "status": "done",
+      "detail": "Physical voice confirmed by George; full fresh 18-step take verified with two Hotdata waves, real cloud browser, Printful draft and owner email. Narrated film under two minutes verified.",
+      "link": "/evidence/physical-voice-check"
+    },
+    {
+      "title": "Judge-facing links and submission",
+      "status": "open",
+      "detail": "Public GitHub and Cloudflare publication are being verified. Form is prepared for George to review and click Submit himself.",
+      "link": "/evidence/judges-repo"
+    }
+  ]
+}

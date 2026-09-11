@@ -1,0 +1,504 @@
+{
+  "at": "2026-09-11T19:21:51.211Z",
+  "result": "pass",
+  "engine": "Actual local conversation with Hotdata, Cognee, HydraDB and Rote",
+  "outputs": [
+    {
+      "message": "Remember: never split shipments.",
+      "reply": "I'll remember that for future requests at this company: never split shipments",
+      "events": [
+        {
+          "id": "cognee-recall",
+          "label": "Retrieved company instructions from Cognee",
+          "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; document d5c73c8a-6737-40c3-81e1-8617a4cd7722; revision 2. Raw dataset retrieval; no graph-completion model call.",
+          "at": "2026-09-11T19:21:37.398Z"
+        },
+        {
+          "id": "company-memory",
+          "label": "Opened the company workspace",
+          "detail": "2 saved instructions and 0 previous approved proposals. Company data a49174ced4c2.",
+          "at": "2026-09-11T19:21:37.398Z"
+        },
+        {
+          "id": "local-memory",
+          "label": "Saved a company instruction",
+          "detail": "never split shipments",
+          "at": "2026-09-11T19:21:39.599Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “remember”; 2205 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:39.608Z"
+        }
+      ],
+      "proposal": null,
+      "approval": null,
+      "artifacts": []
+    },
+    {
+      "freshConversation": {
+        "id": "44bdea37-2632-4b71-b65a-b2af574a5245",
+        "revision": 0,
+        "quantity": 100,
+        "budgetCents": 180000,
+        "rehearsal": {
+          "proposal": null,
+          "approved": null,
+          "memory": []
+        },
+        "notes": [
+          "Owner approval required.",
+          "never split shipments"
+        ],
+        "messages": [],
+        "events": [
+          {
+            "id": "cognee-recall",
+            "label": "Retrieved company instructions from Cognee",
+            "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; document d5c73c8a-6737-40c3-81e1-8617a4cd7722; revision 2. Raw dataset retrieval; no graph-completion model call.",
+            "at": "2026-09-11T19:21:39.676Z"
+          },
+          {
+            "id": "company-memory",
+            "label": "Opened the company workspace",
+            "detail": "2 saved instructions and 0 previous approved proposals. Company data a49174ced4c2.",
+            "at": "2026-09-11T19:21:39.676Z"
+          }
+        ],
+        "artifacts": [],
+        "companyName": "TRU Merch Studio",
+        "source": "Hackathon demonstration dataset; replace with your own company price and stock export."
+      }
+    },
+    {
+      "message": "Review 150 shirts with a budget of 2000 dollars.",
+      "reply": "For 150 shirts, express fits the September 18 deadline at $1,950.00, leaving $50.00 in the budget. Would you like to approve this proposal? Your company instruction is: never split shipments",
+      "events": [
+        {
+          "id": "cognee-recall",
+          "label": "Retrieved company instructions from Cognee",
+          "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; document d5c73c8a-6737-40c3-81e1-8617a4cd7722; revision 2. Raw dataset retrieval; no graph-completion model call.",
+          "at": "2026-09-11T19:21:39.676Z"
+        },
+        {
+          "id": "company-memory",
+          "label": "Opened the company workspace",
+          "detail": "2 saved instructions and 0 previous approved proposals. Company data a49174ced4c2.",
+          "at": "2026-09-11T19:21:39.676Z"
+        },
+        {
+          "id": "company-data",
+          "label": "Read the company data · Hotdata",
+          "detail": "Source a49174ced4c2; 3 Hotdata databases; 1619 ms SQL overlap. Receipt c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f.",
+          "at": "2026-09-11T19:21:48.305Z"
+        },
+        {
+          "id": "local-options",
+          "label": "Checked the sample order",
+          "detail": "150 shirts; $2,000.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+          "at": "2026-09-11T19:21:48.305Z"
+        },
+        {
+          "id": "hydra-constraints",
+          "label": "Queried the order constraints in HydraDB",
+          "detail": "Order node 1132737431928010479; 2 returned constraints, used by the review Play; 30 ms.",
+          "at": "2026-09-11T19:21:49.056Z"
+        },
+        {
+          "id": "rote-review",
+          "label": "Replayed the captured order-review procedure",
+          "detail": "Rote 0.82.0; run_20260911_192148.666_5; 493 ms; no exploratory model wake.",
+          "at": "2026-09-11T19:21:49.056Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “review”; 9378 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:49.056Z"
+        }
+      ],
+      "proposal": {
+        "quantity": 150,
+        "budgetCents": 200000,
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "totalCents": 165000,
+            "arrival": "2026-09-21",
+            "onTime": false,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "express",
+            "name": "Express",
+            "totalCents": 195000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "split",
+            "name": "Split shipment",
+            "totalCents": 175000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+            "withinBudget": true
+          }
+        ],
+        "chosen": {
+          "id": "express",
+          "name": "Express",
+          "totalCents": 195000,
+          "arrival": "2026-09-18",
+          "onTime": true,
+          "explanation": "150 units + shipping; company source demo-company",
+          "withinBudget": true
+        }
+      },
+      "approval": null,
+      "artifacts": [
+        {
+          "id": "c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f",
+          "name": "Data-source receipt",
+          "url": "/api/conversation/receipt/c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f"
+        }
+      ]
+    },
+    {
+      "message": "Yes, approve this proposal.",
+      "reply": "I've recorded your approval for 150 shirts at $1,950.00. Shall I write the customer reply?",
+      "events": [
+        {
+          "id": "company-data",
+          "label": "Read the company data · Hotdata",
+          "detail": "Source a49174ced4c2; 3 Hotdata databases; 1619 ms SQL overlap. Receipt c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f.",
+          "at": "2026-09-11T19:21:48.305Z"
+        },
+        {
+          "id": "local-options",
+          "label": "Checked the sample order",
+          "detail": "150 shirts; $2,000.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+          "at": "2026-09-11T19:21:48.305Z"
+        },
+        {
+          "id": "hydra-constraints",
+          "label": "Queried the order constraints in HydraDB",
+          "detail": "Order node 1132737431928010479; 2 returned constraints, used by the review Play; 30 ms.",
+          "at": "2026-09-11T19:21:49.056Z"
+        },
+        {
+          "id": "rote-review",
+          "label": "Replayed the captured order-review procedure",
+          "detail": "Rote 0.82.0; run_20260911_192148.666_5; 493 ms; no exploratory model wake.",
+          "at": "2026-09-11T19:21:49.056Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “review”; 9378 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:49.056Z"
+        },
+        {
+          "id": "local-approval",
+          "label": "Recorded your proposal approval",
+          "detail": "150 shirts at $1,950.00. Local demo record; no purchase or message.",
+          "at": "2026-09-11T19:21:49.798Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “approve”; 737 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:49.798Z"
+        },
+        {
+          "id": "cognee-save",
+          "label": "Saved the updated company memory in Cognee",
+          "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; revision 3. Raw document stored; no external model call.",
+          "at": "2026-09-11T19:21:49.922Z"
+        }
+      ],
+      "proposal": {
+        "quantity": 150,
+        "budgetCents": 200000,
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "totalCents": 165000,
+            "arrival": "2026-09-21",
+            "onTime": false,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "express",
+            "name": "Express",
+            "totalCents": 195000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "split",
+            "name": "Split shipment",
+            "totalCents": 175000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+            "withinBudget": true
+          }
+        ],
+        "chosen": {
+          "id": "express",
+          "name": "Express",
+          "totalCents": 195000,
+          "arrival": "2026-09-18",
+          "onTime": true,
+          "explanation": "150 units + shipping; company source demo-company",
+          "withinBudget": true
+        }
+      },
+      "approval": {
+        "quantity": 150,
+        "totalCents": 195000,
+        "option": "Express"
+      },
+      "artifacts": [
+        {
+          "id": "c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f",
+          "name": "Data-source receipt",
+          "url": "/api/conversation/receipt/c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f"
+        }
+      ]
+    },
+    {
+      "message": "Write the customer reply.",
+      "reply": "I've prepared the customer reply for 150 shirts at $1,950.00. It's saved in this demo's workspace, ready for you to read.",
+      "events": [
+        {
+          "id": "rote-review",
+          "label": "Replayed the captured order-review procedure",
+          "detail": "Rote 0.82.0; run_20260911_192148.666_5; 493 ms; no exploratory model wake.",
+          "at": "2026-09-11T19:21:49.056Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “review”; 9378 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:49.056Z"
+        },
+        {
+          "id": "local-approval",
+          "label": "Recorded your proposal approval",
+          "detail": "150 shirts at $1,950.00. Local demo record; no purchase or message.",
+          "at": "2026-09-11T19:21:49.798Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “approve”; 737 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:49.798Z"
+        },
+        {
+          "id": "cognee-save",
+          "label": "Saved the updated company memory in Cognee",
+          "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; revision 3. Raw document stored; no external model call.",
+          "at": "2026-09-11T19:21:49.922Z"
+        },
+        {
+          "id": "local-draft",
+          "label": "Created a customer-reply draft",
+          "detail": "Local Markdown artifact. Nothing sent.",
+          "at": "2026-09-11T19:21:50.341Z"
+        },
+        {
+          "id": "rote-packet",
+          "label": "Replayed the approved-work-packet Play",
+          "detail": "Rote 0.82.0; run_20260911_192150.365_4; 119 ms. Draft customer reply and next work saved; nothing sent.",
+          "at": "2026-09-11T19:21:50.461Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “draft”; 537 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:50.461Z"
+        }
+      ],
+      "proposal": {
+        "quantity": 150,
+        "budgetCents": 200000,
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "totalCents": 165000,
+            "arrival": "2026-09-21",
+            "onTime": false,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "express",
+            "name": "Express",
+            "totalCents": 195000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "split",
+            "name": "Split shipment",
+            "totalCents": 175000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+            "withinBudget": true
+          }
+        ],
+        "chosen": {
+          "id": "express",
+          "name": "Express",
+          "totalCents": 195000,
+          "arrival": "2026-09-18",
+          "onTime": true,
+          "explanation": "150 units + shipping; company source demo-company",
+          "withinBudget": true
+        }
+      },
+      "approval": {
+        "quantity": 150,
+        "totalCents": 195000,
+        "option": "Express"
+      },
+      "artifacts": [
+        {
+          "id": "c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f",
+          "name": "Data-source receipt",
+          "url": "/api/conversation/receipt/c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f"
+        },
+        {
+          "id": "982155ab-e48f-4a88-bec2-0a307195bdba",
+          "name": "Approved work packet · 150 shirts",
+          "url": "/api/conversation/artifact/982155ab-e48f-4a88-bec2-0a307195bdba"
+        }
+      ]
+    },
+    {
+      "message": "Remember: allow split shipments after I approve the exact quote.",
+      "reply": "I'll remember that for future requests at this company: allow split shipments after I approve the exact quote I have cleared the current approval so the updated instruction gets reviewed.",
+      "events": [
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “approve”; 737 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:49.798Z"
+        },
+        {
+          "id": "cognee-save",
+          "label": "Saved the updated company memory in Cognee",
+          "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; revision 3. Raw document stored; no external model call.",
+          "at": "2026-09-11T19:21:49.922Z"
+        },
+        {
+          "id": "local-draft",
+          "label": "Created a customer-reply draft",
+          "detail": "Local Markdown artifact. Nothing sent.",
+          "at": "2026-09-11T19:21:50.341Z"
+        },
+        {
+          "id": "rote-packet",
+          "label": "Replayed the approved-work-packet Play",
+          "detail": "Rote 0.82.0; run_20260911_192150.365_4; 119 ms. Draft customer reply and next work saved; nothing sent.",
+          "at": "2026-09-11T19:21:50.461Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “draft”; 537 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:50.461Z"
+        },
+        {
+          "id": "local-memory",
+          "label": "Saved a company instruction",
+          "detail": "allow split shipments after I approve the exact quote",
+          "at": "2026-09-11T19:21:51.086Z"
+        },
+        {
+          "id": "local-language-model",
+          "label": "Understood with the on-device model",
+          "detail": "Apple FoundationModels interpreted “remember”; 623 ms for this turn. No cloud model request.",
+          "at": "2026-09-11T19:21:51.087Z"
+        },
+        {
+          "id": "cognee-save",
+          "label": "Saved the updated company memory in Cognee",
+          "detail": "Dataset 8b9cda4d-fc22-5788-bc55-3771f1235de0; revision 4. Raw document stored; no external model call.",
+          "at": "2026-09-11T19:21:51.210Z"
+        }
+      ],
+      "proposal": {
+        "quantity": 150,
+        "budgetCents": 200000,
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "totalCents": 165000,
+            "arrival": "2026-09-21",
+            "onTime": false,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "express",
+            "name": "Express",
+            "totalCents": 195000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "split",
+            "name": "Split shipment",
+            "totalCents": 175000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+            "withinBudget": true
+          }
+        ],
+        "chosen": {
+          "id": "split",
+          "name": "Split shipment",
+          "totalCents": 175000,
+          "arrival": "2026-09-18",
+          "onTime": true,
+          "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+          "withinBudget": true
+        }
+      },
+      "approval": null,
+      "artifacts": [
+        {
+          "id": "c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f",
+          "name": "Data-source receipt",
+          "url": "/api/conversation/receipt/c6cfcb5e-f4f8-4cc6-a8aa-f7a54b40354f"
+        },
+        {
+          "id": "982155ab-e48f-4a88-bec2-0a307195bdba",
+          "name": "Approved work packet · 150 shirts",
+          "url": "/api/conversation/artifact/982155ab-e48f-4a88-bec2-0a307195bdba"
+        }
+      ]
+    }
+  ],
+  "artifactText": "# Approved order work packet\n\nCompany: TRU Merch Studio\nConversation: 44bdea37-2632-4b71-b65a-b2af574a5245\nProposal revision: 2\nSource fingerprint: a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331\n\n## Approved proposal\n\n150 black T-shirts · Express · $1,950.00 · arrival 2026-09-18\n\n## Customer reply — unsent\n\nHello,\n\nWe can provide 150 black T-shirts using express, for a proposed total of $1,950.00, arriving 2026-09-18. Please confirm the sizes, delivery address and artwork before we finalize the order.\n\nThank you,\nTRU Merch Studio\n\n## Work still requiring human input\n\n- Confirm sizes, address and artwork.\n- Confirm supplier availability against the real company system.\n- Send the reviewed reply through the company's authorized channel.\n\nThis packet records proposal approval only. No customer message, payment or supplier order was made. Demonstration prices and stock remain demonstration data.\n"
+}

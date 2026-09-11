@@ -1,0 +1,124 @@
+{
+  "began": "2026-09-11T18:59:25.534Z",
+  "ended": "2026-09-11T18:59:52.311Z",
+  "status": 200,
+  "state": {
+    "id": "f9a42d44-cccb-4d48-a66e-0a0a1a0a6685",
+    "revision": 1,
+    "quantity": 150,
+    "budgetCents": 180000,
+    "rehearsal": {
+      "proposal": {
+        "quantity": 150,
+        "budgetCents": 180000,
+        "options": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "totalCents": 165000,
+            "arrival": "2026-09-21",
+            "onTime": false,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": true
+          },
+          {
+            "id": "express",
+            "name": "Express",
+            "totalCents": 195000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "150 units + shipping; company source demo-company",
+            "withinBudget": false
+          },
+          {
+            "id": "split",
+            "name": "Split shipment",
+            "totalCents": 175000,
+            "arrival": "2026-09-18",
+            "onTime": true,
+            "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+            "withinBudget": true
+          }
+        ],
+        "chosen": {
+          "id": "split",
+          "name": "Split shipment",
+          "totalCents": 175000,
+          "arrival": "2026-09-18",
+          "onTime": true,
+          "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+          "withinBudget": true
+        }
+      },
+      "approved": null,
+      "memory": []
+    },
+    "notes": [
+      "Owner approval required."
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "text": "The customer needs 150 black T-shirts. Keep the budget at $1800.",
+        "at": "2026-09-11T18:59:52.307Z"
+      },
+      {
+        "role": "assistant",
+        "text": "For 150 shirts, split shipment fits the September 18 deadline at $1,750.00, leaving $50.00 in the budget. Standard arrives too late, and express costs $1,950.00. Would you like to approve this proposal? Your company instruction is: Owner approval required.",
+        "at": "2026-09-11T18:59:52.307Z"
+      }
+    ],
+    "events": [
+      {
+        "id": "company-memory",
+        "label": "Opened the company workspace",
+        "detail": "1 saved instructions and 0 previous approved proposals. Company data a49174ced4c2.",
+        "at": "2026-09-11T18:59:25.529Z"
+      },
+      {
+        "id": "company-data",
+        "label": "Read the company data \u00b7 Hotdata",
+        "detail": "Source a49174ced4c2; 3 Hotdata databases; 1042 ms SQL overlap. Receipt 4da722b9-899b-44f8-866f-bddc94c509d9.",
+        "at": "2026-09-11T18:59:51.559Z"
+      },
+      {
+        "id": "local-options",
+        "label": "Checked the sample order",
+        "detail": "150 shirts; $1,800.00 budget; September 18 deadline. Three fulfillment options calculated from the current company source.",
+        "at": "2026-09-11T18:59:51.560Z"
+      },
+      {
+        "id": "hydra-constraints",
+        "label": "Queried the order constraints in HydraDB",
+        "detail": "Order node 324839167912012230; 2 returned constraints, used by the review Play; 32 ms.",
+        "at": "2026-09-11T18:59:52.307Z"
+      },
+      {
+        "id": "rote-review",
+        "label": "Replayed the captured order-review procedure",
+        "detail": "Rote 0.82.0; run_20260911_185951.943_1; 467 ms; no exploratory model wake.",
+        "at": "2026-09-11T18:59:52.307Z"
+      },
+      {
+        "id": "local-language-model",
+        "label": "Understood with the on-device model",
+        "detail": "Apple FoundationModels interpreted \u201creview\u201d; 26770 ms for this turn. No cloud model request.",
+        "at": "2026-09-11T18:59:52.307Z"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "4da722b9-899b-44f8-866f-bddc94c509d9",
+        "name": "Data-source receipt",
+        "url": "/api/conversation/receipt/4da722b9-899b-44f8-866f-bddc94c509d9"
+      }
+    ],
+    "companyName": "TRU Merch Studio",
+    "source": "Hackathon demonstration dataset; replace with your own company price and stock export.",
+    "dataRevision": "a49174ced4c273d444f947051a0da11382971906a3f2a452c315590b2ea1c331"
+  },
+  "reply": "For 150 shirts, split shipment fits the September 18 deadline at $1,750.00, leaving $50.00 in the budget. Standard arrives too late, and express costs $1,950.00. Would you like to approve this proposal? Your company instruction is: Owner approval required.",
+  "engine": "Apple on-device model",
+  "cloudModelCalls": 0,
+  "paidServiceCalls": 0
+}

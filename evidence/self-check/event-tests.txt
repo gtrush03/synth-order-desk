@@ -1,0 +1,28 @@
+bun test v1.3.10 (30e609e0)
+
+event-workspace/tests/event.test.ts:
+(pass) invalid input, unchecked/string consent, stale terms and injected header are rejected [1.31ms]
+(pass) body cap checks real streamed bytes, including absent or dishonest content length [2.85ms]
+(pass) real SQLite insert persists consent and public projection never exposes private fields [5.01ms]
+(pass) five per IP/hour succeeds; sixth refuses; later hour resets; duplicate cannot overwrite consent [0.83ms]
+(pass) global 200 signups/day boundary and 500 total storage boundary are atomic SQL conditions [18.38ms]
+(pass) removal requires private token, redacts PII, disables directory and follow-up, cleanup purges [0.71ms]
+(pass) expired visitors cannot appear, send, or survive daily retention cleanup [0.43ms]
+(pass) sender held, no consent, mismatched review and no ROOT approval never invoke sender [0.36ms]
+(pass) ten reviewed sends/day cap persists; idempotency prevents repeat; accepted is never delivered [2.33ms]
+(pass) ambiguous provider failure retains reservation and blocks retries [0.73ms]
+(pass) Worker boundary: held signup, cross-origin rejection, actual local persistence, no public send endpoint [0.93ms]
+(pass) IP rate limit remains effective across midnight [0.37ms]
+(pass) scheduled Worker invokes actual expired-record purge [0.22ms]
+(pass) automatic followup requires operator enable, exact content hash and binding; never accepts request control [0.80ms]
+(pass) signup route triggers only explicitly requested fixed content; client cannot override sender or text [0.55ms]
+(pass) actual selftest acceptance migration consumes one Sep11 slot and remains idempotent [1.59ms]
+
+event-workspace/tests/runtime.test.ts:
+(pass) Tenki adapter limits static files, rejects cross origin, holds mail and purges on expiry [7.94ms]
+(pass) Tenki ignores spoofed CF IPs, enforces five shared signups and purges real data at expiry [1.22ms]
+
+ 18 pass
+ 0 fail
+ 103 expect() calls
+Ran 18 tests across 2 files. [60.00ms]

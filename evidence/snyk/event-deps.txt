@@ -1,0 +1,103 @@
+$ snyk test --file=event-workspace/package.json --dev --json-file-output=evidence/snyk/event-deps.json
+
+
+Testing <export>...
+
+Tested 37 dependencies for known issues, found 29 issues, 29 vulnerable paths.
+
+
+Issues to fix by upgrading:
+
+  Upgrade wrangler@4.96.0 to wrangler@4.114.0 to fix
+  ✗ Directory Traversal [Low Severity][https://security.snyk.io/vuln/SNYK-JS-ESBUILD-17750815] in esbuild@0.27.3
+    introduced by wrangler@4.96.0 > esbuild@0.27.3
+  ✗ Integer Overflow [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SHARP-18184262] in sharp@0.34.5
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > sharp@0.34.5
+  ✗ Out-of-bounds Read [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-SHARP-18184416] in sharp@0.34.5
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > sharp@0.34.5
+  ✗ Improper Certificate Validation [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-17372609] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  ✗ Time-of-check Time-of-use (TOCTOU) Race Condition [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-17372752] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  ✗ Integer Overflow [High Severity][https://security.snyk.io/vuln/SNYK-JS-SHARP-18184259] in sharp@0.34.5
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > sharp@0.34.5
+  ✗ Heap-based Buffer Overflow [High Severity][https://security.snyk.io/vuln/SNYK-JS-SHARP-18184418] in sharp@0.34.5
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > sharp@0.34.5
+  ✗ Origin Validation Error [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-17372667] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  ✗ Use of Cache Containing Sensitive Information [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-17372697] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-17372754] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  ✗ Permissive List of Allowed Inputs [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-17372758] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  ✗ Asymmetric Resource Consumption (Amplification) [High Severity][https://security.snyk.io/vuln/SNYK-JS-WS-17344547] in ws@8.20.1
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > ws@8.20.1
+  ✗ Resources Downloaded over Insecure Protocol [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-ESBUILD-17750822] in esbuild@0.27.3
+    introduced by wrangler@4.96.0 > esbuild@0.27.3
+  ✗ CRLF Injection [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-17372658] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+
+
+Issues with no direct upgrade or patch:
+  ✗ Heap-based Buffer Overflow [High Severity][https://security.snyk.io/vuln/SNYK-JS-SHARP-19653587] in sharp@0.34.5
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > sharp@0.34.5
+  This issue was fixed in versions: 0.35.4
+  ✗ Improper Neutralization [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-18426061] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 6.28.0, 7.29.0, 8.9.0
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-18426063] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 6.28.0, 7.29.0, 8.9.0
+  ✗ Interpretation Conflict [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-18426065] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.0, 8.9.0
+  ✗ CRLF Injection [Low Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-18426067] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 6.28.0, 7.29.0, 8.9.0
+  ✗ Information Exposure [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-18426521] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.0, 8.9.0
+  ✗ Missing Release of Resource after Effective Lifetime [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635206] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.1, 8.10.2
+  ✗ Allocation of Resources Without Limits or Throttling [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635208] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.1, 8.10.2
+  ✗ Uncaught Exception [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635210] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 6.28.1, 7.29.1, 8.10.2
+  ✗ HTTP Request Smuggling [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635212] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 6.28.1, 7.29.1, 8.10.2
+  ✗ Numeric Truncation Error [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635214] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.1, 8.10.2
+  ✗ Use of Persistent Cookies Containing Sensitive Information [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635216] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.1, 8.10.2
+  ✗ Improper Certificate Validation [Critical Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635218] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.1, 8.10.2
+  ✗ Insufficient Verification of Data Authenticity [Medium Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635220] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.1, 8.10.2
+  ✗ Uncaught Exception [High Severity][https://security.snyk.io/vuln/SNYK-JS-UNDICI-19635222] in undici@7.24.8
+    introduced by wrangler@4.96.0 > miniflare@4.20260529.0 > undici@7.24.8
+  This issue was fixed in versions: 7.29.1, 8.10.2
+
+
+
+Organization:      hello-UhCF5tfLsxa99UZVdrvcsT
+Package manager:   npm
+Target file:       event-workspace/package.json
+Project name:      trusynth-event-workspace
+Open source:       no
+Project path:      <export>
+Licenses:          enabled
+
+Tip: Detected multiple supported manifests (2), use --all-projects to scan all of them at once.
+
+
+
+[exit 1]
