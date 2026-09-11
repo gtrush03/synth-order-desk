@@ -1,5 +1,5 @@
 {
-  "at": "2026-09-11T22:34:23.856537+00:00",
+  "at": "2026-09-11T22:38:11.422398+00:00",
   "outcome": "verified",
   "durationSeconds": 98.033333,
   "video": {
@@ -11,8 +11,8 @@
   "remotion": {
     "version": "4.0.523",
     "render": "actual local React compositions",
-    "receipt": "qa/render-receipt.json",
-    "chapterReceipt": "qa/rail-render-receipt.json",
+    "receipt": "submission/motion-render-proof.json",
+    "chapterReceipt": "submission/chapter-render-proof.json",
     "concurrency": 2,
     "closedOwnBrowsers": true
   },
@@ -20,7 +20,7 @@
     "introSeconds": 2.4,
     "originalSeconds": 91.63333333333334,
     "outroSeconds": 4,
-    "sourceVideoSha256": "011d0d2aa7088605393acc7326c829755988e6066214251233c708479d54e56e",
+    "sourceVideoSha256": "7b0bfc27ba88988f54046deffbe0dd7f1d960f608a05f033e362716e466d91e8",
     "sourceUntouched": true,
     "recordedFootage": "All2749frames in sameorder/time; uniform90%scale insideblackframe; chapterrail belowactualpicture; no simulated results",
     "chapters": [
@@ -76,8 +76,8 @@
   },
   "files": {
     "submission/synth-order-desk-demo.mp4": {
-      "bytes": 19516597,
-      "sha256": "d9c069244982c9c617796caaa2e3a57e6e941971051503d445cff9302069af1f"
+      "bytes": 19859843,
+      "sha256": "770ecd96836cf94e11d5ac334e7bb59c321b5510a8f36f2143af978f9f489dcd"
     },
     "submission/poster.jpg": {
       "bytes": 134391,
@@ -94,21 +94,158 @@
     "submission/TRANSCRIPT.md": {
       "bytes": 3156,
       "sha256": "b3104956a6ca6b2e6def19c32cc794f20dbbfce087c32732fed46dea58523131"
+    },
+    "submission/SCREENPLAY.md": {
+      "bytes": 7616,
+      "sha256": "7e31602bf51124475e19904e9f1bb1b82e444996dd4e29495f6273e3b319dd4a"
+    },
+    "submission/full-session.mp4": {
+      "bytes": 8278286,
+      "sha256": "c063236dc2df98a01ae3d01bd2d27adb10e6f434705c712d91b2791a745db815"
+    },
+    "submission/motion-render-proof.json": {
+      "bytes": 596,
+      "sha256": "c47415a56d514f9c1045632dc5738df29823c00994ca1de88bc5c6c10f93fb48"
+    },
+    "submission/chapter-render-proof.json": {
+      "bytes": 488,
+      "sha256": "0532aef96eb99dbb3746c07abeaa675f68a116012ed7578875151450f3fc8b39"
+    },
+    "submission/frame-intro.jpg": {
+      "bytes": 99555,
+      "sha256": "ecc9755f54e8f3573d74911e7f6ba7c486c45e40a7eaf74fc5fed182d3cdbfef"
+    },
+    "submission/frame-ask.jpg": {
+      "bytes": 126504,
+      "sha256": "e0fc5c2e5a9c87a164a2023ef81835054bf1100c47577c151c7bb236a65636b9"
+    },
+    "submission/frame-check.jpg": {
+      "bytes": 152888,
+      "sha256": "b86ec9f13071b99883800a09cccf783b313354922d86849d744410512933bb42"
+    },
+    "submission/frame-approve.jpg": {
+      "bytes": 159202,
+      "sha256": "83a0c6b2bc9642533da1daf447d3a6e2dd580f184803fd68cb854f821e6b6f27"
+    },
+    "submission/frame-act.jpg": {
+      "bytes": 147103,
+      "sha256": "9f5f04b99f63d66ca88b0202d9fa071614cb73a741609822033b3d7f2b81c57a"
+    },
+    "submission/frame-cloud.jpg": {
+      "bytes": 118810,
+      "sha256": "b9f16966f53dbd4eeed0a5ba818a161907bd27ccd99f501ed9fd1c92546ddfeb"
+    },
+    "submission/frame-printful.jpg": {
+      "bytes": 163362,
+      "sha256": "e8a8dd7c87fb03e2eaa9fc4d4a230dccbe0ef38ab4c608d7c6bc4809f508902c"
+    },
+    "submission/frame-email.jpg": {
+      "bytes": 137270,
+      "sha256": "e26b718589996c061cf4c00358684e6a465da226ad7c4072454f916a595d3f83"
+    },
+    "submission/frame-remember.jpg": {
+      "bytes": 165572,
+      "sha256": "3afbd30bae86bd779a567d3dda48e91ffde4fc58b6afd48dc3b0e9d6565c074a"
+    },
+    "submission/frame-security.jpg": {
+      "bytes": 205555,
+      "sha256": "abc903efe05155e0c26da717e4f41876ba6e47fb48b885b13b89e37bf046e57d"
+    },
+    "submission/frame-outro.jpg": {
+      "bytes": 127537,
+      "sha256": "839406555d25a9ecff5c01b1790d4672cff1aff7d2dcadb16053d5463bcf2dbb"
     }
   },
   "frameInspection": [
-    "qa/final-intro.jpg",
-    "qa/final-ask.jpg",
-    "qa/final-check.jpg",
-    "qa/final-approve.jpg",
-    "qa/final-act.jpg",
-    "qa/final-remember.jpg",
-    "qa/final-outro.jpg"
+    "submission/frame-intro.jpg",
+    "submission/frame-ask.jpg",
+    "submission/frame-check.jpg",
+    "submission/frame-approve.jpg",
+    "submission/frame-act.jpg",
+    "submission/frame-cloud.jpg",
+    "submission/frame-printful.jpg",
+    "submission/frame-email.jpg",
+    "submission/frame-remember.jpg",
+    "submission/frame-security.jpg",
+    "submission/frame-outro.jpg"
   ],
+  "sourceCapture": {
+    "runId": "2026-09-11T22-29-20-832Z",
+    "passed": true,
+    "chapters": 18,
+    "initialMessages": 0,
+    "initialArtifacts": 0,
+    "rawSha256": "c063236dc2df98a01ae3d01bd2d27adb10e6f434705c712d91b2791a745db815",
+    "evidenceHashes": {
+      "provenance.json": "c18633fa229ace6fb80c85d4b02027599d29cc3bb1d3f7c9248b70ed653f8fc1",
+      "initial-fresh-session.json": "b61dc23a161832af2f3901a40bf02961942dbc91f3174a388b8e4e5df14b0f72",
+      "printful-draft.json": "61d085897a2966e02beed8e2b0320de9366e214464da9ff380812f0b97241eef",
+      "sent-email.json": "1904391eef0ac8e7bdd1b840b6f5b01b70f13697c67c00171382581963f0f33a",
+      "tenki-browser-receipt.json": "bfda88701dbcffac401db3aa5d50fea1c389be7d4ed15cc446bd7c57d0a5dc93",
+      "tenki-handoff-proof.json": "fcc75611cfb50b45034cc7e439f23773e0ae4d0df5cf81a9bcd8fc244be95337"
+    },
+    "oneCompleteFreshTake": true,
+    "failedCapturesExcluded": true,
+    "actualHotdataFreshWaves": 2
+  },
+  "actualActions": {
+    "printful": {
+      "id": 176055721,
+      "status": "draft",
+      "quantity": 1,
+      "reused": true,
+      "submitted": false,
+      "printReady": false,
+      "verifiedAt": "2026-09-11T22:30:58.264Z"
+    },
+    "selfEmail": {
+      "messageId": "1a09298801c6dbe3",
+      "sent": true,
+      "gmailSentReadback": true,
+      "deliveryConfirmed": false,
+      "createdAt": "2026-09-11T22:31:04.142Z"
+    }
+  },
+  "visualQa": {
+    "at": "2026-09-11T22:38:11.422398+00:00",
+    "passed": true,
+    "method": "Actual final-frame inspection",
+    "inspected": [
+      "intro",
+      "approval",
+      "Printful draft",
+      "Gmail SENT",
+      "changed memory decision",
+      "cloud supplier window",
+      "outro"
+    ],
+    "cloudCorrection": {
+      "sameFreshCapture": true,
+      "sourceStartSeconds": 5.1,
+      "sourceDurationSeconds": 0.9,
+      "actualResultHeld": true,
+      "cookieDialogPreserved": true,
+      "correctedFrameSha256": "b9f16966f53dbd4eeed0a5ba818a161907bd27ccd99f501ed9fd1c92546ddfeb"
+    },
+    "captionsLegible": true,
+    "railOutsideActualPicture": true,
+    "noSimulatedProviderStates": true
+  },
+  "editorialAssets": {
+    "higgsfieldClipSha256": "98230c78ed8ce441193581bd3be2680f12352bbf755a02e88e0af9e40d68e3fe",
+    "usage": "Only labeled editorial outro, not product footage",
+    "officialCoverSha256": "478ea704bb4fe479c03ddd6a5d76bbb3f9e86009fbae999d9322a141806a1cbf",
+    "sixSponsorLogos": "Actual supplied assets"
+  },
+  "publishingEncode": {
+    "h264Crf": 21,
+    "maxVideoBitrate": "1800k",
+    "buffer": "3600k",
+    "assetBytes": 19859843,
+    "under25MiB": true,
+    "limitSource": "https://developers.cloudflare.com/pages/platform/limits/"
+  },
+  "buildReceipt": "20260911T223551-EVENT-217f4691.json",
   "actualCapturePassed": true,
-  "freshConversation": true,
-  "oneCompleteTake": true,
-  "rawCaptureSha256": "c063236dc2df98a01ae3d01bd2d27adb10e6f434705c712d91b2791a745db815",
-  "recordedAt": "2026-09-11T22-29-20-832Z",
-  "disclosure": "Prerecorded voice note transcribed by local Whisper. Actual application and provider responses, edited for length from one successful fresh capture. Microsoft Ava narration added separately. Printful draft read back, not paid or submitted. Higgsfield closing concept imagery is editorial."
+  "disclosure": "One complete fresh source capture; prerecorded input note transcribed by local Whisper, Microsoft Ava narration added, waits edited. Cloud-browser visible result held from this same capture. Editorial Higgsfield outro is labelled."
 }

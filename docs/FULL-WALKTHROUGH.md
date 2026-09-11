@@ -15,21 +15,21 @@ The public playground lets anyone compare three sample projects, change quantity
 ## Start here
 
 - [Source and installation](https://github.com/gtrush03/synth-order-desk)
-- [Public hub](https://trusynth-order-desk.pages.dev) — live static playground; final media and source publication are verified separately by ROOT.
-- [Approved public work ticket](https://github.com/gtrush03/synth-order-desk/issues/1)
-- The hub provides the actual video, English captions, transcript and presentation when their files are staged. Canonical destinations are in `showcase-config.json`; an absent asset stays pending.
+- [Public hub](https://trusynth-order-desk.pages.dev) — live static playground with the verified film, PDF, captions and transcript.
+- [Approved public work ticket](https://github.com/gtrush03/synth-order-desk/issues/6)
+- The hub provides the actual98-second video, English captions, transcript and seven-slide presentation. Canonical destinations are in `showcase-config.json`; an absent asset stays pending.
 - [Temporary saved workspace](https://synth-order-work--23h39h.us.sb.tenki.sh) and [read-only cloud desktop](https://synth-live-desktop--23h39h.us.sb.tenki.sh/synth.html): September 11 until **4:51 PM PDT**, according to the current ROOT configuration. The recording and source remain available independently of the cloud computer.
 - The separate event companion had a **3:15 PM PDT** consent and purge deadline. Extending the VM did not extend participant retention. Its expired link is removed from the hub.
 
 ## Current verified state
 
-The accepted isolated code package passes **99 tests: 68 Node, 13 RocketRide adapter and 18 Event tests**. TypeScript, the native helper, web and Event runtime bundles, both Rote Plays, local speech/model checks and an isolated server smoke also pass. The accepted candidate contains 213 verified files with no source drift. The final media-only export retains those exact code, configuration, data and resolved dependency hashes; `EXPORT-MANIFEST.json` records the final file count and any reused check provenance. Exact test logs are in `evidence/self-check/self-check.txt`.
+The latest isolated package passes **99 tests: 68 Node, 13 RocketRide adapter and 18 Event tests**. TypeScript, the native helper, web and Event runtime bundles, both Rote Plays, speech/model checks and an isolated server smoke also pass. The submitted application remains preserved at commit `8226a62`; later documentation, setup and media refinements are visible in Git history. The latest export was fully checked again after the setup and evidence-index refinements. `EXPORT-MANIFEST.json` records its file count and any subsequent documentation-only reuse of those checks. Exact test logs are in `evidence/self-check/self-check.txt`.
 
 Fresh scans of that candidate found **zero vulnerabilities in 45 main npm dependencies and 15 Python dependencies**. The separate Event development dependency scan reports **29 findings** (3 critical, 15 high, 9 medium, 2 low); Snyk Code reports **16 open findings**, including a high path-traversal finding. These are disclosed with context in `SECURITY.md`, not suppressed. A separate local Cognee runtime also has a disclosed advisory; it is outside those clean dependency scopes. Passing tests does not mean the product is production ready.
 
 Actual supplier acceptance now includes **Printful draft 176055721, quantity one, unsubmitted and unpaid**, verified again by provider GET. The requested artwork is not confirmed print-ready. This is a sample draft, not a purchase of the 140-shirt plan. The complete fresh capture **2026-09-11T22-29-20-832Z passed at 22:31:49 UTC**, with all **18 chapters**, **two fresh Hotdata waves** and no recorded errors. Its original screencast is 147.33 seconds before editing. It covers voice input, review, amendment, approval, packet, Tenki browsing, launch kit, work ticket, Printful draft readback, actual owner-email send, saved company policy, a fresh conversation, the changed decision, revised budget and security evidence.
 
-In that same successful take, Printful draft 176055721 was reverified by provider GET at 22:30:58 UTC. The actual owner-email receipt records message **1a09298801c6dbe3**, sent at **22:31:04 UTC**; delivery remains unconfirmed. These receipts belong to the successful full take. Earlier failed recordings and Event self-test mail are separate historical evidence. Final edited media, captions and narration details are identified in the package's media proof and transcript.
+In that same successful take, Printful draft 176055721 was reverified by provider GET at 22:30:58 UTC. The actual owner-email receipt records message **1a09298801c6dbe3**, sent at **22:31:04 UTC**; an independent owner-account readback showed both Sent and Inbox labels. This does not establish delivery to an external recipient. These receipts belong to the successful full take. Earlier failed recordings and Event self-test mail are separate historical evidence. Final edited media, captions and narration details are identified in the package's media proof and transcript.
 
 Natural reply speech is implemented with Microsoft Ava through edge-tts 7.2.8 and confirmed by ROOT's speech endpoint and audio playback receipt. It speaks already-confirmed reply text. Apple FoundationModels handles local intent/reasoning. The optional GPT-Live adapter has 18 injected guard tests, but the actual gateway returned Live 404; **working GPT live audio is not claimed**.
 
@@ -40,7 +40,7 @@ Natural reply speech is implemented with Microsoft Ava through edge-tts 7.2.8 an
 3. **Revise.** “Actually, make it 140.” The eligible split option becomes $1,630. An earlier approval is invalidated.
 4. **Approve.** “Yes, I approve this exact proposal.” Approval binds the current quantity, budget, facts, policy, proposal and revision. A later change clears it.
 5. **Prepare work.** Produce the approved work packet, launch kit and recipient-free Gmail draft; publish the explicitly approved sample ticket to the fixed project repository. A fixed supplier-page read runs on the existing Tenki computer, with a screenshot and receipt.
-6. **Inspect optional actions.** The Printful action creates or reconciles one unsubmitted sample draft. The separate owner-email action is limited to one fixed recipient and exact approved content, with a provider readback; the actual receipt confirms sent status, without claiming delivery.
+6. **Inspect optional actions.** The Printful action creates or reconciles one unsubmitted sample draft. The separate owner-email action is limited to one fixed recipient and exact approved content, with a provider readback; the actual receipt and independent owner-account readback confirm Sent and Inbox labels; no external-recipient delivery is claimed.
 7. **Remember.** Teach “never split shipments.” A new conversation recalls the policy and refuses the $1,800 plan; increasing the budget to $2,000 permits express at $1,950.
 
 Recorded provider responses are real; prices, stock and rates are demonstration data. Edited narration and shortened waiting time are described in the media transcript and proof. The final film is based on the one complete successful fresh take identified above, with actual action receipts. Edited timing, narration and any editorial imagery are disclosed in its transcript and media proof; failed takes are excluded.
@@ -77,7 +77,7 @@ Paths below are relative to the exported repository. This walkthrough is install
 | Conversation and approval | `src/local-conversation.ts`, `conversation-model.ts`, `approval-proof.ts`, `company-workspace.ts`; extracted `tests/order-desk.test.ts` | Current approval revision and quote receipts; `fixtures/company.json` |
 | Progress and workspace | `src/live-progress.ts`, `workspace-map.ts`; `tests/workspace-map.test.ts` | Actual progress events; twelve stock lots with reservations and holds |
 | Static playground | `src/public-preview.ts`, `public-data/preview.js`, `scenarios.json`; workspace parity tests | Original data/engine plus `docs/data/`; actual three-scenario calculations |
-| Public frontdoor | `public-showcase/index.html`, `site.css`, `site.js` | `docs/index.html`, `site.css`, `site.js`; desktop/mobile, keyboard and calculation checks |
+| Public frontdoor | `docs/index.html`, `docs/site.css`, `docs/site.js` | `docs/index.html`, `site.css`, `site.js`; desktop/mobile, keyboard and calculation checks |
 | Data and constraints | `data-workers.ts`, `hotdata-http.ts`, `native/hydra_order.py` | Sanitized sponsor receipts, source rows and cleanup records |
 | Reusable procedures | `local-procedures.ts`, `procedures/`, `plays/` | Both actual replay checks and `.rote-flow-lint.json` |
 | Memory and cloud agreement | `cognee-memory.ts`, `rocketride-cloud.ts`, `pipelines/`; 13 fake-client RocketRide tests | Recovery, cloud agreement and termination receipts |
@@ -89,7 +89,7 @@ Paths below are relative to the exported repository. This walkthrough is install
 | Speech and optional Live | `natural-voice.ts`, `gpt-live.ts`, `gpt-live-browser.ts`; 18 Live guard tests | Ava working; Live gateway blocked. Python pins and scan include edge-tts 7.2.8 |
 | Event companion | `event-workspace/src`, `runtime`, `migrations`, `tests`, `public` | 18 tests, typecheck, runtime bundle, separate dependency scan; no participant database |
 | Official sponsor marks | `public/sponsors/*` | Original assets and `sponsor-logo-sources.json`; also copied under `docs/sponsors/` |
-| Video and presentation | ROOT `submission/*` and canonical config | Durable MP4, poster, VTT captions, transcript, PDF and sanitized proofs when staged; hashes in the final manifest |
+| Video and presentation | ROOT `submission/*` and canonical config | Published MP4, poster, VTT captions, transcript, PDF and sanitized proofs; hashes in the final manifest |
 
 ## Run it yourself
 
@@ -113,10 +113,10 @@ The static hub can be served from `docs/` on a static host. It never needs the p
 
 This is an inspectable hackathon prototype. Public multi-user authentication, tenant separation, durable hosted reasoning, operational recovery, verified billing hard stops across all providers, general supplier fulfillment and production security remediation remain future work. Supplier draft creation does not submit, pay or ship an order; an email provider SENT readback does not prove recipient delivery. Artwork processing is not print readiness. No production-completion percentage or winning probability is asserted.
 
-The JUDGES lane uses no paid models, API credits or new agent processes. ROOT separately authorized a $10.50 funding action with automatic refill off; this does not establish a general spend cap. Runtime allowances bound specific actions but are not a promise of provider billing protection. The Tenki adapter's hard limit is six additional reads and six approved uploads per allowance, on the existing VM only. The current Hotdata allowance permits twenty total waves; counters and remaining quota must be read from actual runtime receipts rather than inferred from this document.
+The operator authorized one $10.50 Cloudflare funding action with automatic refill off; this does not establish a general spend cap. Runtime allowances bound specific actions but are not a promise of provider billing protection. The Tenki adapter's hard limit is six additional reads and six approved uploads per allowance, on the existing VM only. The current Hotdata allowance permits twenty total waves; counters and remaining quota must be read from actual runtime receipts rather than inferred from this document.
 
 ## Evidence and final acceptance
 
 `EXPORT-MANIFEST.json` records the exact copied files, source hashes, portable rewrites, test results and scan scopes. `PROVENANCE.md` explains private-source isolation. The package excludes credentials, private transcripts, participant data, recipient addresses and host history; reviewed guest scripts and cloud assets are explicitly allowlisted.
 
-A final export is accepted only against ROOT's actual matching source-and-media freeze. Publication is ROOT-owned and preserves the repository's initial README commit. The old 110-file candidate18 and its nine Code findings remain preserved as historical evidence, but their scan results do not describe this expanded package. Current source, media and publication receipts are kept distinct.
+The published export was accepted against its matching source-and-media freeze. George confirmed form submission. The original published application is preserved at commit8226a62; later documentation, setup and media refinements are visible in history. The old 110-file candidate18 and its nine Code findings remain preserved as historical evidence, but their scan results do not describe this expanded package. Current source, media and publication receipts are kept distinct.

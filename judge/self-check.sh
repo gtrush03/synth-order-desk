@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Isolated self-check of this export: dependencies, TypeScript, build, tests, Play replays, voice fixture, on-device helper, server smoke.
-# Everything writes under $TRU_PLAN_OUTPUT (default ./run). No conversation turn, no sponsor mutation, no cloud call.
+# Build/runtime outputs write under $TRU_PLAN_OUTPUT (default ./run); dependencies install in this checkout. Existing published receipts stay unchanged. No conversation turn or sponsor call.
 set -u
 cd "$(dirname "$0")/.."
 export TRU_PLAN_OUTPUT="${TRU_PLAN_OUTPUT:-$PWD/run}"; export TRU_SOURCE="$PWD"
@@ -13,7 +13,7 @@ step "typescript check"; bun run check || status=1
 step "build (Swift helper + bundles)"; bun run build || status=1
 step "tests"; bun run test || status=1
 if [ -f scripts/rocketride-cloud.test.ts ]; then step "rocketride adapter tests (fake clients, no network)"; NODE_ENV=test bun test scripts/rocketride-cloud.test.ts || status=1; fi
-if [ -f event-workspace/package.json ]; then step "event SQLite and boundary tests (fake senders)"; bun test event-workspace/tests > evidence/self-check/event-tests.txt 2>&1 || status=1; cat evidence/self-check/event-tests.txt; step "event worker TypeScript"; (cd event-workspace && bun run check) || status=1; step "event Bun runtime bundle"; bun build event-workspace/runtime/bun-server.ts --target=bun --outfile="$TRU_PLAN_OUTPUT/event-server.js" || status=1; fi
+if [ -f event-workspace/package.json ]; then step "event SQLite and boundary tests (fake senders)"; mkdir -p "$TRU_PLAN_OUTPUT/self-check"; bun test event-workspace/tests > "$TRU_PLAN_OUTPUT/self-check/event-tests.txt" 2>&1 || status=1; cat "$TRU_PLAN_OUTPUT/self-check/event-tests.txt"; step "event worker TypeScript"; (cd event-workspace && bun run check) || status=1; step "event Bun runtime bundle"; bun build event-workspace/runtime/bun-server.ts --target=bun --outfile="$TRU_PLAN_OUTPUT/event-server.js" || status=1; fi
 step "rote play replays"; bash judge/replay-plays.sh || status=1
 step "voice fixture transcription"; bash judge/voice-check.sh || status=1
 step "on-device model helper"; bash judge/model-check.sh || status=1

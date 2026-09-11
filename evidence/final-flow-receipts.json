@@ -1,0 +1,943 @@
+{
+  "at": "2026-09-11T22:46:30.269496+00:00",
+  "runId": "2026-09-11T22-29-20-832Z",
+  "source": "Actual saved provider receipts from the one passed fresh capture.",
+  "redactions": [
+    "RocketRide taskTokenPrefix omitted; taskTokenSha256 retained for correlation.",
+    "Private filesystem roots replaced with portable markers."
+  ],
+  "receipts": [
+    {
+      "provider": "hotdata",
+      "originalReceiptSha256": "02089f05d9e9b61486d53d5e55b2381fa1f2dbc24dd84fe858bcc0008312daf1",
+      "receipt": {
+        "id": "ec900136-7236-4bbb-9eb5-535992924a57",
+        "engine": "Hotdata",
+        "sourceSha256": "0a28b1178774abb168911ea5fbafa0a5ffc5020d8860984211a7bafda4c0ca4c",
+        "startedAt": "2026-09-11T22:29:30.585Z",
+        "finishedAt": "2026-09-11T22:29:32.814Z",
+        "workers": [
+          {
+            "role": "policy",
+            "databaseId": "dbidsb38c49ngenpwqyb3jrgtt9g3l",
+            "catalog": "sd_ec90013672364bbb9e_policy",
+            "tables": [
+              "rules"
+            ],
+            "query": "SELECT * FROM sd_ec90013672364bbb9e_policy.public.rules",
+            "startedAt": "2026-09-11T22:29:31.568Z",
+            "finishedAt": "2026-09-11T22:29:31.886Z",
+            "rows": 1,
+            "destroyed": true,
+            "queryRunId": "qrunphhahwi4k5ciywbnms1vm1z6ty",
+            "resultRows": [
+              {
+                "deadline": "2026-09-18",
+                "notesJson": "[\"Owner approval required.\",\"allow split shipments after I approve the exact quote\",\"never split shipments\",\"allow split shipments when they arrive by the deadline and fit the budget\"]"
+              }
+            ]
+          },
+          {
+            "role": "inventory",
+            "databaseId": "dbidpl7a30gh1ey5eip9ie0m9bh8ui",
+            "catalog": "sd_ec90013672364bbb9e_inventory",
+            "tables": [
+              "inventory"
+            ],
+            "query": "SELECT SUM(\"available\"-\"reserved\") AS \"available\", MIN(\"unitCents\") AS \"unitCents\", MAX(\"rushUnitCents\") AS \"rushUnitCents\" FROM sd_ec90013672364bbb9e_inventory.public.inventory WHERE \"status\" = 'ready' AND \"readyBy\" <= '2026-09-18'",
+            "startedAt": "2026-09-11T22:29:31.568Z",
+            "finishedAt": "2026-09-11T22:29:31.940Z",
+            "rows": 1,
+            "destroyed": true,
+            "queryRunId": "qrunrl4otmk010ybflqejl6xxgypng",
+            "resultRows": [
+              {
+                "available": 100,
+                "unitCents": 900,
+                "rushUnitCents": 1200
+              }
+            ]
+          },
+          {
+            "role": "shipping",
+            "databaseId": "dbidfhrwnx5orwpxknarog270682pe",
+            "catalog": "sd_ec90013672364bbb9e_shipping",
+            "tables": [
+              "rates"
+            ],
+            "query": "SELECT * FROM sd_ec90013672364bbb9e_shipping.public.rates",
+            "startedAt": "2026-09-11T22:29:31.568Z",
+            "finishedAt": "2026-09-11T22:29:31.938Z",
+            "rows": 3,
+            "destroyed": true,
+            "queryRunId": "qrunvds62cu85g6hmby4qymte8o0cn",
+            "resultRows": [
+              {
+                "id": "standard",
+                "name": "Standard",
+                "unitCents": 1000,
+                "shippingCents": 15000,
+                "arrival": "2026-09-21"
+              },
+              {
+                "id": "express",
+                "name": "Express",
+                "unitCents": 1000,
+                "shippingCents": 45000,
+                "arrival": "2026-09-18"
+              },
+              {
+                "id": "split",
+                "name": "Split shipment",
+                "unitCents": 0,
+                "shippingCents": 25000,
+                "arrival": "2026-09-18"
+              }
+            ]
+          }
+        ],
+        "queryOverlapMs": 318,
+        "paidCalls": 0,
+        "isolationProbe": {
+          "databaseId": "dbidpl7a30gh1ey5eip9ie0m9bh8ui",
+          "foreignCatalog": "sd_ec90013672364bbb9e_shipping",
+          "denied": true,
+          "status": 400,
+          "detail": "table 'sd_ec90013672364bbb9e_shipping.public.rates' not found"
+        }
+      }
+    },
+    {
+      "provider": "hotdata",
+      "originalReceiptSha256": "bd6f2ac1b7a90de590e23aa3434da8fcf781f9de7e8f7797ce30a1a21124dc06",
+      "receipt": {
+        "id": "38dfd544-b107-48ed-83bf-99c860258aae",
+        "engine": "Hotdata",
+        "sourceSha256": "0a28b1178774abb168911ea5fbafa0a5ffc5020d8860984211a7bafda4c0ca4c",
+        "startedAt": "2026-09-11T22:31:14.010Z",
+        "finishedAt": "2026-09-11T22:31:16.196Z",
+        "workers": [
+          {
+            "role": "shipping",
+            "databaseId": "dbidfo3a9pq3rfviq0d250fs0ppcpq",
+            "catalog": "sd_38dfd544b10748ed83_shipping",
+            "tables": [
+              "rates"
+            ],
+            "query": "SELECT * FROM sd_38dfd544b10748ed83_shipping.public.rates",
+            "startedAt": "2026-09-11T22:31:14.891Z",
+            "finishedAt": "2026-09-11T22:31:15.901Z",
+            "rows": 3,
+            "destroyed": true,
+            "queryRunId": "qrun672r424g2jf7c46405w4nfhkzs",
+            "resultRows": [
+              {
+                "id": "standard",
+                "name": "Standard",
+                "unitCents": 1000,
+                "shippingCents": 15000,
+                "arrival": "2026-09-21"
+              },
+              {
+                "id": "express",
+                "name": "Express",
+                "unitCents": 1000,
+                "shippingCents": 45000,
+                "arrival": "2026-09-18"
+              },
+              {
+                "id": "split",
+                "name": "Split shipment",
+                "unitCents": 0,
+                "shippingCents": 25000,
+                "arrival": "2026-09-18"
+              }
+            ]
+          },
+          {
+            "role": "policy",
+            "databaseId": "dbid8cf7tm526gcgfigeolf4iwg202",
+            "catalog": "sd_38dfd544b10748ed83_policy",
+            "tables": [
+              "rules"
+            ],
+            "query": "SELECT * FROM sd_38dfd544b10748ed83_policy.public.rules",
+            "startedAt": "2026-09-11T22:31:14.891Z",
+            "finishedAt": "2026-09-11T22:31:15.290Z",
+            "rows": 1,
+            "destroyed": true,
+            "queryRunId": "qrun2gqi5es6uzzot9mmldew7t8xy1",
+            "resultRows": [
+              {
+                "deadline": "2026-09-18",
+                "notesJson": "[\"Owner approval required.\",\"allow split shipments after I approve the exact quote\",\"allow split shipments when they arrive by the deadline and fit the budget\",\"never split shipments\"]"
+              }
+            ]
+          },
+          {
+            "role": "inventory",
+            "databaseId": "dbid6txfuh8l2ew01qubakzaj6m5g0",
+            "catalog": "sd_38dfd544b10748ed83_inventory",
+            "tables": [
+              "inventory"
+            ],
+            "query": "SELECT SUM(\"available\"-\"reserved\") AS \"available\", MIN(\"unitCents\") AS \"unitCents\", MAX(\"rushUnitCents\") AS \"rushUnitCents\" FROM sd_38dfd544b10748ed83_inventory.public.inventory WHERE \"status\" = 'ready' AND \"readyBy\" <= '2026-09-18'",
+            "startedAt": "2026-09-11T22:31:14.891Z",
+            "finishedAt": "2026-09-11T22:31:15.290Z",
+            "rows": 1,
+            "destroyed": true,
+            "queryRunId": "qrungtpm3m9meh8zewp72jgkxw2zcv",
+            "resultRows": [
+              {
+                "available": 100,
+                "unitCents": 900,
+                "rushUnitCents": 1200
+              }
+            ]
+          }
+        ],
+        "queryOverlapMs": 399,
+        "paidCalls": 0,
+        "isolationProbe": {
+          "databaseId": "dbid6txfuh8l2ew01qubakzaj6m5g0",
+          "foreignCatalog": "sd_38dfd544b10748ed83_shipping",
+          "denied": true,
+          "status": 400,
+          "detail": "table 'sd_38dfd544b10748ed83_shipping.public.rates' not found"
+        }
+      }
+    },
+    {
+      "provider": "hotdata",
+      "originalReceiptSha256": "f30f2926a738cc190f839c5394021338c7ac55d78326ea9bc8319d1def6bb660",
+      "receipt": {
+        "id": "ad455204-c64e-4e5c-975d-c1a976c861d5",
+        "engine": "verified Hotdata snapshot",
+        "sourceSha256": "0a28b1178774abb168911ea5fbafa0a5ffc5020d8860984211a7bafda4c0ca4c",
+        "startedAt": "2026-09-11T22:31:30.596Z",
+        "finishedAt": "2026-09-11T22:31:30.596Z",
+        "workers": [],
+        "queryOverlapMs": 0,
+        "paidCalls": 0,
+        "reusedFrom": "38dfd544-b107-48ed-83bf-99c860258aae",
+        "sourceQueriedAt": "2026-09-11T22:31:16.196Z"
+      }
+    },
+    {
+      "provider": "hotdata",
+      "originalReceiptSha256": "dcab3358fa9fe944a4a54f21c56b202d2e9ab6d5780a5fff3e022fbaf430df26",
+      "receipt": {
+        "id": "1e98a290-3bac-4bf8-8c3f-303e4f109d2b",
+        "engine": "verified Hotdata snapshot",
+        "sourceSha256": "0a28b1178774abb168911ea5fbafa0a5ffc5020d8860984211a7bafda4c0ca4c",
+        "startedAt": "2026-09-11T22:29:48.971Z",
+        "finishedAt": "2026-09-11T22:29:48.971Z",
+        "workers": [],
+        "queryOverlapMs": 0,
+        "paidCalls": 0,
+        "reusedFrom": "ec900136-7236-4bbb-9eb5-535992924a57",
+        "sourceQueriedAt": "2026-09-11T22:29:32.814Z"
+      }
+    },
+    {
+      "provider": "rocketRide",
+      "originalReceiptSha256": "0406775527e8d87e38d74c4132489e40e9d074df15498b0da9af377ab97ee92b",
+      "receipt": {
+        "id": "d1b10531-83cd-4106-868a-37113362514f",
+        "engine": "RocketRide staging tool_python sandbox",
+        "host": "staging.rocketride.ai",
+        "projectId": "trusynth-order-review-cloud",
+        "source": "tools_1",
+        "node": "tool_python_1",
+        "startedAt": "2026-09-11T22:29:33.777Z",
+        "finishedAt": "2026-09-11T22:29:43.976Z",
+        "ms": 10199,
+        "pipelineValidated": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "taskTokenSha256": "43b84fc526f2f2bd004742c6b55630e33b1c0456a0420d52424ae98b82637533",
+        "taskId": "07b0c8f2",
+        "taskName": "synth-order-review-cloud",
+        "terminated": true,
+        "task": {
+          "state": 3,
+          "completed": false,
+          "exitCode": 0,
+          "status": "Tools ready - system is ready to accept tool calls",
+          "startTime": 1789165775.1415138,
+          "endTime": 0,
+          "tokens": {
+            "cpu_utilization": 0.2,
+            "cpu_memory": 0,
+            "gpu_memory": 0,
+            "gpu_inference": 0,
+            "custom": {},
+            "total": 0.2
+          },
+          "metrics": {
+            "cpu_percent": 2.95,
+            "cpu_memory_mb": 190.73828125,
+            "gpu_memory_mb": 0,
+            "peak_cpu_percent": 33.7375,
+            "peak_cpu_memory_mb": 190.73828125,
+            "peak_gpu_memory_mb": 0,
+            "avg_cpu_percent": 31.48973724020673,
+            "avg_cpu_memory_mb": 190.734380074545,
+            "avg_gpu_memory_mb": 0
+          },
+          "errors": 0,
+          "warnings": 0
+        },
+        "credits": {
+          "unit": "RocketRide credit units (API label: tokens)",
+          "floor": 1000,
+          "availableBefore": 4812.7,
+          "availableAfter": 4812.3,
+          "consumedBefore": 187.3,
+          "consumedAfter": 187.7,
+          "unitsUsed": 0.4,
+          "attributedTransactions": 23,
+          "ledgerNote": "live balance verified before the task; 23 ledger row(s) attributed to task 07b0c8f2"
+        },
+        "cases": [
+          {
+            "quantity": 150,
+            "budgetCents": 180000,
+            "notesCount": 4,
+            "inputSha256": "dcb8207b552859a89feedcda28bef5021bf12cc50645744c252c5819fbe3d5f2",
+            "ms": 90,
+            "agrees": true,
+            "differences": [],
+            "cloudChosen": "split",
+            "localChosen": "split",
+            "cloudOutput": {
+              "procedure": "order-review",
+              "version": "1.0.0",
+              "engine": "RocketRide tool_python sandbox",
+              "inputSha256": "dcb8207b552859a89feedcda28bef5021bf12cc50645744c252c5819fbe3d5f2",
+              "proposal": {
+                "quantity": 150,
+                "budgetCents": 180000,
+                "options": [
+                  {
+                    "id": "standard",
+                    "name": "Standard",
+                    "totalCents": 165000,
+                    "arrival": "2026-09-21",
+                    "onTime": false,
+                    "explanation": "150 units + shipping; company source demo-company",
+                    "withinBudget": true
+                  },
+                  {
+                    "id": "express",
+                    "name": "Express",
+                    "totalCents": 195000,
+                    "arrival": "2026-09-18",
+                    "onTime": true,
+                    "explanation": "150 units + shipping; company source demo-company",
+                    "withinBudget": false
+                  },
+                  {
+                    "id": "split",
+                    "name": "Split shipment",
+                    "totalCents": 175000,
+                    "arrival": "2026-09-18",
+                    "onTime": true,
+                    "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                    "withinBudget": true
+                  }
+                ],
+                "chosen": {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 175000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              },
+              "approved": false,
+              "cloudModelCalls": 0
+            },
+            "localReference": {
+              "quantity": 150,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 165000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 195000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 175000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 175000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "attempts": [
+              {
+                "tool": "execute",
+                "argument": "code",
+                "ok": true,
+                "ms": 90
+              }
+            ]
+          }
+        ],
+        "agrees": true,
+        "cloudModelCalls": 0,
+        "externalModelKeys": 0,
+        "paidCalls": 0
+      }
+    },
+    {
+      "provider": "rocketRide",
+      "originalReceiptSha256": "dc750f681af374d4651e89af4f46a917957ae9aed3b13670f2dbf40b62c99498",
+      "receipt": {
+        "id": "d1c85206-0eca-4db1-9e8c-03fc7353a66d",
+        "engine": "RocketRide staging tool_python sandbox",
+        "host": "staging.rocketride.ai",
+        "projectId": "trusynth-order-review-cloud",
+        "source": "tools_1",
+        "node": "tool_python_1",
+        "startedAt": "2026-09-11T22:29:49.386Z",
+        "finishedAt": "2026-09-11T22:30:01.347Z",
+        "ms": 11961,
+        "pipelineValidated": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "taskTokenSha256": "43b84fc526f2f2bd004742c6b55630e33b1c0456a0420d52424ae98b82637533",
+        "taskId": "07b0c8f2",
+        "taskName": "synth-order-review-cloud",
+        "terminated": true,
+        "task": {
+          "state": 3,
+          "completed": false,
+          "exitCode": 0,
+          "status": "Tools ready - system is ready to accept tool calls",
+          "startTime": 1789165792.046947,
+          "endTime": 0,
+          "tokens": {
+            "cpu_utilization": 0.2,
+            "cpu_memory": 0,
+            "gpu_memory": 0,
+            "gpu_inference": 0,
+            "custom": {},
+            "total": 0.2
+          },
+          "metrics": {
+            "cpu_percent": 1.9625,
+            "cpu_memory_mb": 191.37109375,
+            "gpu_memory_mb": 0,
+            "peak_cpu_percent": 37.1,
+            "peak_cpu_memory_mb": 191.37109375,
+            "peak_gpu_memory_mb": 0,
+            "avg_cpu_percent": 33.26662268698441,
+            "avg_cpu_memory_mb": 190.8515451995479,
+            "avg_gpu_memory_mb": 0
+          },
+          "errors": 0,
+          "warnings": 0
+        },
+        "credits": {
+          "unit": "RocketRide credit units (API label: tokens)",
+          "floor": 1000,
+          "availableBefore": 4812.3,
+          "availableAfter": 4811.9,
+          "consumedBefore": 187.7,
+          "consumedAfter": 188.1,
+          "unitsUsed": 0.4,
+          "attributedTransactions": 24,
+          "ledgerNote": "live balance verified before the task; 24 ledger row(s) attributed to task 07b0c8f2"
+        },
+        "cases": [
+          {
+            "quantity": 140,
+            "budgetCents": 180000,
+            "notesCount": 4,
+            "inputSha256": "e6dfb86a93097656e52941edf1ed0447b88ab51ffebcf227b262b7a58a4226ea",
+            "ms": 94,
+            "agrees": true,
+            "differences": [],
+            "cloudChosen": "split",
+            "localChosen": "split",
+            "cloudOutput": {
+              "procedure": "order-review",
+              "version": "1.0.0",
+              "engine": "RocketRide tool_python sandbox",
+              "inputSha256": "e6dfb86a93097656e52941edf1ed0447b88ab51ffebcf227b262b7a58a4226ea",
+              "proposal": {
+                "quantity": 140,
+                "budgetCents": 180000,
+                "options": [
+                  {
+                    "id": "standard",
+                    "name": "Standard",
+                    "totalCents": 155000,
+                    "arrival": "2026-09-21",
+                    "onTime": false,
+                    "explanation": "140 units + shipping; company source demo-company",
+                    "withinBudget": true
+                  },
+                  {
+                    "id": "express",
+                    "name": "Express",
+                    "totalCents": 185000,
+                    "arrival": "2026-09-18",
+                    "onTime": true,
+                    "explanation": "140 units + shipping; company source demo-company",
+                    "withinBudget": false
+                  },
+                  {
+                    "id": "split",
+                    "name": "Split shipment",
+                    "totalCents": 163000,
+                    "arrival": "2026-09-18",
+                    "onTime": true,
+                    "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                    "withinBudget": true
+                  }
+                ],
+                "chosen": {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 163000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              },
+              "approved": false,
+              "cloudModelCalls": 0
+            },
+            "localReference": {
+              "quantity": 140,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 155000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 185000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "140 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 163000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "split",
+                "name": "Split shipment",
+                "totalCents": 163000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "100 from stock + 40 rush units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "attempts": [
+              {
+                "tool": "execute",
+                "argument": "code",
+                "ok": true,
+                "ms": 94
+              }
+            ]
+          }
+        ],
+        "agrees": true,
+        "cloudModelCalls": 0,
+        "externalModelKeys": 0,
+        "paidCalls": 0
+      }
+    },
+    {
+      "provider": "rocketRide",
+      "originalReceiptSha256": "7667e11f71d9dd386377b6dc28ca0deb0c5806d2671ca6867495c5192e9c8414",
+      "receipt": {
+        "id": "46cd3ae9-1cbd-430e-8106-3da0eee7bfed",
+        "engine": "RocketRide staging tool_python sandbox",
+        "host": "staging.rocketride.ai",
+        "projectId": "trusynth-order-review-cloud",
+        "source": "tools_1",
+        "node": "tool_python_1",
+        "startedAt": "2026-09-11T22:31:16.964Z",
+        "finishedAt": "2026-09-11T22:31:27.264Z",
+        "ms": 10300,
+        "pipelineValidated": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "taskTokenSha256": "43b84fc526f2f2bd004742c6b55630e33b1c0456a0420d52424ae98b82637533",
+        "taskId": "07b0c8f2",
+        "taskName": "synth-order-review-cloud",
+        "terminated": true,
+        "task": {
+          "state": 3,
+          "completed": false,
+          "exitCode": 0,
+          "status": "Tools ready - system is ready to accept tool calls",
+          "startTime": 1789165878.3246806,
+          "endTime": 0,
+          "tokens": {
+            "cpu_utilization": 0.2,
+            "cpu_memory": 0,
+            "gpu_memory": 0,
+            "gpu_inference": 0,
+            "custom": {},
+            "total": 0.2
+          },
+          "metrics": {
+            "cpu_percent": 0.975,
+            "cpu_memory_mb": 191.9453125,
+            "gpu_memory_mb": 0,
+            "peak_cpu_percent": 37.2125,
+            "peak_cpu_memory_mb": 191.9453125,
+            "peak_gpu_memory_mb": 0,
+            "avg_cpu_percent": 24.78665048234122,
+            "avg_cpu_memory_mb": 191.22038037419435,
+            "avg_gpu_memory_mb": 0
+          },
+          "errors": 0,
+          "warnings": 0
+        },
+        "credits": {
+          "unit": "RocketRide credit units (API label: tokens)",
+          "floor": 1000,
+          "availableBefore": 4811.9,
+          "availableAfter": 4811.5,
+          "consumedBefore": 188.1,
+          "consumedAfter": 188.5,
+          "unitsUsed": 0.4,
+          "attributedTransactions": 25,
+          "ledgerNote": "live balance verified before the task; 25 ledger row(s) attributed to task 07b0c8f2"
+        },
+        "cases": [
+          {
+            "quantity": 150,
+            "budgetCents": 180000,
+            "notesCount": 4,
+            "inputSha256": "518bbfdcb2f632e8f6b5d22f7933d36255d47be2b72e488c7763dc523cbe12af",
+            "ms": 78,
+            "agrees": true,
+            "differences": [],
+            "cloudChosen": null,
+            "localChosen": null,
+            "cloudOutput": {
+              "procedure": "order-review",
+              "version": "1.0.0",
+              "engine": "RocketRide tool_python sandbox",
+              "inputSha256": "518bbfdcb2f632e8f6b5d22f7933d36255d47be2b72e488c7763dc523cbe12af",
+              "proposal": {
+                "quantity": 150,
+                "budgetCents": 180000,
+                "options": [
+                  {
+                    "id": "standard",
+                    "name": "Standard",
+                    "totalCents": 165000,
+                    "arrival": "2026-09-21",
+                    "onTime": false,
+                    "explanation": "150 units + shipping; company source demo-company",
+                    "withinBudget": true
+                  },
+                  {
+                    "id": "express",
+                    "name": "Express",
+                    "totalCents": 195000,
+                    "arrival": "2026-09-18",
+                    "onTime": true,
+                    "explanation": "150 units + shipping; company source demo-company",
+                    "withinBudget": false
+                  },
+                  {
+                    "id": "split",
+                    "name": "Split shipment",
+                    "totalCents": 175000,
+                    "arrival": "2026-09-18",
+                    "onTime": true,
+                    "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                    "withinBudget": true
+                  }
+                ],
+                "chosen": null
+              },
+              "approved": false,
+              "cloudModelCalls": 0
+            },
+            "localReference": {
+              "quantity": 150,
+              "budgetCents": 180000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 165000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 195000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": false
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 175000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": null
+            },
+            "attempts": [
+              {
+                "tool": "execute",
+                "argument": "code",
+                "ok": true,
+                "ms": 78
+              }
+            ]
+          }
+        ],
+        "agrees": true,
+        "cloudModelCalls": 0,
+        "externalModelKeys": 0,
+        "paidCalls": 0
+      }
+    },
+    {
+      "provider": "rocketRide",
+      "originalReceiptSha256": "f331e687c09c4d05d22a6aedecac378b30d363fc8ff1299a3ba0d12e17dce0e0",
+      "receipt": {
+        "id": "0d236608-ae59-4d0d-94a6-17f09af767fe",
+        "engine": "RocketRide staging tool_python sandbox",
+        "host": "staging.rocketride.ai",
+        "projectId": "trusynth-order-review-cloud",
+        "source": "tools_1",
+        "node": "tool_python_1",
+        "startedAt": "2026-09-11T22:31:31.417Z",
+        "finishedAt": "2026-09-11T22:31:44.008Z",
+        "ms": 12591,
+        "pipelineValidated": true,
+        "validationErrors": 0,
+        "validationWarnings": 0,
+        "taskTokenSha256": "43b84fc526f2f2bd004742c6b55630e33b1c0456a0420d52424ae98b82637533",
+        "taskId": "07b0c8f2",
+        "taskName": "synth-order-review-cloud",
+        "terminated": true,
+        "task": {
+          "state": 3,
+          "completed": false,
+          "exitCode": 0,
+          "status": "Tools ready - system is ready to accept tool calls",
+          "startTime": 1789165893.2551317,
+          "endTime": 0,
+          "tokens": {
+            "cpu_utilization": 0.2,
+            "cpu_memory": 0,
+            "gpu_memory": 0,
+            "gpu_inference": 0,
+            "custom": {},
+            "total": 0.2
+          },
+          "metrics": {
+            "cpu_percent": 0.4875,
+            "cpu_memory_mb": 190.421875,
+            "gpu_memory_mb": 0,
+            "peak_cpu_percent": 24.6375,
+            "peak_cpu_memory_mb": 190.421875,
+            "peak_gpu_memory_mb": 0,
+            "avg_cpu_percent": 22.112027846771475,
+            "avg_cpu_memory_mb": 190.421875,
+            "avg_gpu_memory_mb": 0
+          },
+          "errors": 0,
+          "warnings": 0
+        },
+        "credits": {
+          "unit": "RocketRide credit units (API label: tokens)",
+          "floor": 1000,
+          "availableBefore": 4811.5,
+          "availableAfter": 4811.1,
+          "consumedBefore": 188.5,
+          "consumedAfter": 188.9,
+          "unitsUsed": 0.4,
+          "attributedTransactions": 25,
+          "ledgerNote": "live balance verified before the task; 25 ledger row(s) attributed to task 07b0c8f2"
+        },
+        "cases": [
+          {
+            "quantity": 150,
+            "budgetCents": 200000,
+            "notesCount": 4,
+            "inputSha256": "40aa9c36124d9508dca94cd8ecb46ae9aa818a3c61dfcfb0eb7502a404cec245",
+            "ms": 102,
+            "agrees": true,
+            "differences": [],
+            "cloudChosen": "express",
+            "localChosen": "express",
+            "cloudOutput": {
+              "procedure": "order-review",
+              "version": "1.0.0",
+              "engine": "RocketRide tool_python sandbox",
+              "inputSha256": "40aa9c36124d9508dca94cd8ecb46ae9aa818a3c61dfcfb0eb7502a404cec245",
+              "proposal": {
+                "quantity": 150,
+                "budgetCents": 200000,
+                "options": [
+                  {
+                    "id": "standard",
+                    "name": "Standard",
+                    "totalCents": 165000,
+                    "arrival": "2026-09-21",
+                    "onTime": false,
+                    "explanation": "150 units + shipping; company source demo-company",
+                    "withinBudget": true
+                  },
+                  {
+                    "id": "express",
+                    "name": "Express",
+                    "totalCents": 195000,
+                    "arrival": "2026-09-18",
+                    "onTime": true,
+                    "explanation": "150 units + shipping; company source demo-company",
+                    "withinBudget": true
+                  },
+                  {
+                    "id": "split",
+                    "name": "Split shipment",
+                    "totalCents": 175000,
+                    "arrival": "2026-09-18",
+                    "onTime": true,
+                    "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                    "withinBudget": true
+                  }
+                ],
+                "chosen": {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 195000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              },
+              "approved": false,
+              "cloudModelCalls": 0
+            },
+            "localReference": {
+              "quantity": 150,
+              "budgetCents": 200000,
+              "options": [
+                {
+                  "id": "standard",
+                  "name": "Standard",
+                  "totalCents": 165000,
+                  "arrival": "2026-09-21",
+                  "onTime": false,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "express",
+                  "name": "Express",
+                  "totalCents": 195000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "150 units + shipping; company source demo-company",
+                  "withinBudget": true
+                },
+                {
+                  "id": "split",
+                  "name": "Split shipment",
+                  "totalCents": 175000,
+                  "arrival": "2026-09-18",
+                  "onTime": true,
+                  "explanation": "100 from stock + 50 rush units + shipping; company source demo-company",
+                  "withinBudget": true
+                }
+              ],
+              "chosen": {
+                "id": "express",
+                "name": "Express",
+                "totalCents": 195000,
+                "arrival": "2026-09-18",
+                "onTime": true,
+                "explanation": "150 units + shipping; company source demo-company",
+                "withinBudget": true
+              }
+            },
+            "attempts": [
+              {
+                "tool": "execute",
+                "argument": "code",
+                "ok": true,
+                "ms": 102
+              }
+            ]
+          }
+        ],
+        "agrees": true,
+        "cloudModelCalls": 0,
+        "externalModelKeys": 0,
+        "paidCalls": 0
+      }
+    }
+  ]
+}

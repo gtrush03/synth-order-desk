@@ -1,5 +1,6 @@
 node_modules/
 .venv/
+.wrangler/
 run/
 models/*.bin
 judge.env

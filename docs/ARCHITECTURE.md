@@ -13,10 +13,10 @@ browser /talk (src/talk.ts)                     Mac (127.0.0.1 only)
         6. reply      ──► deterministic, or bin/synth-local-model (chat only)
         7. deliverable──► rote play run plays/work-packet ──► procedures/work-packet.ts (approved only)
         8. memory     ──► run/conversation/company/memory.json ──► Cognee dataset (raw document per revision)
-  ◄─ JSON state (messages, events with IDs and timings, artifacts) ─► browser speaks the reply (local voice)
+  ◄─ JSON state (messages, events with IDs and timings, artifacts) ─► browser plays the confirmed reply (Microsoft Ava speech)
 ```
 
-Trust boundaries: the server accepts only Host 127.0.0.1/localhost, requires the exact local Origin on mutations, caps JSON bodies at 25 KB and audio at 4 MB / 30 s, applies a strict Content-Security-Policy (media-src self and blob only on /talk), and serves only allowlisted files and documents. Child processes (model helper, ffmpeg, whisper-cli, python bridge, rote) run with bounded timeouts and output sizes. Audio is deleted after transcription. The only outbound network calls are Hotdata (opt-in, bounded) and the two local services.
+Trust boundaries: the server accepts only Host 127.0.0.1/localhost, requires the exact local Origin on mutations, caps JSON bodies at 25 KB and audio at 4 MB / 30 s, applies a strict Content-Security-Policy (media-src self and blob only on /talk), and serves only allowlisted files and documents. Child processes (model helper, ffmpeg, whisper-cli, python bridge, rote) run with bounded timeouts and output sizes. Audio is deleted after transcription. Enabled review calls reach Hotdata and RocketRide; constraints and memory use local HydraDB and Cognee. Unmuted reply synthesis reaches Microsoft's Ava service. Explicitly enabled actions also reach Tenki, Gmail, GitHub and Printful. Each action's configured destination and approval boundary is documented separately.
 
 State layout under `TRU_PLAN_OUTPUT` (default `./run`): `bin/` compiled helper, `dist/` server bundle, `public/` client, `conversation/company/{data.json,memory.json}`, `conversation/sessions/*.json`, `conversation/drafts/*.md`, `conversation/receipts/*.json`, `conversation/procedures/<id>/{input.json,output.*,receipt.json}`, `conversation/hotdata-allowance.json` (opt-in), `conversation/hotdata-run-count.json`, `conversation/verified-data.json` (5-minute Hotdata snapshot cache).
 

@@ -1,0 +1,677 @@
+{
+  "measuredAt": "2026-09-11T22:57:18.947602+00:00",
+  "tool": "scc 3.6.0",
+  "scope": "Public judge export, counted source files listed below; not the private SYNTHOS codebase. Dense or one-line code remains one line; this is not a measure of complexity or hours worked.",
+  "excluded": [
+    "third-party dependencies and caches",
+    "generated Cloudflare worker-configuration.d.ts",
+    "duplicate docs/data/preview.js",
+    "bundles and compiled artifacts",
+    "lockfiles, JSON data, Markdown, images and media"
+  ],
+  "includedSupport": "Tests plus authored judge/export harness and stub sources; see category for each file.",
+  "totals": {
+    "files": 82,
+    "physicalLines": 5297,
+    "codeLines": 4870,
+    "comments": 298,
+    "blankLines": 129
+  },
+  "product": {
+    "files": 53,
+    "physicalLines": 3977,
+    "codeLines": 3652,
+    "comments": 253,
+    "blankLines": 72
+  },
+  "testsAndTooling": {
+    "files": 29,
+    "physicalLines": 1320,
+    "codeLines": 1218,
+    "comments": 45,
+    "blankLines": 57
+  },
+  "languages": [
+    {
+      "Name": "TypeScript",
+      "Count": 56,
+      "Lines": 4336,
+      "Code": 3966,
+      "Comment": 265,
+      "Blank": 105
+    },
+    {
+      "Name": "Shell",
+      "Count": 7,
+      "Lines": 101,
+      "Code": 87,
+      "Comment": 14,
+      "Blank": 0
+    },
+    {
+      "Name": "HTML",
+      "Count": 6,
+      "Lines": 107,
+      "Code": 107,
+      "Comment": 0,
+      "Blank": 0
+    },
+    {
+      "Name": "CSS",
+      "Count": 4,
+      "Lines": 466,
+      "Code": 433,
+      "Comment": 15,
+      "Blank": 18
+    },
+    {
+      "Name": "JavaScript",
+      "Count": 4,
+      "Lines": 173,
+      "Code": 170,
+      "Comment": 1,
+      "Blank": 2
+    },
+    {
+      "Name": "Python",
+      "Count": 2,
+      "Lines": 45,
+      "Code": 43,
+      "Comment": 2,
+      "Blank": 0
+    },
+    {
+      "Name": "SQL",
+      "Count": 2,
+      "Lines": 17,
+      "Code": 16,
+      "Comment": 1,
+      "Blank": 0
+    },
+    {
+      "Name": "Swift",
+      "Count": 1,
+      "Lines": 52,
+      "Code": 48,
+      "Comment": 0,
+      "Blank": 4
+    }
+  ],
+  "reproduce": "scc --format json --no-cocomo --no-complexity --no-duplicates --by-file <each file.path listed below>",
+  "files": [
+    {
+      "path": "docs/index.html",
+      "category": "product",
+      "sha256": "58edd8540aecb77f5a7223750e7bda927d2c2cc7287a0965168954c6033bf19d",
+      "physicalLines": 59,
+      "codeLines": 59
+    },
+    {
+      "path": "docs/site.css",
+      "category": "product",
+      "sha256": "892728a35c638c44b2c0dcbf3ea16a030b81a9c96f370e66c1e5c8166fbcbf49",
+      "physicalLines": 10,
+      "codeLines": 8
+    },
+    {
+      "path": "docs/site.js",
+      "category": "product",
+      "sha256": "184c7b894e1c6db506917a84a154c3ea770e87fcc661d84f0b49d9a14ecc2c4c",
+      "physicalLines": 145,
+      "codeLines": 142
+    },
+    {
+      "path": "event-workspace/migrations/0001_event.sql",
+      "category": "product",
+      "sha256": "6c9ee17eafe3a056df6248ca6a254b57339acdbad6ab7ca9903f54f771ffe3d5",
+      "physicalLines": 15,
+      "codeLines": 15
+    },
+    {
+      "path": "event-workspace/migrations/0002_selftest_receipt.sql",
+      "category": "product",
+      "sha256": "52cbda75a661cfbcabf7411c8b9ff40f314280d1788bbc96a7da06ca1b94e49c",
+      "physicalLines": 2,
+      "codeLines": 1
+    },
+    {
+      "path": "event-workspace/public/app.js",
+      "category": "product",
+      "sha256": "09c7b1cd06bd0fd2e7b00f6c620db85b503dbeeb042ca4725d2ca4518382243b",
+      "physicalLines": 26,
+      "codeLines": 26
+    },
+    {
+      "path": "event-workspace/public/index.html",
+      "category": "product",
+      "sha256": "e41844079f0c933b9d276a3e2523ee144e85c5e3729afe42dca77cda3ec93f29",
+      "physicalLines": 11,
+      "codeLines": 11
+    },
+    {
+      "path": "event-workspace/public/style.css",
+      "category": "product",
+      "sha256": "aa89f0d626ca60ef8ef227ed8662677f01b1b4bde09f7956dbeca01a514fb043",
+      "physicalLines": 1,
+      "codeLines": 1
+    },
+    {
+      "path": "event-workspace/runtime/bun-server.ts",
+      "category": "product",
+      "sha256": "a0ba245b05c837072ebad4a190001939fd94a6e6396567c4d92dffd39e992bdb",
+      "physicalLines": 31,
+      "codeLines": 30
+    },
+    {
+      "path": "event-workspace/src/domain.ts",
+      "category": "product",
+      "sha256": "e8ffe06f412fba92b12147881d010d1938c835f51df65001aa3ad04a985dc231",
+      "physicalLines": 48,
+      "codeLines": 48
+    },
+    {
+      "path": "event-workspace/src/followup.ts",
+      "category": "product",
+      "sha256": "00b60632dc2dfab4d1e8619b74c61c441aaa48f254c8ac99bc1ec1e2bc3f6eb8",
+      "physicalLines": 23,
+      "codeLines": 22
+    },
+    {
+      "path": "event-workspace/src/store.ts",
+      "category": "product",
+      "sha256": "f2a0dbdda868d5aeb7c861d69193ed529e20cb9cf30d4fe9adf67a9ecc854d17",
+      "physicalLines": 55,
+      "codeLines": 52
+    },
+    {
+      "path": "event-workspace/src/worker.ts",
+      "category": "product",
+      "sha256": "57c09a8473e7ca6f3e3c04603bd31d976e8d6cbe32b177f21a6c79c85700996c",
+      "physicalLines": 35,
+      "codeLines": 35
+    },
+    {
+      "path": "event-workspace/tests/event.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "94e4ad60d3ea1a1651b3a42a4e4417d10aac29ddd130fd92bb81d39ba2901d8c",
+      "physicalLines": 44,
+      "codeLines": 39
+    },
+    {
+      "path": "event-workspace/tests/runtime.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "1ea8a4eef270e852a2d7b30d7c09d718573c869ea9bd1eea7c36ef96180c4553",
+      "physicalLines": 24,
+      "codeLines": 23
+    },
+    {
+      "path": "event-workspace/tests/sqlite.ts",
+      "category": "tests-and-tooling",
+      "sha256": "e3dda56b856f5f361bbdb8d4091fdbb58b3966dbbc8740ee48353cfaae7360b2",
+      "physicalLines": 7,
+      "codeLines": 7
+    },
+    {
+      "path": "judge/model-check.sh",
+      "category": "tests-and-tooling",
+      "sha256": "a6892ed100010ba95963b5765f93bfa31276c4ad1fb4fad6d032efa25e9a7f04",
+      "physicalLines": 8,
+      "codeLines": 6
+    },
+    {
+      "path": "judge/replay-plays.sh",
+      "category": "tests-and-tooling",
+      "sha256": "95e23c4a2ada9e1ec0518d5f0eb04af734a3ff963882af6861846834fcd1114f",
+      "physicalLines": 24,
+      "codeLines": 22
+    },
+    {
+      "path": "judge/self-check.sh",
+      "category": "tests-and-tooling",
+      "sha256": "75e449aed147a8dddd40c3e02103314d2fec1b7a96b428cf0faef6f32e7abc83",
+      "physicalLines": 21,
+      "codeLines": 18
+    },
+    {
+      "path": "judge/setup.sh",
+      "category": "tests-and-tooling",
+      "sha256": "81d2eee64d5ac5dbcb247c04fadbcd9262ed02e73b014c5da67e4deacc9317a4",
+      "physicalLines": 23,
+      "codeLines": 21
+    },
+    {
+      "path": "judge/smoke.ts",
+      "category": "tests-and-tooling",
+      "sha256": "30da7b32ce75759af5bee3714f15f9814dbface76c4de5c9f756010e0b88898d",
+      "physicalLines": 32,
+      "codeLines": 29
+    },
+    {
+      "path": "judge/start.sh",
+      "category": "tests-and-tooling",
+      "sha256": "c0892e936f09f36fdaea441ca9b06331186c091031fedd295d3552f7dd64c1cb",
+      "physicalLines": 10,
+      "codeLines": 8
+    },
+    {
+      "path": "judge/test.sh",
+      "category": "tests-and-tooling",
+      "sha256": "16682db14def99f67d7d2f0a22b0bb1eb0a86b754c3987559de494ae3d595744",
+      "physicalLines": 5,
+      "codeLines": 4
+    },
+    {
+      "path": "judge/verify-export.py",
+      "category": "tests-and-tooling",
+      "sha256": "1277666f6084c5de2b237f3860a507190934a980dad486ea09e21d4a4b4477f7",
+      "physicalLines": 28,
+      "codeLines": 26
+    },
+    {
+      "path": "judge/voice-check.sh",
+      "category": "tests-and-tooling",
+      "sha256": "fd1e0ec68df829cde7c9d487a8d7dcf64a05187b12ed0933ba0c2930a6c545b8",
+      "physicalLines": 10,
+      "codeLines": 8
+    },
+    {
+      "path": "native/LocalSynth.swift",
+      "category": "product",
+      "sha256": "483d58c81f238498d85a5c7a6aabaa23b1c6b5de712cab8a028ea63e8c6379a8",
+      "physicalLines": 52,
+      "codeLines": 48
+    },
+    {
+      "path": "native/hydra_order.py",
+      "category": "product",
+      "sha256": "8adb199d171cad50a510331c8c948e22f38c0d5ef40dc5b59a694cf7bd685365",
+      "physicalLines": 17,
+      "codeLines": 17
+    },
+    {
+      "path": "plays/order-review/main.ts",
+      "category": "product",
+      "sha256": "2d20b13e68524370d9b4e4680d8079dd429d5bfafa045ab7ce0688343e94a1a0",
+      "physicalLines": 149,
+      "codeLines": 70
+    },
+    {
+      "path": "plays/work-packet/main.ts",
+      "category": "product",
+      "sha256": "3a73b65e50af3aa043c22794894e0bfd092b043a11943beeb3636a2d662f0891",
+      "physicalLines": 133,
+      "codeLines": 70
+    },
+    {
+      "path": "procedures/order-review.ts",
+      "category": "product",
+      "sha256": "2ef77ac14d4425092731146fccb90697cfd19df089dd4ecac849c94c3b15f38e",
+      "physicalLines": 13,
+      "codeLines": 13
+    },
+    {
+      "path": "procedures/work-packet.ts",
+      "category": "product",
+      "sha256": "568852bfa253d6d7ec1c5822689be7c0ce8e20df737008df6e960da579fbe064",
+      "physicalLines": 8,
+      "codeLines": 8
+    },
+    {
+      "path": "public-cloud/app.js",
+      "category": "product",
+      "sha256": "d65840168524a243cbc723074a7d1ef0d7e74719a4076f631f750389150971b8",
+      "physicalLines": 1,
+      "codeLines": 1
+    },
+    {
+      "path": "public-cloud/desktop.html",
+      "category": "product",
+      "sha256": "600908258f56bc645a4f0c09471553891f13df1f57c61dda547a44c0ec6cfcb8",
+      "physicalLines": 1,
+      "codeLines": 1
+    },
+    {
+      "path": "public-cloud/index.html",
+      "category": "product",
+      "sha256": "fbf48ffd07fea33f4a42c683b2d78a4e4867abbb67b81560a68bccf282d712cd",
+      "physicalLines": 1,
+      "codeLines": 1
+    },
+    {
+      "path": "public-cloud/style.css",
+      "category": "product",
+      "sha256": "6393ddbaa3363070799ef6fff334b2950ae121eb69b83ac57415196de762514c",
+      "physicalLines": 1,
+      "codeLines": 1
+    },
+    {
+      "path": "public-data/preview.js",
+      "category": "product",
+      "sha256": "f1523536aeae9dd890471406887760acf10565cfd1a484ed49c0a308a1dc8a69",
+      "physicalLines": 1,
+      "codeLines": 1
+    },
+    {
+      "path": "public/index.html",
+      "category": "tests-and-tooling",
+      "sha256": "d42df0f42c839c726e0ecc7424e6928ddcc91a4e9051cf48b2e445bf1b06be6e",
+      "physicalLines": 2,
+      "codeLines": 2
+    },
+    {
+      "path": "public/talk.css",
+      "category": "product",
+      "sha256": "1f15fb1f211edf00c503a3f277a0261ad8128bf41cbd2faa86bf8d83804914f2",
+      "physicalLines": 454,
+      "codeLines": 423
+    },
+    {
+      "path": "public/talk.html",
+      "category": "product",
+      "sha256": "8dcabf2accfe5e882708a12859335d86e18dcd3a2507ff35df6957608b716145",
+      "physicalLines": 33,
+      "codeLines": 33
+    },
+    {
+      "path": "scripts/build.ts",
+      "category": "tests-and-tooling",
+      "sha256": "d69e3fab9099ef260c0724958492d37ed053b8bebf43e441bc77ceabc5ba6c41",
+      "physicalLines": 24,
+      "codeLines": 23
+    },
+    {
+      "path": "scripts/rocketride-cloud.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "adedc8ddc3b6d45e20c8a25f88d3ea2e965870cb88ad49ee6b447b383da6c449",
+      "physicalLines": 289,
+      "codeLines": 268
+    },
+    {
+      "path": "scripts/test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "7ede4770986af50005e353b68e3164d4ef366c143369b1389ba6970005f51e2e",
+      "physicalLines": 19,
+      "codeLines": 18
+    },
+    {
+      "path": "src/approval-proof.ts",
+      "category": "product",
+      "sha256": "370b41e80881e3b0474315a53a6ac7e6bd75bdda314492ea2c54d3b8be21d083",
+      "physicalLines": 12,
+      "codeLines": 10
+    },
+    {
+      "path": "src/browser-actions.ts",
+      "category": "product",
+      "sha256": "71b77651d555794939fa74c61d30fc018bdc6f7eb93f23df67ccbe365deac14a",
+      "physicalLines": 247,
+      "codeLines": 214
+    },
+    {
+      "path": "src/cognee-memory.ts",
+      "category": "product",
+      "sha256": "fb7a4d1acdd12b282fa2c66a855ebde0bbdc218add8017ed152a8a8ac836f6a7",
+      "physicalLines": 19,
+      "codeLines": 19
+    },
+    {
+      "path": "src/company-workspace.ts",
+      "category": "product",
+      "sha256": "647086af7758174eab982ed5f499141e333ac44d880b41c2788fb6e9107646da",
+      "physicalLines": 47,
+      "codeLines": 47
+    },
+    {
+      "path": "src/conversation-model.ts",
+      "category": "product",
+      "sha256": "0a9b75eec2f9bfd2dca5accbe9a594be7acfef78cdaba9dd38cd31d98c69a273",
+      "physicalLines": 123,
+      "codeLines": 120
+    },
+    {
+      "path": "src/data-workers.ts",
+      "category": "product",
+      "sha256": "7e42782df4a2d709b18679c8d5e04e0a914a39ad2f2cd43c1435905e946646dd",
+      "physicalLines": 106,
+      "codeLines": 102
+    },
+    {
+      "path": "src/fleet-monitor.ts",
+      "category": "tests-and-tooling",
+      "sha256": "5e513802bda922db95ce321d1b01dbddecdf6462527ddcb2de4b9dcc55d8ad5c",
+      "physicalLines": 4,
+      "codeLines": 1
+    },
+    {
+      "path": "src/gmail-draft.ts",
+      "category": "product",
+      "sha256": "7e2f4769239a3b3eefc2d8e1295666bcf6b538447223aeac8603467031dfa1d1",
+      "physicalLines": 35,
+      "codeLines": 33
+    },
+    {
+      "path": "src/gpt-live-browser.ts",
+      "category": "product",
+      "sha256": "7f7c4603a68f8fdfa942bc5f25fdb141edf24c5bbaf42f6b50b386a7ad528900",
+      "physicalLines": 102,
+      "codeLines": 96
+    },
+    {
+      "path": "src/gpt-live.ts",
+      "category": "product",
+      "sha256": "05b7a3b34376cdb8b3abd14edff724a1cf00595030b725a430d730dbf092e3fc",
+      "physicalLines": 125,
+      "codeLines": 110
+    },
+    {
+      "path": "src/hotdata-http.ts",
+      "category": "product",
+      "sha256": "2c80a18d117fee13d4aff2570711cd3a93ff6cb9dfefdf97a42d44633d2299b0",
+      "physicalLines": 27,
+      "codeLines": 26
+    },
+    {
+      "path": "src/live-progress.ts",
+      "category": "product",
+      "sha256": "f0aaf51f33db2f9e9b8436655e5e72c98252167563c01deab74afce26feffcbf",
+      "physicalLines": 42,
+      "codeLines": 40
+    },
+    {
+      "path": "src/local-conversation.ts",
+      "category": "product",
+      "sha256": "c45e6e6515e518f5e6ca157462f2c9f2cdcdbb76ef1665e5037458317c2a55a2",
+      "physicalLines": 248,
+      "codeLines": 246
+    },
+    {
+      "path": "src/local-procedures.ts",
+      "category": "product",
+      "sha256": "3cbad64d9a22f08d178ac40717b08bb973dca21d87eaba3cb390c0d5bfa57457",
+      "physicalLines": 31,
+      "codeLines": 31
+    },
+    {
+      "path": "src/main.ts",
+      "category": "product",
+      "sha256": "bf46cb46adfab9641c414487a7812fb36efa4e69f11dfd25f583b53b2c74677a",
+      "physicalLines": 14,
+      "codeLines": 11
+    },
+    {
+      "path": "src/model.ts",
+      "category": "tests-and-tooling",
+      "sha256": "5f6808860fa04c0f22a22cbbe4887ed26bd054bef6189fd3a4d965fb22149d5a",
+      "physicalLines": 48,
+      "codeLines": 45
+    },
+    {
+      "path": "src/natural-voice.ts",
+      "category": "product",
+      "sha256": "34e411ca9df0e728190d86dd37f64683c760fb2bab36c549c08da4d60ca61c27",
+      "physicalLines": 7,
+      "codeLines": 6
+    },
+    {
+      "path": "src/printful-draft.ts",
+      "category": "product",
+      "sha256": "c0076a9357818a9af91b0527d4315431f658f4281391cf9796c33eeb17734fcb",
+      "physicalLines": 43,
+      "codeLines": 43
+    },
+    {
+      "path": "src/project-email.ts",
+      "category": "product",
+      "sha256": "acffd63c486f181c020622680683f172c10c4df995696818486c5fa74c85f738",
+      "physicalLines": 26,
+      "codeLines": 25
+    },
+    {
+      "path": "src/public-preview.ts",
+      "category": "product",
+      "sha256": "1dce160ca5eb3fcb45d62f5fcce170177af8ef8d79c8061776968c89aed20b68",
+      "physicalLines": 8,
+      "codeLines": 7
+    },
+    {
+      "path": "src/rehearsal-model.ts",
+      "category": "product",
+      "sha256": "8b7a449f0ae0f1a1da5af1c8ff55419f2acc9d8a7adb152aba182ef0ffd19d16",
+      "physicalLines": 35,
+      "codeLines": 34
+    },
+    {
+      "path": "src/rocketride-cloud.ts",
+      "category": "product",
+      "sha256": "c0918d03981fafc7d8281e35e1650c22c09f13c9f0f823cbac83c2e5c8288e9e",
+      "physicalLines": 372,
+      "codeLines": 342
+    },
+    {
+      "path": "src/server.ts",
+      "category": "product",
+      "sha256": "fc23e919c2c578f2f1770cfa76dba42679b9011234573ccc8d423fd5986a33eb",
+      "physicalLines": 138,
+      "codeLines": 135
+    },
+    {
+      "path": "src/sources.ts",
+      "category": "tests-and-tooling",
+      "sha256": "5ffe9ef328cb6344f0193f48ae4a3c1a96618c321bb4b6f828da700772fb8501",
+      "physicalLines": 115,
+      "codeLines": 109
+    },
+    {
+      "path": "src/sponsor-evidence.ts",
+      "category": "product",
+      "sha256": "a651909f0c2e802eb836e46f3b22e5e91b342b3a05dfb29a72d5859c3252e3cd",
+      "physicalLines": 165,
+      "codeLines": 151
+    },
+    {
+      "path": "src/state.ts",
+      "category": "product",
+      "sha256": "37afc8a045c93d69f3e0b1606f8333766d19992a688f5b46200d4b53dc0ec468",
+      "physicalLines": 70,
+      "codeLines": 66
+    },
+    {
+      "path": "src/talk.ts",
+      "category": "product",
+      "sha256": "8ded1fad3b47d3455f541b93f74009baebedcdc39c2f98f883863c1f37b22515",
+      "physicalLines": 462,
+      "codeLines": 461
+    },
+    {
+      "path": "src/tenki-browser.ts",
+      "category": "product",
+      "sha256": "ac8acee625f43f7ac547ab12b01f9ffa02d7a45ecb5a5fc8af447b459cc1b7a3",
+      "physicalLines": 74,
+      "codeLines": 73
+    },
+    {
+      "path": "src/work-ticket.ts",
+      "category": "product",
+      "sha256": "7e3b8630651878ae22ce82b41b1c700a750e53c29d59181ace1002f15de5f010",
+      "physicalLines": 54,
+      "codeLines": 49
+    },
+    {
+      "path": "src/workers.ts",
+      "category": "tests-and-tooling",
+      "sha256": "2253631faba3f2a49dc590f0d25e3322d3d271785b8618df14bcd44fa2d3776a",
+      "physicalLines": 9,
+      "codeLines": 7
+    },
+    {
+      "path": "src/workspace-map.ts",
+      "category": "product",
+      "sha256": "595676d5ed7ad69f988ec7d395031886a0c910262e9caca6d1adfdec3ac8c052",
+      "physicalLines": 20,
+      "codeLines": 18
+    },
+    {
+      "path": "tests/browser-actions.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "558afd99cff6f0c0db48888733929c2507bb130480f736e08c6f23ed737f6475",
+      "physicalLines": 190,
+      "codeLines": 176
+    },
+    {
+      "path": "tests/gmail-draft.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "cc1d6513c0d6e145aa429c5ae0fc0e9cf891f667e8f01a334e0fbbf1101abe08",
+      "physicalLines": 7,
+      "codeLines": 7
+    },
+    {
+      "path": "tests/gpt-live.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "097323938e3b046e569f8cc5a5e37ec1ccee7f9d20b82f540074ceae721ef7a7",
+      "physicalLines": 36,
+      "codeLines": 34
+    },
+    {
+      "path": "tests/order-desk.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "8d2ab5aeb82a52680afbaf00f47ccb7e98006025a5b259ab4bfca4376e6b2f0b",
+      "physicalLines": 280,
+      "codeLines": 257
+    },
+    {
+      "path": "tests/printful-draft.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "4937567eee6a10e548dd374351e59c65eb4c57140ae23802977e6738743a905a",
+      "physicalLines": 9,
+      "codeLines": 9
+    },
+    {
+      "path": "tests/project-email.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "adeb028fc3c0d90f0502c2b73e17120419fdcaadf8a1f535b6c4ec565d9e3e63",
+      "physicalLines": 7,
+      "codeLines": 6
+    },
+    {
+      "path": "tests/tenki-browser.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "c62542db86d5fe7511f6d127394b60bf6e6c5dfb0f0d94c97d9be40da1ac0b02",
+      "physicalLines": 19,
+      "codeLines": 19
+    },
+    {
+      "path": "tests/work-ticket.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "0f2bee71a3127b30efc56932d0b8187160e13c07f114b28df2fe1c88f9cef567",
+      "physicalLines": 10,
+      "codeLines": 10
+    },
+    {
+      "path": "tests/workspace-map.test.ts",
+      "category": "tests-and-tooling",
+      "sha256": "6ca0b62bfc70300f3effc3ebd823364d44125f4b786d915af4df9de554c74f3f",
+      "physicalLines": 16,
+      "codeLines": 16
+    }
+  ]
+}

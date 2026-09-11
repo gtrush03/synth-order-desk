@@ -22,7 +22,7 @@ Third-party components used at runtime (not vendored, installed by the operator)
 | Hotdata | API | provider terms | opt-in scoped SQL |
 | Tenki SDK (`@tenkicloud/sandbox` on npm) | 1.0.6 | MIT | host-only controller; existing explicitly allowed session only |
 | Playwright | 1.56.0 | Apache-2.0 | patched distribution dependency; original recorded guest used 1.55.0; no local browser launched by tests |
-| RocketRide SDK (`rocketride` on npm) | 1.3.0 | MIT | standalone cloud proof adapter; credentials only from the environment or `judge.env` |
+| RocketRide SDK (`rocketride` on npm) | 1.3.0 | MIT | integrated deterministic cloud cross-check; credentials only from the environment or `judge.env` |
 | Snyk CLI | 1.1307.1 | provider terms | scanning |
 
 The TRU Synth wordmark is the company's trademark and is included only for this submission's UI. Sponsor marks under `public/sponsors/` (when present) are the sponsors' trademarks, supplied for this hackathon and used only to label each sponsor's role; their sources are recorded in `evidence/sponsor-logo-sources.json`.

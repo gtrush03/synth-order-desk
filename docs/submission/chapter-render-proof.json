@@ -1,0 +1,23 @@
+{
+  "at": "2026-09-11T21:37:48.350Z",
+  "remotion": "4.0.523",
+  "browserStatus": {
+    "type": "local-puppeteer-browser"
+  },
+  "concurrency": 2,
+  "availableBytes": 4780687360,
+  "compositions": [
+    {
+      "id": "ChapterRails",
+      "width": 1920,
+      "height": 80,
+      "fps": 30,
+      "frames": 180
+    }
+  ],
+  "sources": [
+    "https://www.remotion.dev/docs/renderer/render-media",
+    "https://www.remotion.dev/docs/renderer/open-browser"
+  ],
+  "closedOwnBrowser": true
+}

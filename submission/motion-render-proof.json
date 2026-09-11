@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-11T21:52:17.390Z",
+  "remotion": "4.0.523",
+  "browserStatus": {
+    "type": "local-puppeteer-browser"
+  },
+  "concurrency": 2,
+  "availableBytes": 4660920320,
+  "compositions": [
+    {
+      "id": "Intro",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 72
+    },
+    {
+      "id": "Outro",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "frames": 120
+    }
+  ],
+  "sources": [
+    "https://www.remotion.dev/docs/renderer/render-media",
+    "https://www.remotion.dev/docs/renderer/open-browser"
+  ],
+  "closedOwnBrowser": true
+}

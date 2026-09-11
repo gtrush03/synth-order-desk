@@ -87,6 +87,10 @@ Evidence files shipped:
 - `evidence/failure-cleanup-check.json`
 - `evidence/sponsor-logo-sources.json`
 - `evidence/expanded-intent-check.json`
+- `evidence/final-flow-code-stats.json`
+- `evidence/final-flow-cognee-setup.json`
+- `evidence/final-flow-github-video.json`
+- `evidence/final-flow-receipts.json`
 - `evidence/rocketride-cloud-ledger.json`
 - `evidence/rocketride-cloud-profile.json`
 - `evidence/rocketride-cloud-proof.json`

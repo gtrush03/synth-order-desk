@@ -1,0 +1,30 @@
+{
+  "startedAt": "2026-09-11T22:44:47Z",
+  "paidModelEndpoint": "loopback discard port9",
+  "existingEnvironmentUnchanged": true,
+  "datasetList": true,
+  "addStatus": 200,
+  "addResponse": {
+    "status": "PipelineRunCompleted",
+    "pipeline_run_id": "1b131146-edfe-4d9c-af93-a4471ae58e49",
+    "dataset_id": "5f442c0b-0fce-518f-bf93-f021b54ee8bc",
+    "dataset_name": "judge-setup-smoke",
+    "payload": null,
+    "data_ingestion_info": [
+      {
+        "run_info": {
+          "status": "PipelineRunCompleted",
+          "pipeline_run_id": "1b131146-edfe-4d9c-af93-a4471ae58e49",
+          "dataset_id": "5f442c0b-0fce-518f-bf93-f021b54ee8bc",
+          "dataset_name": "judge-setup-smoke",
+          "payload": null,
+          "data_ingestion_info": null
+        },
+        "data_id": "d6179128-6a37-4103-b872-688140acdabf"
+      }
+    ]
+  },
+  "passed": true,
+  "rawReadbackMatched": true,
+  "ownServerStopped": true
+}

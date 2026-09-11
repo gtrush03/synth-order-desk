@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-11T22:34:58.143380+00:00",
-  "summary": "19 of 20 demo acceptance checks complete: verified fresh 18-step flow, narrated film, seven-page PDF and isolated tested source. Final public-link review and George clicking Submit remain. This is a hackathon prototype, not production readiness.",
+  "updatedAt": "2026-09-11T22:46:30.288092+00:00",
+  "summary": "George reports the Main Track submission completed. The fresh 18-step demo, PDF, source and hosted assets are verified. Judge documentation and asset presentation are being polished; this checklist measures demo acceptance, not production readiness.",
   "method": "20 explicit acceptance checks for the revised talking-Synth entry; this replaces the earlier dashboard checklist. Equal-weight check completion is not effort, quality or winning probability.",
   "tagline": "Turn order changes into approved work.",
   "taglineCharacters": 38,
@@ -121,8 +121,8 @@
     },
     {
       "title": "Judge-facing links and submission",
-      "status": "open",
-      "detail": "Public GitHub and Cloudflare publication are being verified. Form is prepared for George to review and click Submit himself.",
+      "status": "done",
+      "detail": "George confirmed submission. Public source commit8226a62 and Cloudflare video/PDF/captions were read back with matching hashes. Documentation/media refinements preserve the submitted application behavior.",
       "link": "/evidence/judges-repo"
     }
   ]
